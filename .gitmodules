@@ -1,0 +1,27 @@
+[submodule ".vim/bundle/nerdtree"]
+  path = .vim/bundle/nerdtree
+  url = https://github.com/scrooloose/nerdtree.git
+
+[submodule ".vim/bundle/vim-colors-solarized"]
+  path = .vim/bundle/vim-colors-solarized
+  url = https://github.com/altercation/vim-colors-solarized.git
+
+[submodule ".vim/bundle/vim-css3-syntax"]
+  path = .vim/bundle/vim-css3-syntax
+  url = https://github.com/hail2u/vim-css3-syntax.git
+
+[submodule ".vim/bundle/vim-git"]
+  path = .vim/bundle/vim-git
+  url = https://github.com/tpope/vim-git.git
+
+[submodule ".vim/bundle/vim-markdown"]
+  path = .vim/bundle/vim-markdown
+  url = https://github.com/tpope/vim-markdown.git
+
+[submodule ".vim/bundle/vim-rails"]
+  path = .vim/bundle/vim-rails
+  url = https://github.com/tpope/vim-rails.git
+
+[submodule ".vim/bundle/vim-coffee-script"]
+  path = .vim/bundle/vim-coffee-script
+  url = https://github.com/kchmck/vim-coffee-script.git
