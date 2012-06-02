@@ -21,4 +21,8 @@ If I'm using something I forgot to credit, please let me know.
 [ryanb/dotfiles]: https://github.com/ryanb/dotfiles
 [rtomayko/dotfiles]: https://github.com/rtomayko/dotfiles
 [technicalpickles/pickled-vim]: https://github.com/technicalpickles/pickled-vim
+<<<<<<< HEAD
 [tpope/tpope]: https://github.com/tpope/tpope
+=======
+[tpope/tpope]: https://github.com/tpope/tpope
+>>>>>>> dd275a278f709f09228c20caceea55fef504bd37
