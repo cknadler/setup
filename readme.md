@@ -4,9 +4,9 @@ These are my config files to set up my development environment.
 ## Installation
 I use [homesick][homesick] by Josh Nichols. To install my dotfiles using homesick just paste the following:
 
-	gem install homesick
-	homesick clone cknadler/dotfiles
-	homesick symlink dotfiles
+	$ gem install homesick
+	$ homesick clone cknadler/dotfiles
+	$ homesick symlink cknadler/dotfiles
 
 ## Credits
 I made practically none of these dotfiles. They are mostly from:
