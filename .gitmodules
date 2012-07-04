@@ -33,6 +33,11 @@
 [submodule "home/.vim/bundle/vim-powerline"]
   path = home/.vim/bundle/vim-powerline
   url = https://github.com/Lokaltog/vim-powerline.git
+
 [submodule "home/.vim/bundle/vim-zencoding"]
   path = home/.vim/bundle/vim-zencoding
   url = https://github.com/mattn/zencoding-vim.git
+
+[submodule "home/.vim/bundle/nerdcommenter"]
+  path = home/.vim/bundle/nerdcommenter
+  url = https://github.com/scrooloose/nerdcommenter.git

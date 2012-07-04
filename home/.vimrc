@@ -8,7 +8,7 @@ colorscheme solarized
 filetype off
 filetype plugin indent on
 set gfn=Inconsolata:h16
-set lines=50 columns=180
+set lines=50 columns=100
 
 set showcmd
 set showmode

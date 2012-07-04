@@ -1,3 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/Users/takeshi91k/Sites/warm_cheerful_webdesign'
+let g:netrw_dirhist_2='/Users/takeshi91k/projects/Octopress-Theme-Slash/sass'
+let g:netrw_dirhist_3='/Users/takeshi91k/projects/cknadler.github.com/.git'
+let g:netrw_dirhist_4='/Users/takeshi91k/projects/Octopress-Theme-Slash'
+let g:netrw_dirhist_5='/Users/takeshi91k/.homesick/repos/cknadler/dotfiles/.git'

@@ -34,16 +34,18 @@ plugins=(git brew bundler node npm osx ruby rvm rails3 vagrant)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/mysql/bin:~/.bin:~/.rvm/bin
+export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin:~/.rvm/bin
 
 #aliases
 alias la='ls -a'
 alias ll='ls -la'
 alias c='clear'
 
-#navigation 
-alias p='cd ~/projects'
-alias s='cd ~/Sites'
-
 #vim
 alias vim='mvim'
+
+#git
+eval "$(hub alias -s)"
+alias gst="git status -sb"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
