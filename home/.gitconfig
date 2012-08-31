@@ -3,3 +3,5 @@
 	email = takeshi91k@gmail.com
 [core]
 	excludesfile = /Users/takeshi91k/.global_gitignore
+[credential]
+	helper = osxkeychain
