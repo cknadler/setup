@@ -1,7 +1,9 @@
 [user]
 	name = Chris Knadler
 	email = takeshi91k@gmail.com
+
 [core]
-	excludesfile = /Users/takeshi91k/.global_gitignore
+	excludesfile = /Users/cknadler/.global_gitignore
+
 [credential]
 	helper = osxkeychain

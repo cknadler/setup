@@ -3,13 +3,10 @@ ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="bira"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew osx ruby rails3)
+plugins=(git brew osx ruby rails3 npm pow terminalapp vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 

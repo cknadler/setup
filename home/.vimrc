@@ -28,7 +28,6 @@ set autoindent
 
 "Nerd Tree
 map <C-f> :NERDTreeToggle<CR>
-autocmd vimenter * if !argc() | NERDTree | endif
 
 map <C-j> <C-W>j<C-W><CR>
 map <C-k> <C-W>k<C-W><CR>
