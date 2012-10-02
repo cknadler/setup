@@ -14,17 +14,18 @@ set showcmd
 set showmode
 set number
 
+"Search
 set incsearch
 set hlsearch
 
-set wrap
-set linebreak
-
+"Tabs in Indenting
 set smartindent
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
+set wrap
+set linebreak
 
 "Nerd Tree
 map <C-f> :NERDTreeToggle<CR>
