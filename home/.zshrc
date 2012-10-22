@@ -13,10 +13,14 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin:~/.bin
 
-#aliases
+#general
 alias la='ls -a'
 alias ll='ls -la'
 alias c='clear'
+
+#navigation
+alias home='cd ~/.homesick/repos/cknadler/dotfiles'
+alias p='cd ~/projects'
 
 #vim
 alias vim='mvim'
