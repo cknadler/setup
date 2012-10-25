@@ -24,6 +24,7 @@ alias p='cd ~/projects'
 
 #vim
 alias vim='mvim'
+alias vi='mvim'
 
 #git
 eval "$(hub alias -s)"
