@@ -7,3 +7,6 @@
 
 [credential]
 	helper = osxkeychain
+
+[github]
+	user = cknadler
