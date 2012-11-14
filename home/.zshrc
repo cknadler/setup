@@ -10,8 +10,11 @@ plugins=(git brew osx ruby rails3 npm pow terminalapp vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin:~/.bin
+# Standard path
+export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin
+
+#rbenv
+eval "$(rbenv init -)"
 
 #general
 alias la='ls -a'
@@ -27,8 +30,4 @@ alias vim='mvim'
 alias vi='mvim'
 
 #git
-eval "$(hub alias -s)"
 alias gst="git status -sb"
-
-#rbenv
-eval "$(rbenv init -)"

@@ -1,12 +1,12 @@
 [user]
-	name = Chris Knadler
-	email = takeshi91k@gmail.com
+  name = Chris Knadler
+  email = takeshi91k@gmail.com
 
 [core]
-	excludesfile = /Users/cknadler/.global_gitignore
+  excludesfile = /Users/cknadler/.global_gitignore
 
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 
 [github]
-	user = cknadler
+  user = cknadler
