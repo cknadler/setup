@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="bira"
+ZSH_THEME="kennethreitz"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(git brew osx ruby rails3 npm pow terminalapp vi-mode)
