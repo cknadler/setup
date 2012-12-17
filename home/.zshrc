@@ -1,17 +1,14 @@
-# Path to your oh-my-zsh configuration.
+# ZSH Config
 ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="kennethreitz"
-
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(git brew osx ruby rails3 npm pow terminalapp vi-mode)
-
 source $ZSH/oh-my-zsh.sh
 
 # Standard path
 export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin
+
+# Add Postgres.app bin to path
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 #rbenv
 eval "$(rbenv init -)"
