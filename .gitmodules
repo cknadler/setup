@@ -65,9 +65,15 @@
 [submodule "home/.vim/bundle/vim-eunuch"]
   path = home/.vim/bundle/vim-eunuch
   url = https://github.com/tpope/vim-eunuch.git
+
 [submodule "home/.vim/bundle/supertab"]
-	path = home/.vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
+  path = home/.vim/bundle/supertab
+  url = https://github.com/ervandew/supertab.git
+
 [submodule "home/.vim/bundle/vim-unimpaired"]
-	path = home/.vim/bundle/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired.git
+  path = home/.vim/bundle/vim-unimpaired
+  url = https://github.com/tpope/vim-unimpaired.git
+
+[submodule "home/.vim/bundle/vim-clojure-static"]
+  path = home/.vim/bundle/vim-clojure-static
+  url = https://github.com/guns/vim-clojure-static.git

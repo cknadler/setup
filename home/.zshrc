@@ -18,6 +18,9 @@ alias la='ls -a'
 alias ll='ls -la'
 alias c='clear'
 
+#brew
+alias brewup='brew update && brew upgrade'
+
 #navigation
 alias home='cd ~/.homesick/repos/cknadler/dotfiles'
 alias p='cd ~/projects'
