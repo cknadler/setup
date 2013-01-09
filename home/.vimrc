@@ -10,9 +10,14 @@ filetype off
 filetype plugin indent on
 set gfn=Inconsolata:h16
 set lines=50 columns=80
+
+"Show command and mode
 set showcmd
 set showmode
-set number
+
+"Numbers
+set relativenumber
+set numberwidth=2
 
 "Search
 set incsearch
