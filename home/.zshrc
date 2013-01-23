@@ -14,7 +14,7 @@ PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 eval "$(rbenv init -)"
 
 #general
-alias la='ls -a'
+alias l='ls -a'
 alias ll='ls -la'
 alias c='clear'
 
@@ -26,8 +26,9 @@ alias home='cd ~/.homesick/repos/cknadler/dotfiles'
 alias p='cd ~/projects'
 
 #vim
-alias vim='mvim'
-alias vi='mvim'
+alias vi='vim'
+alias v='vim'
 
 #git
 alias gst="git status -sb"
+alias go="git push origin master"
