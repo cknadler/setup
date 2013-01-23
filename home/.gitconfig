@@ -1,9 +1,28 @@
+[core]
+  whitespace = trailing-space,space-before-tab
+  excludesfile = /Users/cknadler/.global_gitignore
+  editor = vim
+
 [user]
   name = Chris Knadler
   email = takeshi91k@gmail.com
 
-[core]
-  excludesfile = /Users/cknadler/.global_gitignore
+[push]
+  default = upstream
+
+[alias]
+  ca = commit --amend
+  cached = diff --cached
+  graph = log --oneline --graph
+  ap = add -p
+  l = log --decorate --stat
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  
+[color]
+  ui = true
+
+[log]
+  decorate = short
 
 [credential]
   helper = osxkeychain
