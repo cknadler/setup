@@ -30,5 +30,4 @@ alias vi='vim'
 alias v='vim'
 
 #git
-alias gst="git status -sb"
 alias go="git push origin master"
