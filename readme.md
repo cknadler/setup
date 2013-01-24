@@ -11,15 +11,11 @@ I use [homesick][homesick] by Josh Nichols. To install my dotfiles using homesic
 ## Credits
 I made practically none of these dotfiles. They are mostly from:
 
-* [ryanb/dotfiles][ryanb/dotfiles]
-* [rtomayko/dotfiles][rtomayko/dotfiles]
-* [technicalpickles/pickled-vim][technicalpickles/pickled-vim]
-* [tpope/tpope][tpope/tpope]
+* [ryanb/dotfiles](https://github.com/ryanb/dotfiles)
+* [rtomayko/dotfiles](https://github.com/rtomayko/dotfiles)
+* [technicalpickles/pickled-vim](https://github.com/technicalpickles/pickled-vim)
+* [tpope/tpope](https://github.com/tpope/tpope)
 
 If I'm using something I forgot to credit, please let me know.
 
 [homesick]: https://github.com/technicalpickles/homesick
-[ryanb/dotfiles]: https://github.com/ryanb/dotfiles
-[rtomayko/dotfiles]: https://github.com/rtomayko/dotfiles
-[technicalpickles/pickled-vim]: https://github.com/technicalpickles/pickled-vim
-[tpope/tpope]: https://github.com/tpope/tpope
