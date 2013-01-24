@@ -15,6 +15,7 @@ I made practically none of these dotfiles. They are mostly from:
 * [rtomayko/dotfiles](https://github.com/rtomayko/dotfiles)
 * [technicalpickles/pickled-vim](https://github.com/technicalpickles/pickled-vim)
 * [tpope/tpope](https://github.com/tpope/tpope)
+* [sectioneight/dotfiles](https://github.com/sectioneight/dotfiles)
 
 If I'm using something I forgot to credit, please let me know.
 
