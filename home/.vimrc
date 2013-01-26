@@ -8,8 +8,6 @@ set background=dark
 colorscheme solarized
 filetype off
 filetype plugin indent on
-set gfn=Inconsolata:h16
-set lines=50 columns=80
 
 "Show command and mode
 set showcmd
