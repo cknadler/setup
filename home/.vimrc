@@ -35,6 +35,10 @@ set linebreak
 "Nerd Tree
 map <C-f> :NERDTreeToggle<CR>
 
+"Powerline
+set laststatus=2
+let g:Powerline_symbols = 'fancy'
+
 "Disable arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>

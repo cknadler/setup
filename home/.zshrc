@@ -20,6 +20,7 @@ alias c='clear'
 
 #tmux
 alias t='tmux -u'
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 #brew
 alias brewup='brew update && brew upgrade'
