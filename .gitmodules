@@ -22,10 +22,6 @@
   path = home/.vim/bundle/vim-slurper
   url = https://github.com/adamlowe/vim-slurper.git
 
-[submodule "home/.vim/bundle/vim-powerline"]
-  path = home/.vim/bundle/vim-powerline
-  url = https://github.com/Lokaltog/vim-powerline.git
-
 [submodule "home/.vim/bundle/vim-ruby"]
   path = home/.vim/bundle/vim-ruby
   url = https://github.com/vim-ruby/vim-ruby.git
