@@ -17,7 +17,7 @@
   ap = add -p
   l = log --decorate --stat
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  s = status -sb
+  s = status
   
 [color]
   ui = true

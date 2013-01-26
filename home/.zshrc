@@ -18,6 +18,9 @@ alias l='ls -a'
 alias ll='ls -la'
 alias c='clear'
 
+#tmux
+alias t='tmux -u'
+
 #brew
 alias brewup='brew update && brew upgrade'
 
@@ -30,4 +33,5 @@ alias vi='vim'
 alias v='vim'
 
 #git
+alias gst="git status -sb"
 alias go="git push origin master"
