@@ -4,18 +4,8 @@ call pathogen#infect()
 
 "Standard config
 syntax on
-set background=dark
-colorscheme solarized
 filetype off
 filetype plugin indent on
-
-"Show command and mode
-set showcmd
-set showmode
-
-"Numbers
-set relativenumber
-set numberwidth=2
 
 "Search
 set incsearch
