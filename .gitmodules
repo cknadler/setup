@@ -1,11 +1,3 @@
-[submodule "home/.vim/bundle/nerdtree"]
-  path = home/.vim/bundle/nerdtree
-  url = https://github.com/scrooloose/nerdtree.git
-
-[submodule "home/.vim/bundle/vim-colors-solarized"]
-  path = home/.vim/bundle/vim-colors-solarized
-  url = https://github.com/altercation/vim-colors-solarized.git
-
 [submodule "home/.vim/bundle/vim-css3-syntax"]
   path = home/.vim/bundle/vim-css3-syntax
   url = https://github.com/hail2u/vim-css3-syntax.git
@@ -34,10 +26,6 @@
   path = home/.vim/bundle/vim-powerline
   url = https://github.com/Lokaltog/vim-powerline.git
 
-[submodule "home/.vim/bundle/vim-zencoding"]
-  path = home/.vim/bundle/vim-zencoding
-  url = https://github.com/mattn/zencoding-vim.git
-
 [submodule "home/.vim/bundle/vim-ruby"]
   path = home/.vim/bundle/vim-ruby
   url = https://github.com/vim-ruby/vim-ruby.git
@@ -53,10 +41,6 @@
 [submodule "home/.vim/bundle/vim-surround"]
   path = home/.vim/bundle/vim-surround
   url = https://github.com/tpope/vim-surround.git
-
-[submodule "home/.vim/bundle/vim-ruby-minitest"]
-  path = home/.vim/bundle/vim-ruby-minitest
-  url = https://github.com/sunaku/vim-ruby-minitest.git
 
 [submodule "home/.vim/bundle/vim-cucumber"]
   path = home/.vim/bundle/vim-cucumber
