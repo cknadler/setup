@@ -7,8 +7,9 @@ source $ZSH/oh-my-zsh.sh
 # Standard path
 export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin
 
-# Add Postgres.app bin to path
-PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+# os 161
+# This should be removed eventually
+PATH="$PATH:$HOME/sys161/bin:$HOME/sys161/tools/bin"
 
 #rbenv
 eval "$(rbenv init -)"
