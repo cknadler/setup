@@ -61,6 +61,10 @@
 [submodule "home/.tmux/tmux-powerline"]
   path = home/.tmux/tmux-powerline
   url = https://github.com/erikw/tmux-powerline.git
+
 [submodule "home/.vim/bundle/vim-colors-solarized"]
-	path = home/.vim/bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
+  path = home/.vim/bundle/vim-colors-solarized
+  url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "home/.vim/bundle/ack.vim"]
+	path = home/.vim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git

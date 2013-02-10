@@ -1,5 +1,4 @@
 set nocompatible
-
 call pathogen#infect()
 
 "Standard config
