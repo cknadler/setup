@@ -1,11 +1,7 @@
-# ZSH Config
+# Oh-My-ZSH Config
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="kennethreitz"
-plugins=(git brew osx ruby rails3 npm pow terminalapp vi-mode)
+ZSH_THEME="lambda"
 source $ZSH/oh-my-zsh.sh
-
-# Standard path
-export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin
 
 # os 161
 # This should be removed eventually
@@ -18,10 +14,6 @@ eval "$(rbenv init -)"
 alias l='ls -a'
 alias ll='ls -la'
 alias c='clear'
-
-#tmux
-alias t='tmux -u'
-PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 #brew
 alias brewup='brew update && brew upgrade'
