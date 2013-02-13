@@ -1,6 +1,6 @@
 # Oh-My-ZSH Config
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="lambda"
+ZSH_THEME="minimal"
 source $ZSH/oh-my-zsh.sh
 
 # os 161
