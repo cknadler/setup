@@ -58,10 +58,6 @@
   path = home/.vim/bundle/vim-clojure-static
   url = https://github.com/guns/vim-clojure-static.git
   
-[submodule "home/.tmux/tmux-powerline"]
-  path = home/.tmux/tmux-powerline
-  url = https://github.com/erikw/tmux-powerline.git
-
 [submodule "home/.vim/bundle/ack.vim"]
   path = home/.vim/bundle/ack.vim
   url = https://github.com/mileszs/ack.vim.git
