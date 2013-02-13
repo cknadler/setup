@@ -19,9 +19,6 @@ set autoindent
 set wrap
 set linebreak
 
-"Nerd Tree
-map <C-f> :NERDTreeToggle<CR>
-
 "Disable arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
