@@ -11,13 +11,38 @@
   default = upstream
 
 [alias]
+  # add
+  a = add
+  au = add -u
+  ap = add --patch
+
+  # commit
+  c = commit
   ca = commit --amend
-  cached = diff --cached
-  graph = log --oneline --graph
-  ap = add -p
+
+  # diff
+  d = diff
+  dc = diff --cached
+
+  # log
   l = log --decorate --stat
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  s = status
+  sl = log --pretty=format:'%Cred%h%Creset %s %Cgreen%d%Creset'
+  cl = log -u
+
+  # rebase
+  rc = rebase --continue
+  rs = rebase --skip
+
+  # remote
+  r = remote -v
+
+  # status
+  s = status -sb
+  st = status
+
+  # reset
+  us = reset HEAD
+  uc = reset --soft HEAD^
   
 [color]
   ui = true
