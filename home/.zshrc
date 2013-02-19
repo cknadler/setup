@@ -10,21 +10,22 @@ PATH="$PATH:$HOME/.bin"
 # This should be removed eventually
 PATH="$PATH:$HOME/sys161/bin:$HOME/sys161/tools/bin"
 
-#rbenv
+# rbenv
 eval "$(rbenv init -)"
 
-#general
+# general
 alias l='ls -a'
 alias ll='ls -la'
 alias c='clear'
 
-#brew
+# brew
 alias brewup='brew update && brew upgrade'
 
-#navigation
+# navigation
 alias home='cd ~/.homesick/repos/cknadler/dotfiles'
 alias p='cd ~/projects'
 
-#vim
-alias vi='vim'
-alias v='vim'
+# Vim
+alias vim='mvim -v'
+alias vi='mvim -v'
+alias v='mvim -v'

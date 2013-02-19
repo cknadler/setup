@@ -43,7 +43,7 @@
   # reset
   us = reset HEAD
   uc = reset --soft HEAD^
-  
+
 [color]
   ui = true
 

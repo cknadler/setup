@@ -22,7 +22,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'chriskempson/vim-tomorrow-theme'
 
 " Utilities
-Bundle 'scroolose/syntastic'
+Bundle 'scrooloose/syntastic'
 Bundle 'mileszs/ack.vim'
 
 " Editing
@@ -43,12 +43,13 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-unimpaired'
 
 " Web Frontend
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-haml'
-Bundle 'askammer/vim-css-color'
+Bundle 'skammer/vim-css-color'
 Bundle 'othree/html5.vim'
 Bundle 'wavded/vim-stylus'
 
