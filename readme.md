@@ -11,8 +11,6 @@ Install the following:
 
 ## Installation
 
-First you need ruby. Install [rbenv][rbenv] if you dont have it already and update to the newest version of ruby (just to be safe).
-
 I use [homesick][homesick] by Josh Nichols. It's a simple way to symlink your dotfiles into `$HOME`.
 
 First, clone and link everything with homesick:
