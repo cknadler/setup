@@ -20,4 +20,8 @@ I made practically none of these dotfiles. They are mostly from:
 
 If I'm using something I forgot to credit, please let me know.
 
+## Copyright
+
+Copyright (c) 2013 Chris Knadler. See LICENSE for details.
+
 [homesick]: https://github.com/technicalpickles/homesick
