@@ -6,8 +6,8 @@ These are my config files to set up my OSX development environment.
 Install the following:
 
 * [rbenv][rbenv]
-* [homesick][homesick]: `gem install homesick`
-* [MacVim](http://code.google.com/p/macvim/): `brew install macvim`
+* [homesick][homesick] - `gem install homesick`
+* [MacVim](http://code.google.com/p/macvim/) - `brew install macvim`
 
 ## Installation
 
