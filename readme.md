@@ -28,7 +28,7 @@ git submodule init &&\
 git submodule update
 ```
 
-Finally, load all of the bundles with in vim. Open vim and run:
+Finally, load all of the vim bundles. Open vim and run:
 
 ```
 :BundleInstall
