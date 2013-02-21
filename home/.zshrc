@@ -21,8 +21,3 @@ alias brewup='brew update && brew upgrade'
 # navigation
 alias home='cd ~/.homesick/repos/cknadler/dotfiles'
 alias p='cd ~/projects'
-
-# Vim
-alias vim='mvim -v'
-alias vi='mvim -v'
-alias v='mvim -v'

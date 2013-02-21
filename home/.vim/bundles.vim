@@ -43,7 +43,6 @@ Bundle 'nathanaelkane/vim-indent-guides'
 
 " Formatting
 Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'godlygeek/tabular'
 
 " Auto Completion
 Bundle 'mattn/zencoding-vim'

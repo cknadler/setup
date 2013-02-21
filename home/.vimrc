@@ -39,14 +39,14 @@ let g:EasyMotion_leader_key = '<Leader>'
 
 " nerdcommenter
 let NERDSpaceDelims=1
-nmap <D-/> :NERDComToggleComment<cr>
+" nmap <D-/> :NERDComToggleComment<cr>
 let NERDCompactSexyComs=1
 
 " ZenCoding
-let g:user_zen_expandabbr_key='<C-j>'
+" let g:user_zen_expandabbr_key='<C-j>'
 
 " powerline
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
 
 " map ctrl+{h,j,k,l} to switch splits
 nnoremap <c-j> <c-w>j
