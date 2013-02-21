@@ -1,3 +1,7 @@
 [submodule "home/.vim/bundle/vundle"]
   path = home/.vim/bundle/vundle
   url = https://github.com/gmarik/vundle.git
+
+[submodule "home/.color/base16-shell"]
+  path = home/.color/base16-shell
+  url = https://github.com/chriskempson/base16-shell.git
