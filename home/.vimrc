@@ -1,86 +1,60 @@
-set nocompatible
-filetype off
+" load all bundles
+source ~/.vim/bundles.vim
 
-" Vundle required conf
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
-"""""""""""""""""""""""
-" Bundles
-"""""""""""""""""""""""
-
-" Git
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-fugitive'
-
-" Syntax Highlighting
-Bundle 'guns/vim-clojure-static'
-Bundle 'tpope/vim-markdown'
-
-" Themes
-Bundle 'chriskempson/vim-tomorrow-theme'
-
-" Utilities
-Bundle 'scrooloose/syntastic'
-Bundle 'mileszs/ack.vim'
-
-" Editing
-Bundle 'sjl/gundo.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'nathanaelkane/vim-indent-guides'
-
-" Formatting
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'godlygeek/tabular'
-
-" Auto Completion
-Bundle 'mattn/zencoding-vim'
-Bundle 'Valloric/YouCompleteMe'
-
-" Navigation
-Bundle 'kien/ctrlp.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-unimpaired'
-
-" Web Frontend
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-haml'
-Bundle 'skammer/vim-css-color'
-Bundle 'othree/html5.vim'
-Bundle 'wavded/vim-stylus'
-
-" Web Backend
-Bundle 'digitaltoad/vim-jade'
-Bundle 'tpope/vim-rails'
-
-" Ruby
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-cucumber'
-
-"Standard config
+" standard config
 syntax on
 filetype plugin indent on
 
-"Search
+" colorscheme
+set background=dark
+colorscheme base16-tomorrow
+
+" search
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 
-"Tabs and indents
+" folding
+set nofoldenable
+
+" navigation
+set scrolloff=5
+
+" display
+set showmatch
+set showcmd
+
+" tabs and indents
 set smartindent
+set autoindent
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set autoindent
+set smarttab
 set wrap
-set linebreak
 
-"Disable arrow keys
+" easy-motion
+let g:EasyMotion_leader_key = '<Leader>'
+
+" nerdcommenter
+let NERDSpaceDelims=1
+nmap <D-/> :NERDComToggleComment<cr>
+let NERDCompactSexyComs=1
+
+" ZenCoding
+let g:user_zen_expandabbr_key='<C-j>'
+
+" powerline
+let g:Powerline_symbols = 'fancy'
+
+" map ctrl+{h,j,k,l} to switch splits
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" disable arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
 inoremap  <Left>   <NOP>
