@@ -3,7 +3,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="minimal"
 source $ZSH/oh-my-zsh.sh
 
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+# Standard path
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin
 
 # os 161
 # This should be removed eventually
