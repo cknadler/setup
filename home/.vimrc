@@ -22,7 +22,6 @@ set nofoldenable
 set scrolloff=5
 
 " display
-set showmatch
 set showcmd
 
 " tabs and indents
@@ -36,11 +35,6 @@ set wrap
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
-
-" nerdcommenter
-let NERDSpaceDelims=1
-" nmap <D-/> :NERDComToggleComment<cr>
-let NERDCompactSexyComs=1
 
 " ZenCoding
 " let g:user_zen_expandabbr_key='<C-j>'
