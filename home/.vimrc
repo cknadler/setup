@@ -7,7 +7,7 @@ filetype plugin indent on
 
 " colorscheme
 set background=dark
-colorscheme base16-tomorrow
+colorscheme Tomorrow-Night
 
 " search
 set incsearch

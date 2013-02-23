@@ -24,12 +24,11 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 
-" Syntax Highlighting
-Bundle 'guns/vim-clojure-static'
-Bundle 'tpope/vim-markdown'
-
 " Colorscheme
-Bundle 'chriskempson/base16-vim'
+Bundle 'chriskempson/vim-tomorrow-theme'
+
+" Syntax Highlighting
+Bundle 'tpope/vim-markdown'
 
 " Utilities
 Bundle 'scrooloose/syntastic'
@@ -50,7 +49,6 @@ Bundle 'Valloric/YouCompleteMe'
 
 " Navigation
 Bundle 'kien/ctrlp.vim'
-Bundle 'majutsushi/tagbar'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-unimpaired'
 
@@ -58,9 +56,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-haml'
-Bundle 'skammer/vim-css-color'
 Bundle 'othree/html5.vim'
-Bundle 'wavded/vim-stylus'
 
 " Web Backend
 Bundle 'digitaltoad/vim-jade'

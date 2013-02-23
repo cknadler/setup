@@ -3,6 +3,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="minimal"
 source $ZSH/oh-my-zsh.sh
 
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
 # os 161
 # This should be removed eventually
 PATH="$PATH:$HOME/sys161/bin:$HOME/sys161/tools/bin"
