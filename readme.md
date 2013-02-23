@@ -36,12 +36,6 @@ Several vim plugins I use require a more up to date version of vim than ships wi
 $ brew install macvim --override-system-vim
 ```
 
-Here, we are moving system `vim` to `vim72` because, by default, `/usr/bin` apprears before `/usr/local/bin` in the `$PATH`. When homebrew installs macvim and "overrides system vim", it is symlinking macvim's version of vim to `/usr/local/bin/vim` and `/usr/local/bin/vi`.
-
-```bash
-$ sudo mv /usr/bin/vim /usr/bin/vim72
-```
-
 Finally, install a bunch of other miscelanious tools:
 
 ```bash
@@ -57,14 +51,6 @@ First, clone and link everything with homesick:
 ```bash
 $ homesick clone cknadler/dotfiles &&\
 homesick symlink cknadler/dotfiles
-```
-
-Next, load up the git submodule(s):
-
-```bash
-$ cd ~/.homesick/repos/cknadler/dotfiles &&\
-git submodule init &&\
-git submodule update
 ```
 
 Compile [YouCompleteMe][ycm]:
