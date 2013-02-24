@@ -39,6 +39,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Valloric/MatchTagAlways'
 
 " Formatting
 Bundle 'bronson/vim-trailing-whitespace'
