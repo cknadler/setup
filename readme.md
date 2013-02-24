@@ -39,7 +39,7 @@ $ brew install macvim --override-system-vim
 Finally, install a bunch of other miscelanious tools:
 
 ```bash
-$ brew install the_silver_searcher tmux hub git-extras cmake
+$ brew install the_silver_searcher tmux hub
 ```
 
 ## Installation
@@ -53,14 +53,7 @@ $ homesick clone cknadler/dotfiles &&\
 homesick symlink cknadler/dotfiles
 ```
 
-Compile [YouCompleteMe][ycm]:
-
-```bash
-$ cd ~/.vim/bundle/YouCompleteMe &&\
-./install.sh --clang-completer
-```
-
-Finally, load all of the vim bundles. Open vim and run:
+Then, load all of the vim bundles. Open vim and run:
 
 ```
 :BundleInstall
@@ -93,5 +86,3 @@ Copyright (c) 2013 Chris Knadler. See LICENSE for details.
 [rbenv]: https://github.com/sstephenson/rbenv/
 [homesick]: https://github.com/technicalpickles/homesick
 [omzsh]: https://github.com/robbyrussell/oh-my-zsh
-[ag]: https://github.com/ggreer/the_silver_searcher
-[ycm]: https://github.com/Valloric/YouCompleteMe.git
