@@ -22,5 +22,8 @@ alias c='clear'
 alias brewup='brew update && brew upgrade'
 
 # navigation
-alias home='cd ~/.homesick/repos/cknadler/dotfiles'
-alias p='cd ~/projects'
+alias code='cd $HOME/code'
+alias home='cd $HOME/.homesick/repos/cknadler/dotfiles'
+
+# use homebrew gcc
+export CC=/usr/local/bin/gcc-4.2
