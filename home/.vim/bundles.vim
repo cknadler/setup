@@ -44,10 +44,6 @@ Bundle 'Valloric/MatchTagAlways'
 " Formatting
 Bundle 'bronson/vim-trailing-whitespace'
 
-" Auto Completion
-Bundle 'mattn/zencoding-vim'
-Bundle 'Valloric/YouCompleteMe'
-
 " Navigation
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'

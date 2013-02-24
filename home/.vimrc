@@ -9,6 +9,9 @@ filetype plugin indent on
 set background=dark
 colorscheme Tomorrow-Night
 
+" leader
+let mapleader = ","
+
 " search
 set incsearch
 set hlsearch
@@ -36,11 +39,10 @@ set wrap
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
 
-" ZenCoding
-" let g:user_zen_expandabbr_key='<C-j>'
-
-" powerline
-" let g:Powerline_symbols = 'fancy'
+" quick vim config edit mappings
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>eb :vsplit $HOME/.vim/bundles.vim<cr>
 
 " map ctrl+{h,j,k,l} to switch splits
 nnoremap <c-j> <c-w>j
