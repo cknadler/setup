@@ -24,9 +24,6 @@ set nofoldenable
 " navigation
 set scrolloff=5
 
-" display
-set showcmd
-
 " tabs and indents
 set smartindent
 set autoindent
@@ -35,6 +32,9 @@ set softtabstop=2
 set expandtab
 set smarttab
 set wrap
+
+" always display bottom bar
+set laststatus=2
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
