@@ -1,0 +1,12 @@
+.less-history-file:
+.search
+"-C
+"-l
+"-I
+"-I dir
+"-L dir
+"-L
+"vim
+"-I dir
+"lesshst
+.shell
