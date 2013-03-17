@@ -1,0 +1,14 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    brewdler (0.3.1)
+      commander
+    commander (4.1.3)
+      highline (~> 1.6.11)
+    highline (1.6.16)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  brewdler
