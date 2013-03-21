@@ -6,6 +6,7 @@ cmake
 gfortran
 git
 go
+gource
 macvim
 open-mpi
 rbenv

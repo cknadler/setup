@@ -3,3 +3,5 @@ home/.vim/bundle/*
 
 # except vundle
 !home/.vim/bundle/vundle
+
+.lesshst
