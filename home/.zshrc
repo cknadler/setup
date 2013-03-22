@@ -10,6 +10,9 @@ PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin
 # This should be removed eventually
 PATH="$PATH:$HOME/sys161/bin:$HOME/sys161/tools/bin"
 
+# npm
+PATH="/usr/local/share/npm/bin:$PATH"
+
 # rbenv
 eval "$(rbenv init -)"
 
