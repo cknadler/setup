@@ -3,6 +3,7 @@ autoconf
 automake
 check
 cmake
+ctags
 gfortran
 git
 go
