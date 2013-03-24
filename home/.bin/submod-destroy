@@ -1,7 +1,0 @@
-#!/bin/sh
-
-echo "Removing submodule $1"
-
-git rm -rf --cached $1
-git config -f .git/config --remove-section submodule.$1
-git config -f .gitmodules --remove-section submodule.$1
