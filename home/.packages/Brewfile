@@ -11,6 +11,7 @@ gource
 macvim
 open-mpi
 rbenv
+reattach-to-user-namespace
 ruby-build
 stone-soup
 the_silver_searcher
