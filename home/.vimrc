@@ -33,6 +33,10 @@ set expandtab
 set smarttab
 set wrap
 
+" copy/paste pbcopy
+vmap <C-x> :!pbcopy<cr>
+vmap <C-c> :w !pbcopy<cr><cr>
+
 " always display bottom bar
 set laststatus=2
 
