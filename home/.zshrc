@@ -30,3 +30,4 @@ alias home='cd $HOME/.homesick/repos/cknadler/dotfiles'
 
 # use homebrew gcc
 export CC=/usr/local/bin/gcc-4.2
+
