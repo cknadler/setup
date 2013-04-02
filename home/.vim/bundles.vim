@@ -33,6 +33,7 @@ Bundle 'tpope/vim-markdown'
 " Utilities
 Bundle 'scrooloose/syntastic'
 Bundle 'mileszs/ack.vim'
+Bundle 'kana/vim-fakeclip'
 
 " Editing
 Bundle 'sjl/gundo.vim'
