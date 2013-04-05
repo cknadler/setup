@@ -33,6 +33,11 @@ set expandtab
 set smarttab
 set wrap
 
+" fix tmux + vim + osx clipboard issues
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
+
 " copy/paste pbcopy
 vmap <C-x> :!pbcopy<cr>
 vmap <C-c> :w !pbcopy<cr><cr>
