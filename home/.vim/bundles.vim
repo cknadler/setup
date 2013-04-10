@@ -8,9 +8,6 @@
 " configuration can be found in vimrc.
 """
 
-set nocompatible
-filetype off
-
 " Vundle required conf
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()

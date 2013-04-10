@@ -1,9 +1,18 @@
+"""""""""""""""""""""""""
+" bundle config
+"""""""""""""""""""""""""
+set nocompatible
+filetype off
+
 " load all bundles
 source ~/.vim/bundles.vim
 
-" standard config
 syntax on
 filetype plugin indent on
+
+"""""""""""""""""""""""""
+" general config
+""""""""""""""""""""""""
 
 " colorscheme
 set background=dark
