@@ -32,7 +32,6 @@ set encoding=utf-8
 set scrolloff=5
 set autoindent
 set showmode
-set showcmd
 set hidden
 set wildmenu
 set wildmode=list:longest
@@ -70,6 +69,10 @@ set nofoldenable
 
 " save on lost focus
 au FocusLost * :wa
+
+" quick colon
+nnoremap ; :
+vnoremap ; :
 
 " fix tmux + vim + osx clipboard issues
 if $TMUX == ''
