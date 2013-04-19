@@ -106,3 +106,6 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
+
+" disable ZZ to :wq
+nnoremap ZZ <NOP>
