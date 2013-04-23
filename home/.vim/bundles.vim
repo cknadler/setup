@@ -22,7 +22,7 @@ Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 
 " Colorscheme
-Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'tomasr/molokai'
 
 " Syntax Highlighting
 Bundle 'tpope/vim-markdown'

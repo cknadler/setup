@@ -19,7 +19,7 @@ set modelines=0
 
 " colorscheme
 set background=dark
-colorscheme Tomorrow-Night
+colorscheme molokai
 
 " tabs
 set tabstop=2
@@ -36,7 +36,6 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
-set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
