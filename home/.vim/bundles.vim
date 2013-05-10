@@ -61,3 +61,6 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-cucumber'
+
+" Go
+Bundle 'jnwhiteh/vim-golang'
