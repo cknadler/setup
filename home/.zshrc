@@ -14,12 +14,14 @@ PATH="$PATH:$HOME/sys161/bin:$HOME/sys161/tools/bin"
 PATH="/usr/local/share/npm/bin:$PATH"
 
 # rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # general
 alias l='ls -a'
 alias ll='ls -la'
 alias c='clear'
+alias rst='exec $SHELL -l'
 
 # brew
 alias brewup='brew update && brew upgrade'

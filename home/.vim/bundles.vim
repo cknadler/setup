@@ -21,7 +21,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 
-" Colorscheme
+" Colorschemes
 Bundle 'tomasr/molokai'
 
 " Syntax Highlighting
