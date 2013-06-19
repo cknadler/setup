@@ -6,15 +6,11 @@ source $ZSH/oh-my-zsh.sh
 # Standard path
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-# os 161
-# This should be removed eventually
-PATH="$PATH:$HOME/sys161/bin:$HOME/sys161/tools/bin"
-
 # npm
 PATH="/usr/local/share/npm/bin:$PATH"
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
+PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # general
@@ -22,6 +18,7 @@ alias l='ls -a'
 alias ll='ls -la'
 alias c='clear'
 alias rst='exec $SHELL -l'
+EDITOR='vim'
 
 # brew
 alias brewup='brew update && brew upgrade'
@@ -31,7 +28,12 @@ alias src='cd ~/src'
 alias home='cd ~/.homesick/repos/cknadler/dotfiles'
 
 # use homebrew gcc
-export CC=/usr/local/bin/gcc-4.2
+CC=/usr/local/bin/gcc-4.2
 
 # aliases for quick project navigation
+# TODO: make this tolerant of no directories in src
 for p in ~/src/*; do alias d-$(basename $p)="cd $p"; done
+
+# git
+GIT_DISCOVERY_ACROSS_FILESYSTEM=1
+
