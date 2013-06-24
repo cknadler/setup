@@ -18,6 +18,7 @@ alias l='ls -a'
 alias ll='ls -la'
 alias c='clear'
 alias rst='exec $SHELL -l'
+
 EDITOR='vim'
 
 # brew
@@ -34,6 +35,9 @@ CC=/usr/local/bin/gcc-4.2
 # TODO: make this tolerant of no directories in src
 for p in ~/src/*; do alias d-$(basename $p)="cd $p"; done
 
-# git
-GIT_DISCOVERY_ACROSS_FILESYSTEM=1
+# custom work config
+if [ -f ~/.work_bin ]; then
+  PATH="$PATH:$HOME/.work_bin"
+  source $HOME/.work_bin/work_aliases.zsh
+fi
 
