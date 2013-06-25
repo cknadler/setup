@@ -31,12 +31,15 @@ alias home='cd ~/.homesick/repos/cknadler/dotfiles'
 # use homebrew gcc
 CC=/usr/local/bin/gcc-4.2
 
+# tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
 # aliases for quick project navigation
 # TODO: make this tolerant of no directories in src
 for p in ~/src/*; do alias d-$(basename $p)="cd $p"; done
 
 # custom work config
-if [ -f ~/.work_bin ]; then
+if [ -d ~/.work_bin ]; then
   PATH="$PATH:$HOME/.work_bin"
   source $HOME/.work_bin/work_aliases.zsh
 fi
