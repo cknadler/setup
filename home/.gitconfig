@@ -16,17 +16,29 @@
   au = add -u
   ap = add --patch
 
+  # branch
+  b = branch
+
+  # checkout
+  co = checkout
+  cb = checkout -b
+
   # commit
   c = commit
   ca = commit --amend
 
   # diff
-  d = diff
+  df = diff
   dc = diff --cached
 
+  ###
   # log
+  ###
+  # regular log
   l = log --decorate --stat
+  # short log
   sl = log --pretty=format:'%Cred%h%Creset %s %Cgreen%d%Creset'
+  # change log
   cl = log -u
 
   # rebase
