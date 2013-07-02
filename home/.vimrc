@@ -85,6 +85,12 @@ vmap <C-c> :w !pbcopy<cr><cr>
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
 
+" jcommenter
+autocmd FileType java let b:jcommenter_class_author='kndlrc'
+autocmd FileType java let b:jcommenter_file_author='kndlrc'
+autocmd FileType java source $VIM/macros/jcommenter.vim
+autocmd FileType java map <M-c> :call JCommentWriter()<CR>
+
 " quick vim config edit mappings
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
