@@ -17,6 +17,9 @@ filetype plugin indent on
 " prevent security exploit
 set modelines=0
 
+" 256 colors
+set t_Co=256
+
 " colorscheme
 set background=dark
 colorscheme molokai
@@ -58,12 +61,12 @@ nnoremap <tab> %
 vnoremap <tab> %
 
 " wrap
-set nowrap
+set wrap
 set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
 
-" folding
+" folding (psh...yeah right)
 set nofoldenable
 
 " save on lost focus
@@ -84,12 +87,6 @@ vmap <C-c> :w !pbcopy<cr><cr>
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
-
-" jcommenter
-autocmd FileType java let b:jcommenter_class_author='kndlrc'
-autocmd FileType java let b:jcommenter_file_author='kndlrc'
-autocmd FileType java source $VIM/macros/jcommenter.vim
-autocmd FileType java map <M-c> :call JCommentWriter()<CR>
 
 " quick vim config edit mappings
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>

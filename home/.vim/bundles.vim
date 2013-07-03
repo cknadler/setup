@@ -66,4 +66,4 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'jnwhiteh/vim-golang'
 
 " Java
-Bundle 'vim-scripts/jcommenter.vim'
+"Bundle 'vim-scripts/jcommenter.vim'
