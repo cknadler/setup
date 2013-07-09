@@ -40,6 +40,5 @@ for p in $HOME/src/*; do alias d-$(basename $p)="cd $p"; done
 
 # custom work config
 if [ -d ~/.work_bin ]; then
-  PATH="$PATH:$HOME/.work_bin"
   source $HOME/.work_bin/.workrc
 fi
