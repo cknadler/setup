@@ -20,12 +20,10 @@ Bundle 'gmarik/vundle'
 " Git
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
+Bundle 'vim-gitgutter'
 
 " Colorschemes
 Bundle 'tomasr/molokai'
-
-" Syntax Highlighting
-Bundle 'tpope/vim-markdown'
 
 " Utilities
 Bundle 'scrooloose/syntastic'
@@ -46,6 +44,18 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-unimpaired'
 
+" tmux
+Bundle 'sjl/vitality.vim'
+
+" vimux
+Bundle 'benmills/vimux'
+Bundle 'jgdavey/vim-turbux'
+Bundle 'benmills/vimux-golang'
+
+"""""
+" Lanugage Specific Plugins
+"""""
+
 " Web Frontend
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
@@ -55,6 +65,9 @@ Bundle 'othree/html5.vim'
 " Web Backend
 Bundle 'digitaltoad/vim-jade'
 Bundle 'tpope/vim-rails'
+
+" Markdown
+Bundle 'tpope/vim-markdown'
 
 " Ruby
 Bundle 'vim-ruby/vim-ruby'

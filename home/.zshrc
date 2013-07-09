@@ -43,4 +43,3 @@ if [ -d ~/.work_bin ]; then
   PATH="$PATH:$HOME/.work_bin"
   source $HOME/.work_bin/.workrc
 fi
-
