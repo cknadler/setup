@@ -81,6 +81,9 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 " turn off gitgutter by default
 let g:gitgutter_enabled = 0
 
+" command-t conf
+nnoremap <leader>t :CommandT<cr>
+
 " save on lost focus
 au FocusLost * :wa
 

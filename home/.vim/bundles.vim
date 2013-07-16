@@ -40,7 +40,7 @@ Bundle 'Valloric/MatchTagAlways'
 Bundle 'bronson/vim-trailing-whitespace'
 
 " Navigation
-Bundle 'kien/ctrlp.vim'
+Bundle 'wincent/Command-T'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-unimpaired'
 
