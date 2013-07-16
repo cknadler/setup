@@ -78,6 +78,9 @@ set nofoldenable
 let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['ruby', 'c'] }
 
+" turn off gitgutter by default
+let g:gitgutter_enabled = 0
+
 " save on lost focus
 au FocusLost * :wa
 
