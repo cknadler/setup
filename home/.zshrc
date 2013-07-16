@@ -39,6 +39,4 @@ CC=/usr/local/bin/gcc-4.2
 for p in $HOME/src/*; do alias d-$(basename $p)="cd $p"; done
 
 # custom work config
-if [ -d ~/.work_bin ]; then
-  source $HOME/.work_bin/.workrc
-fi
+[[ -d $HOME/.work_bin ]] && source $HOME/.work_bin/.workrc
