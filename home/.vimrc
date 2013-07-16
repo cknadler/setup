@@ -13,7 +13,6 @@ filetype plugin indent on
 """""""""""""""""""""""""
 " general config
 """"""""""""""""""""""""
-
 " prevent security exploit
 set modelines=0
 
@@ -74,16 +73,25 @@ set colorcolumn=85
 " folding (psh...yeah right)
 set nofoldenable
 
-" custom syntastic conf
+""""""""""""""""""""""""
+" plugin config
+""""""""""""""""""""""""
+" syntastic
 let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['ruby', 'c'] }
 
-" turn off gitgutter by default
+" gitgutter
 let g:gitgutter_enabled = 0
 
-" command-t conf
+" easy-motion
+let g:EasyMotion_leader_key = '<Leader>'
+
+" command-t
 nnoremap <leader>t :CommandT<cr>
 
+""""""""""""""""""""""""
+" advanced config
+""""""""""""""""""""""""
 " save on lost focus
 au FocusLost * :wa
 
@@ -99,9 +107,6 @@ endif
 " copy/paste pbcopy
 vmap <C-x> :!pbcopy<cr>
 vmap <C-c> :w !pbcopy<cr><cr>
-
-" easy-motion
-let g:EasyMotion_leader_key = '<Leader>'
 
 " quick vim config edit mappings
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>

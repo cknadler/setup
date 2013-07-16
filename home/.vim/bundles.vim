@@ -55,31 +55,34 @@ Bundle 'benmills/vimux-golang'
 """""
 " Lanugage Specific Plugins
 """""
-
-" Web Frontend
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-haml'
+" HTML
 Bundle 'othree/html5.vim'
 
-" Web Backend
+" CoffeeScript
+Bundle 'kchmck/vim-coffee-script'
+
+" JavaScript
+Bundle 'pangloss/vim-javascript'
+
+" Jade
 Bundle 'digitaltoad/vim-jade'
-Bundle 'tpope/vim-rails'
 
 " Markdown
 Bundle 'tpope/vim-markdown'
 
 " Ruby
+Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-haml'
+
+" Clojure
+Bundle 'tpope/vim-fireplace'
 
 " Go
 Bundle 'jnwhiteh/vim-golang'
 
 " Mediawiki
 Bundle 'chikamichi/mediawiki.vim'
-
-" Java
-"Bundle 'vim-scripts/jcommenter.vim'
