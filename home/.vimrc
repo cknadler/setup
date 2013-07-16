@@ -30,6 +30,11 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" language specific tabs
+au FileType java setl ts=4 sw=4 sts=4
+au FileType javascript setl ts=2 sw=2 sts=2
+au FileType html setl ts=4 sw=4 sts=4
+
 " general
 set encoding=utf-8
 set scrolloff=5
@@ -68,6 +73,10 @@ set colorcolumn=85
 
 " folding (psh...yeah right)
 set nofoldenable
+
+" custom syntastic conf
+let g:syntastic_mode_map = { 'mode': 'passive',
+                           \ 'active_filetypes': ['ruby', 'c'] }
 
 " save on lost focus
 au FocusLost * :wa

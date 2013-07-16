@@ -20,7 +20,7 @@ Bundle 'gmarik/vundle'
 " Git
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
-Bundle 'vim-gitgutter'
+Bundle 'airblade/vim-gitgutter'
 
 " Colorschemes
 Bundle 'tomasr/molokai'
@@ -77,6 +77,9 @@ Bundle 'tpope/vim-cucumber'
 
 " Go
 Bundle 'jnwhiteh/vim-golang'
+
+" Mediawiki
+Bundle 'chikamichi/mediawiki.vim'
 
 " Java
 "Bundle 'vim-scripts/jcommenter.vim'
