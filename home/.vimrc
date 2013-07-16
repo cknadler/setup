@@ -112,28 +112,6 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 """"""""""""""""""""""""
-" dmenu hacks
-""""""""""""""""""""""""
-" Strip the newline from the end of a string
-function! Chomp(str)
-  return substitute(a:str, '\n$', '', '')
-endfunction
-
-" Find a file and pass it to cmd
-function! DmenuOpen(cmd)
-  let fname = Chomp(system("git ls-files | dmenu -i -l 20 -p " . a:cmd))
-  if empty(fname)
-    return
-  endif
-  execute a:cmd . " " . fname
-endfunction
-
-" open a file in a new vsplit
-map <c-t> :call DmenuOpen("vs")<cr>
-" open a file in the current buffer
-map <c-f> :call DmenuOpen("e")<cr>
-
-""""""""""""""""""""""""
 " unbind stuff
 """"""""""""""""""""""""
 " disable arrow keys
