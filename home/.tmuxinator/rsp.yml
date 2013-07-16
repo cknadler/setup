@@ -1,0 +1,18 @@
+project_name: rsp
+project_root: ~/amzn-dev/workplace/dev/rsp/src
+pre: mnt-dev
+tabs:
+  - local:
+      layout: even-horizontal
+      panes:
+        - vim
+  - local2:
+      layout: even-horizontal
+      panes:
+        - #empty, will just run plain zsh
+  - remote:
+      layout: even-horizontal
+      panes:
+        - con-dev
+        - con-dev
+  - irssi: irssi
