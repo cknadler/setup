@@ -14,8 +14,9 @@ PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # general
-alias l='ls -a'
-alias ll='ls -la'
+alias l='ls'
+alias la='ls -A'
+alias ll='ls -lA'
 alias c='clear'
 alias rst='exec $SHELL -l'
 
@@ -29,7 +30,7 @@ alias src='cd ~/src'
 alias home='cd ~/.homesick/repos/cknadler/dotfiles'
 
 # use homebrew gcc
-CC=/usr/local/bin/gcc-4.2
+# CC=/usr/local/bin/gcc-4.2
 
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
