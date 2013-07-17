@@ -12,3 +12,6 @@
 .*.sw[a-z]
 *.un~
 Session.vim
+
+## FUSE
+.fuse_*
