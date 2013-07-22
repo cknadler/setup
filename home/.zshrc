@@ -30,14 +30,15 @@ alias src='cd ~/src'
 alias home='cd ~/.homesick/repos/cknadler/dotfiles'
 
 # use homebrew gcc
-# CC=/usr/local/bin/gcc-4.2
+CC=/usr/local/bin/gcc-4.2
 
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 # aliases for quick project navigation
 # TODO: make this tolerant of no directories in src
-for p in $HOME/src/*; do alias d-$(basename $p)="cd $p"; done
+# TODO: get this to not break promt
+# for p in $HOME/src/*; do alias d-$(basename $p)="cd $p"; done
 
 # custom work config
 [[ -d $HOME/.work_bin ]] && source $HOME/.work_bin/.workrc
