@@ -20,17 +20,14 @@ Bundle 'gmarik/vundle'
 " Git
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
 
 " Colorschemes
 Bundle 'tomasr/molokai'
 
 " Utilities
 Bundle 'scrooloose/syntastic'
-Bundle 'mileszs/ack.vim'
 
 " Editing
-Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -40,17 +37,11 @@ Bundle 'Valloric/MatchTagAlways'
 Bundle 'bronson/vim-trailing-whitespace'
 
 " Navigation
-Bundle 'wincent/Command-T'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-unimpaired'
+Bundle 'kien/ctrlp.vim'
 
 " tmux
 Bundle 'sjl/vitality.vim'
-
-" vimux
-Bundle 'benmills/vimux'
-Bundle 'jgdavey/vim-turbux'
-Bundle 'benmills/vimux-golang'
 
 """""
 " Lanugage Specific Plugins
@@ -77,9 +68,6 @@ Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
-
-" Clojure
-Bundle 'tpope/vim-fireplace'
 
 " Go
 Bundle 'jnwhiteh/vim-golang'

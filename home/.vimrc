@@ -78,16 +78,7 @@ set nofoldenable
 """"""""""""""""""""""""
 " syntastic
 let g:syntastic_mode_map = { 'mode': 'passive',
-                           \ 'active_filetypes': ['ruby', 'c'] }
-
-" gitgutter
-let g:gitgutter_enabled = 0
-
-" easy-motion
-let g:EasyMotion_leader_key = '<Leader>'
-
-" command-t
-nnoremap <leader>t :CommandT<cr>
+                           \ 'active_filetypes': ['ruby', 'c', 'javascript'] }
 
 """"""""""""""""""""""""
 " advanced config
@@ -134,3 +125,4 @@ noremap <Right> <NOP>
 
 " disable ZZ, use :wq yo
 nnoremap ZZ <NOP>
+
