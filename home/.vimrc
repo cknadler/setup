@@ -84,7 +84,10 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['ruby', 'c', 'javascript'] }
 
 " ctrlp
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn|eclipse|settings)$',
+  \ 'file': '\v\.(class)$',
+  \ }
 
 """"""""""""""""""""""""
 " advanced config
