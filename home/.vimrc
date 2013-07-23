@@ -48,6 +48,9 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 
+" ignored files
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
 " leader
 let mapleader = ","
 
@@ -79,6 +82,9 @@ set nofoldenable
 " syntastic
 let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['ruby', 'c', 'javascript'] }
+
+" ctrlp
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 """"""""""""""""""""""""
 " advanced config
