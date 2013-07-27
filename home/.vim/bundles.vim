@@ -23,6 +23,8 @@ Bundle 'tpope/vim-fugitive'
 
 " Colorschemes
 Bundle 'tomasr/molokai'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'Lokaltog/vim-distinguished'
 
 " Utilities
 Bundle 'scrooloose/syntastic'

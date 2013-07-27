@@ -21,7 +21,7 @@ set t_Co=256
 
 " colorscheme
 set background=dark
-colorscheme molokai
+colorscheme jellybeans
 
 " tabs
 set tabstop=2
