@@ -49,6 +49,10 @@ EDITOR='vim'
 # use homebrew gcc
 CC=/usr/local/bin/gcc-4.2
 
+###
+# load custom config
+###
+
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 

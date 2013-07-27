@@ -21,7 +21,7 @@ set t_Co=256
 
 " colorscheme
 set background=dark
-colorscheme jellybeans
+colorscheme molokai
 
 " tabs
 set tabstop=2
@@ -134,4 +134,3 @@ noremap <Right> <NOP>
 
 " disable ZZ, use :wq yo
 nnoremap ZZ <NOP>
-
