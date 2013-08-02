@@ -64,12 +64,13 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'tpope/vim-markdown'
 
 " Ruby
-Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
+Bundle 'noprompt/vim-yardoc'
 
 " Go
 Bundle 'jnwhiteh/vim-golang'
