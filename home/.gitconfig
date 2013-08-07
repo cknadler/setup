@@ -13,11 +13,15 @@
 [alias]
   # add
   a = add
+  aa = add -A
+  ae = add -e
   au = add -u
-  ap = add --patch
+  ap = add -p
+  ai = add -i
 
   # branch
   b = branch
+  bu = branch -u
 
   # checkout
   co = checkout
@@ -31,16 +35,12 @@
   df = diff
   dc = diff --cached
 
-  ###
   # log
-  ###
-  l = log --decorate --stat
+  l = log --decorate --stat # standard log
   sl = log --pretty=format:'%Cred%h%Creset %s %Cgreen%d%Creset' # short log
   cl = log -u # change log
 
-  ###
   # ribbon
-  ###
   ribbon = tag --force _ribbon origin/master
   catchup = log --patch --reverse --topo-order _ribbon..origin/master
 
