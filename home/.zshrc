@@ -29,7 +29,6 @@ eval "$(rbenv init -)"
 
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-source ~/.bin/tmuxinator.zsh # autocompletion
 DISABLE_AUTO_TITLE=true
 
 # work
