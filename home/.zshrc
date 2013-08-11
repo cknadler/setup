@@ -11,7 +11,7 @@ plugins=(brew bundler gem node npm osx rails4 rake rbenv rsync ruby tmux tmuxina
 # path
 ###
 
-# Standard path
+# standard path
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 # npm
@@ -19,7 +19,21 @@ PATH="/usr/local/share/npm/bin:$PATH"
 
 # rbenv
 PATH="$HOME/.rbenv/bin:$PATH"
+
+###
+# config
+###
+
+# rbenv
 eval "$(rbenv init -)"
+
+# tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+source ~/.bin/tmuxinator.zsh # autocompletion
+DISABLE_AUTO_TITLE=true
+
+# work
+[[ -d $HOME/.work_bin ]] && source $HOME/.work_bin/.workrc
 
 ###
 # aliases
@@ -40,7 +54,7 @@ alias src='cd ~/src'
 alias home='cd ~/.homesick/repos/cknadler/dotfiles'
 
 ###
-# env variables
+# general env variables
 ###
 
 # general
@@ -48,13 +62,3 @@ EDITOR='vim'
 
 # use homebrew gcc
 CC=/usr/local/bin/gcc-4.2
-
-###
-# load custom config
-###
-
-# tmuxinator
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-
-# custom work config
-[[ -d $HOME/.work_bin ]] && source $HOME/.work_bin/.workrc
