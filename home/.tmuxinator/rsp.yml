@@ -1,7 +1,7 @@
 project_name: rsp
 project_root: ~/amzn-dev
-pre_window: mnt-dev
-tabs:
+pre: mnt-dev
+windows:
   - editor:
       layout: even-horizontal
       panes:
