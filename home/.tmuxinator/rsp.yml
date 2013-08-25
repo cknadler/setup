@@ -2,11 +2,8 @@ project_name: rsp
 project_root: ~/amzn-dev
 pre: mnt-dev
 windows:
-  - editor:
-      layout: even-horizontal
-      panes:
-        - vim
-  - local_util: #empty, will just run plain zsh
+  - editor: #empty, will just run plain zsh
+  - local_util: #empty
   - remote:
       layout: even-horizontal
       panes:
