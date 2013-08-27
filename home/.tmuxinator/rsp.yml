@@ -10,4 +10,3 @@ windows:
         - con-dev
         - con-dev
   - remote_util: con-dev
-  - irssi: irssi
