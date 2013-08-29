@@ -5,7 +5,13 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="minimal"
 source $ZSH/oh-my-zsh.sh
-plugins=(brew bundler gem node npm osx rails4 rake rbenv rsync ruby tmux tmuxinator vi-mode vundle)
+plugins=(brew node npm osx)
+
+###
+# vi mode
+###
+
+bindkey -v
 
 ###
 # path
