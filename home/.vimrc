@@ -31,8 +31,8 @@ set expandtab
 
 " language specific tabs
 au FileType java setl ts=4 sw=4 sts=4
-au FileType javascript setl ts=2 sw=2 sts=2
 au FileType html setl ts=4 sw=4 sts=4
+au FileType xml setl ts=4 sw=4 sts=4
 
 " general
 set encoding=utf-8
@@ -81,7 +81,7 @@ set nofoldenable
 """"""""""""""""""""""""
 " syntastic
 let g:syntastic_mode_map = { 'mode': 'passive',
-                           \ 'active_filetypes': ['ruby', 'c', 'javascript'] }
+                           \ 'active_filetypes': ['ruby', 'c'] }
 
 " ctrlp
 let g:ctrlp_custom_ignore = {
