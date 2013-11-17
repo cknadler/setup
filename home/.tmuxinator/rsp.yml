@@ -1,9 +1,10 @@
 project_name: rsp
-project_root: ~/amzn-dev
-pre: mnt-dev
+project_root: ~/
 windows:
-  - editor: #empty, will just run plain zsh
-  - local_util: #empty
+  - e1: con-dev
+  - e2: con-dev
+  - e3: con-dev
+  - e4: con-dev
   - remote:
       layout: even-horizontal
       panes:
