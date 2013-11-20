@@ -8,14 +8,12 @@ TODO: write a script that does all of this
 
 ## Issues
 
-If you run into any problems getting things setup, contact me and we will get it figured out.
+If you see something, say something. Feel free to open issues or pull requests.
 
-Email: takeshi91k@gmail.com
+Email: takeshi91k@gmail.com  
 Twitter: [@cknadler](https://twitter.com/cknadler)
 
 ## Credits
-
-I made practically none of these dotfiles. They are mostly from:
 
 * [ryanb/dotfiles](https://github.com/ryanb/dotfiles)
 * [rtomayko/dotfiles](https://github.com/rtomayko/dotfiles)
@@ -29,7 +27,3 @@ If I'm using something I forgot to credit, please let me know.
 ## Copyright
 
 Copyright (c) 2013 Chris Knadler. See LICENSE for details.
-
-[rbenv]: https://github.com/sstephenson/rbenv/
-[homesick]: https://github.com/technicalpickles/homesick
-[omzsh]: https://github.com/robbyrussell/oh-my-zsh
