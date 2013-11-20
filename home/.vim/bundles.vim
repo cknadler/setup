@@ -5,7 +5,7 @@
 "
 " This file contains all the configuration needed to get the
 " bundles installed and vundle working. Individual bundle
-" configuration can be found in vimrc.
+" configuration can be found in .vimrc.
 """
 
 " Vundle required conf
@@ -46,8 +46,9 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'sjl/vitality.vim'
 
 """""
-" Lanugage Specific Plugins
+" Lanugage Specific Bundles
 """""
+
 " HTML
 Bundle 'othree/html5.vim'
 
@@ -56,6 +57,7 @@ Bundle 'kchmck/vim-coffee-script'
 
 " JavaScript
 Bundle 'pangloss/vim-javascript'
+Bundle 'elzr/vim-json'
 
 " Jade
 Bundle 'digitaltoad/vim-jade'

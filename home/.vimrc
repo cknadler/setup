@@ -1,8 +1,13 @@
 """""""""""""""""""""""""
-" bundle config
+" pre config
 """""""""""""""""""""""""
+
 set nocompatible
 filetype off
+
+"""""""""""""""""""""""""
+" activate bundles
+"""""""""""""""""""""""""
 
 " load all bundles
 source ~/.vim/bundles.vim
@@ -11,8 +16,9 @@ syntax on
 filetype plugin indent on
 
 """""""""""""""""""""""""
-" general config
+" general
 """"""""""""""""""""""""
+
 " prevent security exploit
 set modelines=0
 
@@ -34,7 +40,7 @@ au FileType java setl ts=4 sw=4 sts=4
 au FileType html setl ts=4 sw=4 sts=4
 au FileType xml setl ts=4 sw=4 sts=4
 
-" general
+" misc
 set encoding=utf-8
 set scrolloff=5
 set autoindent
@@ -89,9 +95,13 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(class)$',
   \ }
 
+" vim-json
+let g:vim_json_syntax_conceal = 0 " don't conceal quotes
+
 """"""""""""""""""""""""
-" advanced config
+" bindings
 """"""""""""""""""""""""
+
 " save on lost focus
 au FocusLost * :wa
 
@@ -120,8 +130,9 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 """"""""""""""""""""""""
-" unbind stuff
+" unbindings
 """"""""""""""""""""""""
+
 " disable arrow keys
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
