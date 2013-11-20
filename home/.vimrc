@@ -50,6 +50,7 @@ set fileformats="unix,dos,mac"
 " appearance
 set ruler
 set showmode
+set cursorline     " highlight current line
 set laststatus=2   " always show status line
 set cmdheight=2    " use a status bar that is 2 rows high
 set nonumber       " no line numbers
@@ -57,11 +58,10 @@ set nowrap
 set textwidth=79
 set colorcolumn=85
 set listchars=tab:▸\ ,trail:·,extends:#,nbsp:·
-set nolist         " list characters are turned on for some filetypes (later)
+set nolist         " list characters enabled for some ft (later)
 set shortmess+=I   " hide the launch screen
 
 " bells
-set novisualbell
 
 " movement
 set scrolloff=5
@@ -91,7 +91,20 @@ set nofoldenable
 set encoding=utf-8
 set termencoding=utf-8
 set ttyfast
-set lazyredraw     " don't update the display while executing macros
+set lazyredraw         " don't update the display while executing macros
+set novisualbell       " no...
+set noerrorbells       " ...bells
+
+" internal
+set history=1000       " remember more commands and search history
+set undolevels=1000    " use many muchos levels of undo
+if v:version >= 730
+    set undofile       " keep a persistent backup file
+    set undodir=~/.vim/.undo,~/tmp,/tmp
+endif
+set nobackup           " no backup files
+set noswapfile         " no swap files
+set directory=~/.vim/.tmp,~/tmp,/tmp
 
 """"""""""""""""""""""""
 " plugin config
@@ -120,9 +133,24 @@ set pastetoggle=<F2>
 " save on lost focus
 au FocusLost * :wa
 
+" sort paragraphs
+vnoremap <leader>s !sort -f<CR>gv
+nnoremap <leader>s vip!sort -f<CR><Esc>
+
 " quick colon
 nnoremap ; :
 vnoremap ; :
+
+" get j and k to work as expected on super long (wrapped) lines
+nnoremap j gj
+nnoremap k gk
+
+" delete a line without adding it to the yank stack
+nnoremap <silent> <leader>d "_d
+vnoremap <silent> <leader>d "_d
+
+" yank to the end of the line
+nnoremap Y y$
 
 " fix tmux + vim + osx clipboard issues
 if $TMUX == ''
