@@ -37,11 +37,6 @@ set expandtab
 set autoindent
 set copyindent
 
-" language specific indentation
-au FileType java setl ts=4 sw=4 sts=4
-au FileType html setl ts=4 sw=4 sts=4
-au FileType xml setl ts=4 sw=4 sts=4
-
 " editing
 set hidden
 set formatoptions=qrn1
@@ -191,3 +186,36 @@ noremap <Right> <NOP>
 
 " disable ZZ, use :wq yo
 nnoremap ZZ <NOP>
+
+""""""""""""""""""""""""
+" filetype specific
+""""""""""""""""""""""""
+
+" only run this if autocmd is supported
+if has("autocmd")
+
+  aug invisible_chars "{{{
+      au!
+      " show invisible characters in all of these files
+      au filetype vim setl list
+      au filetype python setl list
+      au filetype ruby setl list
+      au filetype javascript,css setl list
+  aug end "}}}
+
+  aug java_files "{{{
+    au!
+    au filetype java setl ts=4 sw=4 sts=4
+  aug end "}}}
+
+  aug html_files "{{{
+    au!
+    au filetype html setl ts=4 sw=4 sts=4
+  aug end "}}}
+
+  aug xml_files "{{{
+    au!
+    au filetype xml setl ts=4 sw=4 sts=4
+  aug end "}}}
+
+endif
