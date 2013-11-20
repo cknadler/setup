@@ -22,6 +22,9 @@ filetype plugin indent on
 " prevent security exploit
 set modelines=0
 
+" shell
+set shell=bash " be explicit in case we are using something like fish
+
 " 256 colors
 set t_Co=256
 
@@ -29,36 +32,45 @@ set t_Co=256
 set background=dark
 colorscheme molokai
 
-" tabs
+" leader
+let mapleader = ","
+
+" indentation
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set autoindent
+set copyindent
 
-" language specific tabs
+" language specific indentation
 au FileType java setl ts=4 sw=4 sts=4
 au FileType html setl ts=4 sw=4 sts=4
 au FileType xml setl ts=4 sw=4 sts=4
 
-" misc
-set encoding=utf-8
-set scrolloff=5
-set autoindent
+" appearance
+set ruler
 set showmode
-set hidden
+set laststatus=2
+set nonumber
+set nowrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+" bells
+set novisualbell
+
+" movement
+set scrolloff=5
+set backspace=indent,eol,start
+
+" menu
 set wildmenu
 set wildmode=list:longest
-set visualbell
-set ttyfast
-set ruler
-set backspace=indent,eol,start
-set laststatus=2
 
 " ignored files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
-" leader
-let mapleader = ","
 
 " search
 nnoremap / /\v
@@ -73,18 +85,18 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
-" wrap
-set nowrap
-set textwidth=79
-set formatoptions=qrn1
-set colorcolumn=85
-
 " folding (psh...yeah right)
 set nofoldenable
+
+" misc
+set encoding=utf-8
+set hidden
+set ttyfast
 
 """"""""""""""""""""""""
 " plugin config
 """"""""""""""""""""""""
+
 " syntastic
 let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['ruby', 'c'] }
