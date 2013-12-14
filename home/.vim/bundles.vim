@@ -23,19 +23,17 @@ Bundle 'tpope/vim-fugitive'
 
 " Colorschemes
 Bundle 'tomasr/molokai'
-"Bundle 'nanotech/jellybeans.vim'
-"Bundle 'Lokaltog/vim-distinguished'
 
 " Utilities
 Bundle 'scrooloose/syntastic'
 
-" Editing
+" Appearance
 Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdcommenter'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Valloric/MatchTagAlways'
 
-" Formatting
+" Editing
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'bronson/vim-trailing-whitespace'
 
 " Navigation

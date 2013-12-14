@@ -84,3 +84,6 @@
 
 [github]
   user = cknadler
+
+[amazon]
+	append-cr-url = true

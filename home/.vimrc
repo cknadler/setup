@@ -56,8 +56,6 @@ set listchars=tab:▸\ ,trail:·,extends:#,nbsp:·
 set nolist         " list characters enabled for some ft (later)
 set shortmess+=I   " hide the launch screen
 
-" bells
-
 " movement
 set scrolloff=5
 set backspace=indent,eol,start
@@ -195,12 +193,13 @@ nnoremap ZZ <NOP>
 if has("autocmd")
 
   aug invisible_chars "{{{
-      au!
-      " show invisible characters in all of these files
-      au filetype vim setl list
-      au filetype python setl list
-      au filetype ruby setl list
-      au filetype javascript,css setl list
+    au!
+    " show invisible characters in all of these files
+    au filetype vim setl list
+    au filetype python setl list
+    au filetype ruby setl list
+    au filetype javascript setl list
+    au filetype css setl list
   aug end "}}}
 
   aug java_files "{{{
@@ -219,3 +218,10 @@ if has("autocmd")
   aug end "}}}
 
 endif
+
+"""
+" excercises
+"""
+
+map - ddp
+map _ ddkP
