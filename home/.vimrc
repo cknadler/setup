@@ -150,6 +150,9 @@ vnoremap <silent> <leader>d "_d
 " yank to the end of the line
 nnoremap Y y$
 
+" move current line up and append above line to the end
+nnoremap K k0d$j$a <Esc>pkdd
+
 " fix tmux + vim + osx clipboard issues
 if $TMUX == ''
   set clipboard+=unnamed
