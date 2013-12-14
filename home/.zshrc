@@ -60,4 +60,5 @@ alias g=git
 
 # navigation
 alias src='cd ~/src'
+alias ws='cd ~/workspace'
 alias home='cd ~/.homesick/repos/cknadler/dotfiles'

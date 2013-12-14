@@ -22,7 +22,6 @@ filetype plugin indent on
 set modelines=0     " prevent security exploit
 set shell=bash      " be explicit in case we are using something like fish
 let mapleader = ","
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 " colorscheme
 set t_Co=256        " 256 colors
@@ -104,17 +103,23 @@ set directory=~/.vim/.tmp,~/tmp,/tmp
 """"""""""""""""""""""""
 
 " syntastic
-let g:syntastic_mode_map = { 'mode': 'passive',
-                           \ 'active_filetypes': ['ruby', 'c'] }
-
-" ctrlp
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|eclipse|settings)$',
-  \ 'file': '\v\.(class)$',
+let g:syntastic_mode_map = {
+  \ 'mode': 'passive',
+  \ 'active_filetypes': ['ruby', 'c']
   \ }
 
 " vim-json
 let g:vim_json_syntax_conceal = 0 " don't conceal quotes
+
+""""""""""""""""""""""""
+" wildignore
+""""""""""""""""""""""""
+set wildignore+=*/tmp/*,*.swp,*.zip,*.out  " general
+set wildignore+=*.so,*.dylib,*.a,*.o       " c family
+set wildignore+=.git,.hg,.svn              " source control
+set wildignore+=.eclipse,.settings         " eclipse
+set wildignore+=*.class                    " java
+set wildignore+=node_modules               " node
 
 """"""""""""""""""""""""
 " bindings
