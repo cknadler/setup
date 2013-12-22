@@ -35,6 +35,7 @@ Bundle 'Valloric/MatchTagAlways'
 " Editing
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'junegunn/vim-easy-align'
 
 " Navigation
 Bundle 'Lokaltog/vim-easymotion'

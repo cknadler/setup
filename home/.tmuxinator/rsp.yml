@@ -2,12 +2,3 @@ project_name: rsp
 project_root: ~/
 windows:
   - e1: con-dev
-  - e2: con-dev
-  - e3: con-dev
-  - e4: con-dev
-  - remote:
-      layout: even-horizontal
-      panes:
-        - con-dev
-        - con-dev
-  - remote_util: con-dev
