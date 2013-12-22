@@ -21,7 +21,7 @@ filetype plugin indent on
 
 set modelines=0     " prevent security exploit
 set shell=bash      " be explicit in case we are using something like fish
-let mapleader = ","
+let mapleader=","
 
 " colorscheme
 set t_Co=256        " 256 colors
@@ -110,6 +110,12 @@ let g:syntastic_mode_map = {
 
 " vim-json
 let g:vim_json_syntax_conceal = 0 " don't conceal quotes
+
+" easy-align
+" start interactive easy-align in visual mode
+vmap <Enter> <Plug>(EasyAlign)
+" start interactive easy-align with a Vim movement
+nmap <Leader>a <Plug>(EasyAlign)
 
 """"""""""""""""""""""""
 " wildignore
@@ -226,10 +232,3 @@ if has("autocmd")
   aug end "}}}
 
 endif
-
-"""
-" excercises
-"""
-
-map - ddp
-map _ ddkP
