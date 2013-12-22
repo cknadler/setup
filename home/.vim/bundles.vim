@@ -48,6 +48,8 @@ Bundle 'sjl/vitality.vim'
 " Lanugage Specific Bundles
 """""
 
+Bundle 'mustache/vim-mustache-handlebars'
+
 " HTML
 Bundle 'othree/html5.vim'
 

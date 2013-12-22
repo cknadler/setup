@@ -62,3 +62,6 @@ alias g=git
 alias src='cd ~/src'
 alias ws='cd ~/workspace'
 alias home='cd ~/.homesick/repos/cknadler/dotfiles'
+
+# ruby dev
+alias bex='bundle exec'
