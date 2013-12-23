@@ -65,3 +65,5 @@ alias home='cd ~/.homesick/repos/cknadler/dotfiles'
 
 # ruby dev
 alias bex='bundle exec'
+alias bi='bundle install'
+alias bu='bundle uninstall'
