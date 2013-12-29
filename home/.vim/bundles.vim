@@ -81,3 +81,6 @@ Bundle 'jnwhiteh/vim-golang'
 
 " Mediawiki
 Bundle 'chikamichi/mediawiki.vim'
+
+" AppleScript
+Bundle 'vim-scripts/applescript.vim'

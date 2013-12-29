@@ -1,0 +1,11 @@
+project_name: nidyx
+project_root: ~/src/nidyx
+
+windows:
+  - editor: vim
+  - console:
+      layout: main-vertical
+      panes:
+        - bundle exec guard
+        - # plain zsh
+

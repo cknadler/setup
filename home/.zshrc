@@ -18,13 +18,15 @@ bindkey -v
 ###
 
 # standard path
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+PATH=/usr/bin:/bin:/usr/sbin:/sbin
+# homebrew
+PATH=/usr/local/bin:$PATH
 # npm
-PATH="/usr/local/share/npm/bin:$PATH"
+PATH=/usr/local/share/npm/bin:$PATH
 # rbenv
-PATH="$HOME/.rbenv/bin:$PATH"
+PATH=$HOME/.rbenv/bin:$PATH
 # work
-PATH="$PATH:$HOME/.work_bin"
+PATH=$PATH:$HOME/.work_bin
 
 ###
 # general env variables
@@ -34,11 +36,12 @@ EDITOR='vim'
 CC=/usr/local/bin/gcc-4.2 # use homebrew gcc
 
 ###
-# tool loaders
+# setup tools
 ###
 
 # rbenv
 eval "$(rbenv init -)"
+
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 DISABLE_AUTO_TITLE=true
