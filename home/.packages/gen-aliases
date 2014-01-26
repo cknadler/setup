@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+ws = "/Users/kndlrc/workspace"
+Dir.foreach(ws) do |f|
+  next if ['..','.'].include?(f)
+  als = f.gsub(/[a-z]/, "").downcase
+  puts "alias #{als}='cd #{ws}/#{f}';"
+end

@@ -75,6 +75,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
 Bundle 'noprompt/vim-yardoc'
 Bundle 'sunaku/vim-ruby-minitest'
+Bundle 'tpope/vim-liquid'
 
 " Go
 Bundle 'jnwhiteh/vim-golang'

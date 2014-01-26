@@ -200,6 +200,13 @@ noremap <Right> <NOP>
 nnoremap ZZ <NOP>
 
 """"""""""""""""""""""""
+" setting filetypes
+""""""""""""""""""""""""
+
+" ruby
+au BufRead,BufNewFile Podfile set filetype=ruby
+
+""""""""""""""""""""""""
 " filetype specific
 """"""""""""""""""""""""
 

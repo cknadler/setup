@@ -1,0 +1,6 @@
+project_name: telly
+project_root: ~/workspace
+windows:
+  - iphone: cd IPhone
+  - iphone-frameworks: cd IPhoneFrameworks
+  - srds-client: cd SRDSClientIOS

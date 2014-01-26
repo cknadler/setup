@@ -1,0 +1,6 @@
+project_name: vim-anywhere
+project_root: ~/src/vim-anywhere
+
+windows:
+  - editor: vim
+  - console:

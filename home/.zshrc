@@ -70,3 +70,5 @@ alias home='cd ~/.homesick/repos/cknadler/dotfiles'
 alias bex='bundle exec'
 alias bi='bundle install'
 alias bu='bundle uninstall'
+
+eval `~/.packages/gen-aliases`
