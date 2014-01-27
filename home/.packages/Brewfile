@@ -26,13 +26,15 @@ install automake
 install curl
 install git
 install hub
+install macvim
 install node
 install pcre
 install python
 install python3
+install rbenv
 install reattach-to-user-namespace
+install ruby-build
 install sqlite
-install macvim
 install the_silver_searcher
 install tmux
 install xctool

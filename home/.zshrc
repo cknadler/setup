@@ -19,10 +19,10 @@ bindkey -v
 
 # standard path
 PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
-# homebrew
-PATH=/usr/local/bin:$PATH
 # gnu core utils
 PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+# homebrew
+PATH=/usr/local/bin:$PATH
 # npm
 PATH=/usr/local/share/npm/bin:$PATH
 # rbenv
