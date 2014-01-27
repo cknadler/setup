@@ -96,4 +96,7 @@ alias bu='bundle uninstall'
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
+# core-utils
+alias readlink=greadlink
+
 eval `~/.packages/gen-aliases`

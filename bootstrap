@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+run_remote() {
+  curl -fsSL https://raw.github.com/cknadler/dotfiles/master/$1 | bash
+}
+
+# Homebrew
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+# Install everything from Brewfile
+curl -fsSL https://raw.github.com/cknadler/dotfiles/master/home/.packages/Brewfile > /private/tmp/Brewfile
+brew bundle /private/tmp/Brewfile
+# Install Casks
+run_remote home/.cask
+
+# Install Ruby
+RUBY_VERSION="2.0.0-p353"
+rbenv install $RUBY_VERSION
+rbenv global $RUBY_VERSION
+rbenv rehash
+
+# Homesick
+gem install homesick
+homesick clone cknadler/dotfiles
+homesick symlink dotfiles
+
+# vim-anywhere (should always be installed last)
+curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
