@@ -29,19 +29,19 @@ ROOT=$(dirname $SCRIPT_PATH)
 RUBY_VERSION="2.0.0-p353"
 
 ###
-# Installer
+# installer
 ###
 
 # Homebrew
-if ! installed homebrew; then
+if ! installed brew; then
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 fi
-# Install everything from Brewfile
+# install everything from Brewfile
 brew bundle $ROOT/Brewfile
-# Install Casks
+# install Casks
 $ROOT/home/.cask
 
-# Ruby
+# ruby
 # temporary env variables to get rbenv to work immediately
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
@@ -50,18 +50,20 @@ rbenv install $RUBY_VERSION
 rbenv global $RUBY_VERSION
 rbenv rehash
 
-# Gems
+# gems
 bundle install --gemfile=$ROOT/Gemfile
 rbenv rehash
 
-# Oh-my-zsh
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+# oh-my-zsh
+if ! [[ -d $HOME/.oh-my-zsh ]]; then
+  curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+fi
 
-# Homesick
+# homesick
 homesick clone cknadler/dotfiles
 homesick symlink dotfiles
 
-# Fonts
+# fonts
 mkdir -p $HOME/Library/Fonts
 cp $ROOT/fonts/* $HOME/Library/Fonts
 
@@ -69,8 +71,10 @@ cp $ROOT/fonts/* $HOME/Library/Fonts
 open $ROOT/colors/Tomorrow\ Night\ Bright.itermcolors
 
 # vim-anywhere
-curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
+if ! [[ -d $HOME/.vim-anywhere ]]; then
+  curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
+fi
 
 # OSX defaults
-# Should always be run last as it will shut down Terminal
+# should always be run last as it will shut down Terminal
 $ROOT/home/.osx
