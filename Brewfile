@@ -38,6 +38,7 @@ install sqlite
 install the_silver_searcher
 install tmux
 install xctool
+install zsh
 
 # Remove outdated versions from the cellar
 cleanup
