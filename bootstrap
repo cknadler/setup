@@ -2,6 +2,16 @@
 
 set -e
 
+###
+# functions
+###
+
+installed() { hash $1 &> /dev/null; }
+
+###
+# globals
+###
+
 # Determine the script path
 TARGET_FILE=$0
 cd "$(dirname "$TARGET_FILE")"
@@ -16,12 +26,16 @@ done
 SCRIPT_PATH=$(pwd -P)/$TARGET_FILE
 ROOT=$(dirname $SCRIPT_PATH)
 
+RUBY_VERSION="2.0.0-p353"
+
 ###
 # Installer
 ###
 
 # Homebrew
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+if ! installed homebrew; then
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+fi
 # Install everything from Brewfile
 brew bundle $ROOT/Brewfile
 # Install Casks
@@ -32,7 +46,6 @@ $ROOT/home/.cask
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 # install
-RUBY_VERSION="2.0.0-p353"
 rbenv install $RUBY_VERSION
 rbenv global $RUBY_VERSION
 rbenv rehash
