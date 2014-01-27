@@ -26,7 +26,7 @@ done
 SCRIPT_PATH=$(pwd -P)/$TARGET_FILE
 ROOT=$(dirname $SCRIPT_PATH)
 
-RUBY_VERSION="2.0.0-p353"
+RUBY_VERSION="2.0.0-p195"
 
 ###
 # installer
@@ -46,7 +46,9 @@ $ROOT/home/.cask
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 # install
-rbenv install $RUBY_VERSION
+if ! rbenv versions --bare | grep $RUBY_VERSION; then
+  rbenv install $RUBY_VERSION
+fi
 rbenv global $RUBY_VERSION
 rbenv rehash
 
