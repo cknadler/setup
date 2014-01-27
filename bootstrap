@@ -70,9 +70,6 @@ homesick symlink dotfiles
 mkdir -p $HOME/Library/Fonts
 cp $ROOT/fonts/* $HOME/Library/Fonts
 
-# iTerm 2 colors
-open $ROOT/colors/Tomorrow\ Night\ Bright.itermcolors
-
 # vim-anywhere
 if ! [[ -d $HOME/.vim-anywhere ]]; then
   curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
