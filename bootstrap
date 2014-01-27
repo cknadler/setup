@@ -53,6 +53,7 @@ rbenv global $RUBY_VERSION
 rbenv rehash
 
 # gems
+gem install bundler
 bundle install --gemfile=$ROOT/Gemfile
 rbenv rehash
 
