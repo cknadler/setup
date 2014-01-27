@@ -12,6 +12,8 @@ installcask google-chrome
 installcask iterm2
 installcask keyremap4macbook
 installcask pckeyboardhack
+installcask skype
+installcask spotify
 installcask the-unarchiver
 installcask transmission
 installcask virtualbox
