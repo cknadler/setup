@@ -1,27 +1,49 @@
 #!/usr/bin/env bash
 
-run_remote() {
-  curl -fsSL https://raw.github.com/cknadler/dotfiles/master/$1 | bash
-}
+set -e
+
+# Determine the script path
+TARGET_FILE=$0
+cd "$(dirname "$TARGET_FILE")"
+TARGET_FILE=$(basename "$TARGET_FILE")
+# Iterate down a (possible) chain of symlinks
+while [ -L "$TARGET_FILE" ]; do
+  TARGET_FILE=$(readlink "$TARGET_FILE")
+  cd "$(dirname "$TARGET_FILE")"
+  TARGET_FILE=$(basename "$TARGET_FILE")
+done
+# Put it all together
+SCRIPT_PATH=$(pwd -P)/$TARGET_FILE
+ROOT=$(dirname $SCRIPT_PATH)
+
+###
+# Installer
+###
 
 # Homebrew
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 # Install everything from Brewfile
-curl -fsSL https://raw.github.com/cknadler/dotfiles/master/home/.packages/Brewfile > /private/tmp/Brewfile
-brew bundle /private/tmp/Brewfile
+brew bundle $ROOT/Brewfile
 # Install Casks
-run_remote home/.cask
+$ROOT/home/.cask
 
-# Install Ruby
+# OSX defaults
+$ROOT/home/.osx
+
+# Ruby
 RUBY_VERSION="2.0.0-p353"
 rbenv install $RUBY_VERSION
 rbenv global $RUBY_VERSION
 rbenv rehash
 
+# Gems
+bundle install --gemfile=$ROOT/Gemfile
+rbenv rehash
+
 # Homesick
-gem install homesick
 homesick clone cknadler/dotfiles
 homesick symlink dotfiles
 
-# vim-anywhere (should always be installed last)
+# vim-anywhere
+# Should always be installed last as it will refocus the screen
 curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
