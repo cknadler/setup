@@ -30,7 +30,6 @@ install macvim
 install node
 install pcre
 install python
-install python3
 install rbenv
 install reattach-to-user-namespace
 install ruby-build
