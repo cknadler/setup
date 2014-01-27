@@ -51,6 +51,9 @@ homesick symlink dotfiles
 mkdir -p $HOME/Library/Fonts
 cp $ROOT/fonts/* $HOME/Library/Fonts
 
+# iTerm 2 colors
+open $ROOT/colors/Tomorrow\ Night\ Bright.itermcolors
+
 # vim-anywhere
-# Should always be installed last as it will refocus the screen
+# Should always be installed last as it will focus the screen
 curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
