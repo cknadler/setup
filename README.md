@@ -4,22 +4,31 @@ These are my config files to set up my OSX development environment.
 
 ## Setup
 
-My system setup. Software I use, key bindings I override, etc.
+Most of this is automated. Run the following:
 
-### Fonts
+```bash
+git clone https://github.com/cknadler/dotfiles && \
+pushd dotfiles && \
+  ./bootstrap && \
+popd && \
+rm -r dotfiles
+```
 
-- [Atreyu](http://www.losttype.com/font/?name=atreyu)
-- [Edmondsans](http://www.losttype.com/font/?name=edmondsans)
-- [Inconsolata](http://levien.com/type/myfonts/inconsolata.html)
-- [Kilnic Slab](http://www.losttype.com/kilnic)
-- [Mission Script](http://www.losttype.com/missionscript)
-- [Source Code Pro](https://github.com/adobe/source-code-pro)
+### App Store
 
-### Software
+Software I install via the App Store:
+
+- [Dash](http://kapeli.com/dash)
+- [Growl](http://growl.info/)
+- [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
+- [Boom](http://www.globaldelight.com/boom/)
+- [Pixelmator](http://www.pixelmator.com/)
+- [XCode](https://developer.apple.com/xcode/)
+
+### Bindings
 
 - [Dash](http://kapeli.com/dash)
   - Open: `cmd+shift+space`
-- [Growl](http://growl.info/)
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
   - Maximize: `cmd+ctrl+m`
   - Left Half: `cmd+ctrl+h`
@@ -30,7 +39,6 @@ My system setup. Software I use, key bindings I override, etc.
   - Top Right: `cmd+ctrl+u`
   - Bottom Left: `cmd+ctrl+b`
   - Bottom Right: `cmd+ctrl+n`
-- [Boom](http://www.globaldelight.com/boom/)
 - [PCKeyboardHack](https://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)
   - Caps Lock: `53` (remap caps lock to escape, and vise versa)
 - [KeyRemap4MacBook](https://pqrs.org/macosx/keyremap4macbook/)
