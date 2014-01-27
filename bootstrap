@@ -27,9 +27,6 @@ brew bundle $ROOT/Brewfile
 # Install Casks
 $ROOT/home/.cask
 
-# OSX defaults
-$ROOT/home/.osx
-
 # Ruby
 RUBY_VERSION="2.0.0-p353"
 rbenv install $RUBY_VERSION
@@ -55,5 +52,8 @@ cp $ROOT/fonts/* $HOME/Library/Fonts
 open $ROOT/colors/Tomorrow\ Night\ Bright.itermcolors
 
 # vim-anywhere
-# Should always be installed last as it will focus the screen
 curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
+
+# OSX defaults
+# Should always be run last as it will shut down Terminal
+$ROOT/home/.osx
