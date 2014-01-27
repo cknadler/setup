@@ -28,6 +28,10 @@ brew bundle $ROOT/Brewfile
 $ROOT/home/.cask
 
 # Ruby
+# temporary env variables to get rbenv to work immediately
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+# install
 RUBY_VERSION="2.0.0-p353"
 rbenv install $RUBY_VERSION
 rbenv global $RUBY_VERSION
