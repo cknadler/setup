@@ -40,6 +40,9 @@ rbenv rehash
 bundle install --gemfile=$ROOT/Gemfile
 rbenv rehash
 
+# Oh-my-zsh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
 # Homesick
 homesick clone cknadler/dotfiles
 homesick symlink dotfiles
