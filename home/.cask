@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Install native apps
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+function installcask() {
+  brew cask install "${@}" 2> /dev/null
+}
+
+installcask dropbox
+installcask google-chrome
+installcask iterm2
+installcask keyremap4macbook
+installcask pckeyboardhack
+installcask the-unarchiver
+installcask transmission
+installcask virtualbox
