@@ -44,6 +44,10 @@ rbenv rehash
 homesick clone cknadler/dotfiles
 homesick symlink dotfiles
 
+# Fonts
+mkdir -p $HOME/Library/Fonts
+cp $ROOT/fonts/* $HOME/Library/Fonts
+
 # vim-anywhere
 # Should always be installed last as it will refocus the screen
 curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
