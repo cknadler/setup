@@ -11,6 +11,7 @@ installcask dropbox
 installcask google-chrome
 installcask iterm2
 installcask keyremap4macbook
+installcask mou
 installcask pckeyboardhack
 installcask skype
 installcask spotify
