@@ -73,8 +73,8 @@ DISABLE_AUTO_TITLE=true
 ###
 
 # general
-alias l='ls -A'
-alias c='clear'
+alias l='ls -A --color'
+alias ll='ls -lA --color'
 alias rst='exec $SHELL -l'
 
 # brew
@@ -86,7 +86,7 @@ alias g=git
 # navigation
 alias src='cd ~/src'
 alias ws='cd ~/workspace'
-alias home='cd ~/.homesick/repos/cknadler/dotfiles'
+alias home='cd ~/.homesick/repos/dotfiles'
 
 # ruby dev
 alias bex='bundle exec'
@@ -99,4 +99,4 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # core-utils
 alias readlink=greadlink
 
-eval `~/.packages/gen-aliases`
+#eval `~/.packages/gen-aliases`
