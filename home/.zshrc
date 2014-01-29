@@ -99,4 +99,4 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # core-utils
 alias readlink=greadlink
 
-#eval `~/.packages/gen-aliases`
+eval `~/.packages/gen-aliases`

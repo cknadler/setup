@@ -38,6 +38,8 @@ if ! installed brew; then
 fi
 # install everything from Brewfile
 brew bundle $ROOT/Brewfile
+# link apps
+brew linkapps
 # install Casks
 $ROOT/home/.cask
 
