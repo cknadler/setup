@@ -1,7 +1,7 @@
 """
 " bundles.vim
 "
-" Contains bundles to be sourced in vimrc and managed by vundle.
+" Contains bundles to be sourced in .vimrc and managed by vundle.
 "
 " This file contains all the configuration needed to get the
 " bundles installed and vundle working. Individual bundle
@@ -36,10 +36,13 @@ Bundle 'Valloric/MatchTagAlways'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'junegunn/vim-easy-align'
+Bundle 'junegunn/goyo.vim'
+Bundle 'chrisbra/NrrwRgn'
 
 " Navigation
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
+Bundle 'goldfeld/vim-seek'
 
 " tmux
 Bundle 'sjl/vitality.vim'
@@ -47,9 +50,6 @@ Bundle 'sjl/vitality.vim'
 """""
 " Lanugage Specific Bundles
 """""
-
-Bundle 'mustache/vim-mustache-handlebars'
-
 " HTML
 Bundle 'othree/html5.vim'
 
@@ -85,3 +85,6 @@ Bundle 'chikamichi/mediawiki.vim'
 
 " AppleScript
 Bundle 'vim-scripts/applescript.vim'
+
+" Mustache
+Bundle 'mustache/vim-mustache-handlebars'
