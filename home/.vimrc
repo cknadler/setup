@@ -221,6 +221,7 @@ if has("autocmd")
   aug spell_checking
     au!
     au filetype markdown setl spell
+    au filetype gitcommit setl spell
   aug end
 
   " show invisible characters in these file types
