@@ -50,7 +50,7 @@ set cmdheight=2    " use a status bar that is 2 rows high
 set nonumber       " no line numbers
 set nowrap
 set textwidth=79
-set colorcolumn=85
+set colorcolumn=80
 set listchars=tab:▸\ ,trail:·,extends:#,nbsp:·
 set nolist         " list characters enabled for some ft (later)
 set shortmess+=I   " hide the launch screen
@@ -76,7 +76,12 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
-" folding (...nope)
+" spelling
+set spelllang=en
+set spellfile=$HOME/.vim/spell/en.utf-8.add
+set nospell " spell checking enabled for some ft (later)
+
+" folding...nope
 set nofoldenable
 
 " editor
@@ -200,7 +205,7 @@ noremap <Right> <NOP>
 nnoremap ZZ <NOP>
 
 """"""""""""""""""""""""
-" setting filetypes
+" set filetypes
 """"""""""""""""""""""""
 
 " ruby
@@ -212,30 +217,34 @@ au BufRead,BufNewFile Podfile set filetype=ruby
 
 " only run this if autocmd is supported
 if has("autocmd")
-
-  aug invisible_chars "{{{
+  " turn on spell checking for these file types
+  aug spell_checking
     au!
-    " show invisible characters in all of these files
+    au filetype markdown setl spell
+  aug end
+
+  " show invisible characters in these file types
+  aug invisible_chars
+    au!
     au filetype vim setl list
     au filetype python setl list
     au filetype ruby setl list
     au filetype javascript setl list
     au filetype css setl list
-  aug end "}}}
+  aug end
 
-  aug java_files "{{{
+  aug java_files
     au!
     au filetype java setl ts=4 sw=4 sts=4
-  aug end "}}}
+  aug end
 
-  aug html_files "{{{
+  aug html_files
     au!
     au filetype html setl ts=4 sw=4 sts=4
-  aug end "}}}
+  aug end
 
-  aug xml_files "{{{
+  aug xml_files
     au!
     au filetype xml setl ts=4 sw=4 sts=4
-  aug end "}}}
-
+  aug end
 endif
