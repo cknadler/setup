@@ -1,5 +1,5 @@
 """""""""""""""""""""""""
-" pre config
+" base
 """""""""""""""""""""""""
 
 set nocompatible
@@ -88,19 +88,19 @@ set nofoldenable
 set encoding=utf-8
 set termencoding=utf-8
 set ttyfast
-set lazyredraw         " don't update the display while executing macros
-set novisualbell       " no...
-set noerrorbells       " ...bells
+set lazyredraw   " don't update the display while executing macros
+set novisualbell " no...
+set noerrorbells " ...bells
 
 " internal
-set history=1000       " remember more commands and search history
-set undolevels=1000    " use many muchos levels of undo
+set history=1000    " remember more commands and search history
+set undolevels=1000 " use many muchos levels of undo
 if v:version >= 730
-    set undofile       " keep a persistent backup file
+    set undofile    " keep a persistent backup file
     set undodir=~/.vim/.undo,~/tmp,/tmp
 endif
-set nobackup           " no backup files
-set noswapfile         " no swap files
+set nobackup        " no backup files
+set noswapfile      " no swap files
 set directory=~/.vim/.tmp,~/tmp,/tmp
 
 """"""""""""""""""""""""
@@ -220,6 +220,7 @@ if has("autocmd")
   " turn on spell checking for these file types
   aug spell_checking
     au!
+    au filetype text setl spell
     au filetype markdown setl spell
     au filetype gitcommit setl spell
   aug end
