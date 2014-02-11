@@ -4,14 +4,16 @@ brew tap phinze/homebrew-cask
 brew install brew-cask
 
 function installcask() {
-  brew cask install "${@}" 2> /dev/null
+  brew cask install "${@}"
 }
 
 installcask dropbox
 installcask google-chrome
 installcask iterm2
 installcask keyremap4macbook
+installcask mactex
 installcask mou
+installcask pandoc
 installcask pckeyboardhack
 installcask skype
 installcask spotify

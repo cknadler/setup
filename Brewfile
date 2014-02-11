@@ -18,13 +18,19 @@ install vim --override-system-vi
 tap homebrew/dupes
 install homebrew/dupes/grep
 
+# Install homebrew cask
+tap phinze/cask
+install brew-cask
+
 # Install other useful binaries
 install ack
+install apple-gcc42
 install appledoc
 install autoconf
 install automake
 install curl
 install git
+install haskell-platform
 install hub
 install macvim
 install node

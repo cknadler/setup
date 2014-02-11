@@ -17,8 +17,8 @@ bindkey -v
 # path
 ###
 
-# standard path
-PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
+# tex
+PATH=/usr/texbin:$PATH
 # gnu core utils
 PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 # homebrew
