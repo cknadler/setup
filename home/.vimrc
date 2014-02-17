@@ -28,6 +28,11 @@ set t_Co=256        " 256 colors
 set background=dark
 colorscheme molokai
 
+" fix tmux + vim + osx clipboard issues
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
+
 " indentation
 set tabstop=2
 set shiftwidth=2
@@ -143,8 +148,8 @@ set pastetoggle=<F2>
 au FocusLost * :wa
 
 " sort paragraphs
-vnoremap <leader>s !sort -f<CR>gv
-nnoremap <leader>s vip!sort -f<CR><Esc>
+vnoremap <leader>s !sort -f<cr>gv
+nnoremap <leader>s vip!sort -f<cr><Esc>
 
 " quick colon
 nnoremap ; :
@@ -164,14 +169,13 @@ nnoremap Y y$
 " move current line up and append above line to the end
 nnoremap K k0d$j$a <Esc>pkdd
 
-" fix tmux + vim + osx clipboard issues
-if $TMUX == ''
-  set clipboard+=unnamed
-endif
-
 " copy/paste pbcopy
 vmap <C-x> :!pbcopy<cr>
 vmap <C-c> :w !pbcopy<cr><cr>
+
+" quote selected text
+" automatically adds additional levels if text is already quoted
+vmap <C-L> :s/^\(\|*\)/\1\| <cr>
 
 " toggle show/hide invisible chars
 nnoremap <leader>i :set list!<cr>

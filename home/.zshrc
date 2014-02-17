@@ -77,6 +77,10 @@ alias l='ls -A --color'
 alias ll='ls -lA --color'
 alias rst='exec $SHELL -l'
 
+# vim-anywhere
+alias vaw-history='ls /tmp/vim-anywhere'
+alias vaw-latest='vim $( ls /tmp/vim-anywhere | sort -r | head -n 1 )'
+
 # brew
 alias brewup='brew update && brew upgrade'
 
