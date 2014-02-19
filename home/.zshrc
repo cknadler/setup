@@ -76,6 +76,7 @@ DISABLE_AUTO_TITLE=true
 alias l='ls -A --color'
 alias ll='ls -lA --color'
 alias rst='exec $SHELL -l'
+alias c='clear'
 
 # vim-anywhere
 alias vaw-history='ls /tmp/vim-anywhere'
