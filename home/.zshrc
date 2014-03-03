@@ -104,4 +104,7 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # core-utils
 alias readlink=greadlink
 
-eval `~/.packages/gen-aliases`
+# navigation aliases
+if [ -f ~/.packages/gen-aliases ]; then
+  eval `~/.packages/gen-aliases`
+fi

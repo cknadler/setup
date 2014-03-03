@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
+
 ws = "/Users/kndlrc/workspace"
+exit unless File.exists?(ws)
+
 Dir.foreach(ws) do |f|
   next if ['..','.'].include?(f)
   als = f.gsub(/[a-z]/, "").downcase
