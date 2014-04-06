@@ -53,9 +53,9 @@ set cursorline     " highlight current line
 set laststatus=2   " always show status line
 set cmdheight=2    " use a status bar that is 2 rows high
 set nonumber       " no line numbers
-set nowrap
-set textwidth=79
-set colorcolumn=80
+set nowrap         " no wrapping text lines, break at 80 chars or less yo
+set textwidth=80
+set colorcolumn=81
 set listchars=tab:▸\ ,trail:·,extends:#,nbsp:·
 set nolist         " list characters enabled for some ft (later)
 set shortmess+=I   " hide the launch screen
@@ -69,17 +69,12 @@ set wildmenu
 set wildmode=list:longest
 
 " search
-nnoremap / /\v
-vnoremap / /\v
 set ignorecase
 set smartcase
 set gdefault
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
 
 " spelling
 set spelllang=en
@@ -115,7 +110,7 @@ set directory=~/.vim/.tmp,~/tmp,/tmp
 " syntastic
 let g:syntastic_mode_map = {
   \ 'mode': 'passive',
-  \ 'active_filetypes': ['ruby', 'c']
+  \ 'active_filetypes': ['ruby', 'c', 'python']
   \ }
 
 " vim-json
@@ -140,6 +135,17 @@ set wildignore+=node_modules               " node
 """"""""""""""""""""""""
 " bindings
 """"""""""""""""""""""""
+
+" better search
+nnoremap / /\v
+vnoremap / /\v
+
+" kill highlighting
+nnoremap <leader><space> :noh<cr>
+
+" tab to move to next match
+nnoremap <tab> %
+vnoremap <tab> %
 
 " toggle paste mode
 set pastetoggle=<F2>
@@ -233,24 +239,17 @@ if has("autocmd")
   aug invisible_chars
     au!
     au filetype vim setl list
-    au filetype python setl list
     au filetype ruby setl list
     au filetype javascript setl list
     au filetype css setl list
   aug end
 
-  aug java_files
+  " override the default 2 space with 4 space indents in these file types
+  aug alternate_spacing
     au!
     au filetype java setl ts=4 sw=4 sts=4
-  aug end
-
-  aug html_files
-    au!
     au filetype html setl ts=4 sw=4 sts=4
-  aug end
-
-  aug xml_files
-    au!
     au filetype xml setl ts=4 sw=4 sts=4
+    au filetype python setl ts=4 sw=4 sts=4
   aug end
 endif
