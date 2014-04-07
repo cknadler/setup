@@ -1,9 +1,9 @@
 ###
-# zsh specific
+# oh my zsh
 ###
 
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="minimal"
+ZSH_THEME='minimal'
 source $ZSH/oh-my-zsh.sh
 plugins=(brew node npm osx)
 
@@ -42,30 +42,33 @@ export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 # Make some commands not show up in history
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+export HISTIGNORE='ls:cd:cd -:pwd:exit:date:* --help'
 
 # Prefer US English and use UTF-8
-export LANG="en_US"
-export LC_ALL="en_US.UTF-8"
-
-# Highlight section titles in manual pages
-export LESS_TERMCAP_md="$ORANGE"
-
-# Don’t clear the screen after quitting a manual page
-export MANPAGER="less -X"
+export LANG='en_US'
+export LC_ALL='en_US.UTF-8'
 
 # Always enable colored `grep` output
-export GREP_OPTIONS="--color=auto"
+export GREP_OPTIONS='--color=auto'
 
 ###
-# setup tools
+# man pages
+###
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md=$ORANGE
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER='less -X'
+
+###
+# source tools
 ###
 
 # rbenv
 eval "$(rbenv init -)"
 
 # tmuxinator
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 DISABLE_AUTO_TITLE=true
 
 ###
@@ -79,8 +82,8 @@ alias rst='exec $SHELL -l'
 alias c='clear'
 
 # vim-anywhere
-alias vaw-history='ls /tmp/vim-anywhere'
-alias vaw-latest='vim $( ls /tmp/vim-anywhere | sort -r | head -n 1 )'
+alias vim-aw-hist='ls /tmp/vim-anywhere'
+alias vim-aw-last='vim $( ls /tmp/vim-anywhere | sort -r | head -n 1 )'
 
 # brew
 alias brewup='brew update && brew upgrade'

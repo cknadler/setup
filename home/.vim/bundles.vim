@@ -14,77 +14,43 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 """""""""""""""""""""""
-" Bundles
+" bundles
 """""""""""""""""""""""
-
-" Git
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-fugitive'
-
-" Colorschemes
-Bundle 'tomasr/molokai'
-
-" Utilities
-Bundle 'scrooloose/syntastic'
-
-" Appearance
-Bundle 'tpope/vim-surround'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'Valloric/MatchTagAlways'
-
-" Editing
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'junegunn/goyo.vim'
-Bundle 'chrisbra/NrrwRgn'
-
-" Navigation
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'kien/ctrlp.vim'
-Bundle 'goldfeld/vim-seek'
-
-" tmux
-Bundle 'sjl/vitality.vim'
-
-"""""
-" Lanugage Specific Bundles
-"""""
-" HTML
-Bundle 'othree/html5.vim'
-
-" CoffeeScript
-Bundle 'kchmck/vim-coffee-script'
-
-" JavaScript
-Bundle 'pangloss/vim-javascript'
-Bundle 'elzr/vim-json'
-
-" Jade
-Bundle 'digitaltoad/vim-jade'
-
-" Markdown
-Bundle 'tpope/vim-markdown'
-
-" Ruby
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-haml'
-Bundle 'noprompt/vim-yardoc'
-Bundle 'sunaku/vim-ruby-minitest'
-Bundle 'tpope/vim-liquid'
-
-" Go
-Bundle 'jnwhiteh/vim-golang'
-
-" Mediawiki
+Bundle 'Valloric/MatchTagAlways'
+Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'chikamichi/mediawiki.vim'
-
-" AppleScript
-Bundle 'vim-scripts/applescript.vim'
-
-" Mustache
+Bundle 'chrisbra/NrrwRgn'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'elzr/vim-json'
+Bundle 'goldfeld/vim-seek'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'junegunn/goyo.vim'
+Bundle 'junegunn/vim-easy-align'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'noprompt/vim-yardoc'
+Bundle 'othree/html5.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'rking/ag.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'sunaku/vim-ruby-minitest'
+Bundle 'tomasr/molokai'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-liquid'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-scripts/applescript.vim'
+Bundle 'wookiehangover/jshint.vim'
+Bundle 'zaiste/tmux.vim'
+

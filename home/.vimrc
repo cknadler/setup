@@ -4,16 +4,18 @@
 
 set nocompatible
 filetype off
+syntax enable
 
 """""""""""""""""""""""""
 " activate bundles
 """""""""""""""""""""""""
 
-" load all bundles
-source ~/.vim/bundles.vim
+" load bundles
+if filereadable(expand("~/.vim/bundles.vim"))
+  source ~/.vim/bundles.vim
+endif
 
-syntax on
-filetype plugin indent on
+filetype plugin indent on " after loading bundles
 
 """""""""""""""""""""""""
 " general
@@ -21,17 +23,15 @@ filetype plugin indent on
 
 set modelines=0     " prevent security exploit
 set shell=bash      " be explicit in case we are using something like fish
-let mapleader=","
+set hidden
+set formatoptions=qrn1
+set fileformats="unix,dos,mac"
+set clipboard=unnamed " system clipboard
 
 " colorscheme
 set t_Co=256        " 256 colors
 set background=dark
 colorscheme molokai
-
-" fix tmux + vim + osx clipboard issues
-if $TMUX == ''
-  set clipboard+=unnamed
-endif
 
 " indentation
 set tabstop=2
@@ -40,11 +40,6 @@ set softtabstop=2
 set expandtab
 set autoindent
 set copyindent
-
-" editing
-set hidden
-set formatoptions=qrn1
-set fileformats="unix,dos,mac"
 
 " appearance
 set ruler
@@ -56,7 +51,7 @@ set nonumber       " no line numbers
 set nowrap         " no wrapping text lines, break at 80 chars or less yo
 set textwidth=80
 set colorcolumn=81
-set listchars=tab:▸\ ,trail:·,extends:#,nbsp:·
+set listchars=tab:▸\ ,trail:▫
 set nolist         " list characters enabled for some ft (later)
 set shortmess+=I   " hide the launch screen
 
@@ -85,12 +80,14 @@ set nospell " spell checking enabled for some ft (later)
 set nofoldenable
 
 " editor
+set autoread
 set encoding=utf-8
 set termencoding=utf-8
 set ttyfast
 set lazyredraw   " don't update the display while executing macros
 set novisualbell " no...
 set noerrorbells " ...bells
+
 
 " internal
 set history=1000    " remember more commands and search history
@@ -122,6 +119,15 @@ vmap <Enter> <Plug>(EasyAlign)
 " start interactive easy-align with a Vim movement
 nmap <Leader>a <Plug>(EasyAlign)
 
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
 """"""""""""""""""""""""
 " wildignore
 """"""""""""""""""""""""
@@ -136,12 +142,29 @@ set wildignore+=node_modules               " node
 " bindings
 """"""""""""""""""""""""
 
+" leader bindings
+let mapleader=","
+nnoremap <leader>a :Ag<space>
+nnoremap <leader>t :CtrlP<CR>
+nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
+" kill highlighting
+nnoremap <leader><space> :noh<cr>
+" delete a line without adding it to the yank stack
+nnoremap <silent> <leader>d "_d
+vnoremap <silent> <leader>d "_d
+" toggle show/hide invisible chars
+nnoremap <leader>i :set list!<cr>
+" quick vim config edit mappings
+nnoremap <leader>S :source $MYVIMRC<cr>
+nnoremap <leader>E :vsplit $MYVIMRC<cr>
+nnoremap <leader>B :vsplit $HOME/.vim/bundles.vim<cr>
+" sort paragraphs
+vnoremap <leader>s !sort -f<cr>gv
+nnoremap <leader>s vip!sort -f<cr><Esc>
+
 " better search
 nnoremap / /\v
 vnoremap / /\v
-
-" kill highlighting
-nnoremap <leader><space> :noh<cr>
 
 " tab to move to next match
 nnoremap <tab> %
@@ -153,10 +176,6 @@ set pastetoggle=<F2>
 " save on lost focus
 au FocusLost * :wa
 
-" sort paragraphs
-vnoremap <leader>s !sort -f<cr>gv
-nnoremap <leader>s vip!sort -f<cr><Esc>
-
 " quick colon
 nnoremap ; :
 vnoremap ; :
@@ -165,37 +184,27 @@ vnoremap ; :
 nnoremap j gj
 nnoremap k gk
 
-" delete a line without adding it to the yank stack
-nnoremap <silent> <leader>d "_d
-vnoremap <silent> <leader>d "_d
-
 " yank to the end of the line
 nnoremap Y y$
 
+" TODO: Fix
 " move current line up and append above line to the end
-nnoremap K k0d$j$a <Esc>pkdd
+" nnoremap K k0d$j$a <Esc>pkdd
 
 " copy/paste pbcopy
 vmap <C-x> :!pbcopy<cr>
 vmap <C-c> :w !pbcopy<cr><cr>
 
+" TODO: Fix
 " quote selected text
 " automatically adds additional levels if text is already quoted
 vmap <C-L> :s/^\(\|*\)/\1\| <cr>
 
-" toggle show/hide invisible chars
-nnoremap <leader>i :set list!<cr>
-
-" quick vim config edit mappings
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader>eb :vsplit $HOME/.vim/bundles.vim<cr>
-
 " map ctrl+{h,j,k,l} to switch splits
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 """"""""""""""""""""""""
 " unbindings
@@ -253,3 +262,4 @@ if has("autocmd")
     au filetype python setl ts=4 sw=4 sts=4
   aug end
 endif
+
