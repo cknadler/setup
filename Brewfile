@@ -30,9 +30,11 @@ install autoconf
 install automake
 install curl
 install git
+install gradle
 install haskell-platform
 install hub
 install macvim
+install maven
 install node
 install pcre
 install python
