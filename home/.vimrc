@@ -189,7 +189,7 @@ nnoremap Y y$
 
 " TODO: Fix
 " move current line up and append above line to the end
-" nnoremap K k0d$j$a <Esc>pkdd
+"nnoremap K k0d$j$a <Esc>pkdd
 
 " copy/paste pbcopy
 vmap <C-x> :!pbcopy<cr>
@@ -198,7 +198,7 @@ vmap <C-c> :w !pbcopy<cr><cr>
 " TODO: Fix
 " quote selected text
 " automatically adds additional levels if text is already quoted
-vmap <C-L> :s/^\(\|*\)/\1\| <cr>
+"vmap <C-L> :s/^\(\|*\)/\1\| <cr>
 
 " map ctrl+{h,j,k,l} to switch splits
 map <C-h> <C-w>h

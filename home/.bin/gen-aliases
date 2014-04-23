@@ -4,7 +4,7 @@ ws = "/Users/kndlrc/workspace"
 exit unless File.exists?(ws)
 
 Dir.foreach(ws) do |f|
-  next if ['..','.'].include?(f)
+  next if f.match(/\..*/)
   als = f.gsub(/[a-z]/, "").downcase
   puts "alias #{als}='cd #{ws}/#{f}';"
 end

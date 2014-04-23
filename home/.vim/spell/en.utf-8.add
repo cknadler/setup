@@ -38,3 +38,8 @@ deets
 subviews
 Nidyx
 JSON
+UILabel
+CoreText
+CoreGraphics
+JSONModel
+subview
