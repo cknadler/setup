@@ -35,6 +35,7 @@ install haskell-platform
 install hub
 install macvim
 install maven
+install mmv
 install node
 install pcre
 install python
