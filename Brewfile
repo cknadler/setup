@@ -36,6 +36,7 @@ install hub
 install macvim
 install maven
 install node
+install objc-run
 install pcre
 install python
 install rbenv
@@ -46,6 +47,7 @@ install the_silver_searcher
 install tmux
 install xctool
 install zsh
+
 
 # Remove outdated versions from the cellar
 cleanup
