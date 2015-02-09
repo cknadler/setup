@@ -42,6 +42,7 @@
   # log
   l = log --decorate --stat # standard log
   sl = log --pretty=format:'%Cred%h%Creset %s %Cgreen%d%Creset' # short log
+  tl = log --pretty=format:'%h %s %d' # timeline log, no color
   cl = log -u # change log
   dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
 

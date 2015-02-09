@@ -27,8 +27,12 @@ PATH=/usr/local/bin:$PATH
 PATH=/usr/local/share/npm/bin:$PATH
 # rbenv
 PATH=$HOME/.rbenv/bin:$PATH
-# work
-PATH=$PATH:$HOME/.work_bin
+# bin
+PATH=$HOME/.bin:$PATH
+# work specific path
+if [ -d $HOME/.work_bin ]; then
+  PATH=$PATH:$HOME/.work_bin
+fi
 
 ###
 # exports
@@ -107,7 +111,21 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # core-utils
 alias readlink=greadlink
 
+# iOS dev
+alias deriveddata="cd /Users/$USER/Library/Developer/Xcode/DerivedData"
+alias oxp="open *.xcodeproj"
+
 # navigation aliases
 if [ -f ~/.bin/gen-aliases ]; then
   eval `~/.bin/gen-aliases`
+fi
+
+# post-review
+alias prv=post-review
+alias prvm="post-review --parent mainline"
+
+# enable work settings
+if [ -d /apollo/env/SDETools/bin ]; then
+#   PATH=/apollo/env/SDETools/bin:$PATH
+#   PATH=/apollo/env/ruby193/bin:$PATH
 fi

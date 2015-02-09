@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+from __future__ import print_function
+import subprocess
+import sys
+import re
+import os
+
+"""
+symbolicateCrash 'logname'.crash 'appname.app'.dSYM/Contents/Resources/DWARF/'appname'
+"""
+
+SYMBOLICATE_CRASH = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/PrivateFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash'
+#app_name_matcher = re.compile('^(?P<app_name>[^\.]*).*')
+crash = sys.argv[1]
+artifact = sys.argv[2]
+
+if not crash and artifact:
+    print('Too few arguments')
+    sys.exit(1)
+
+#match = app_name_matcher.match(artifact)
+
+#if not match:
+#    print('App artifact isn\'t in the format "AppName.app.dSYM"')
+#    sys.exit(1)
+
+#app_name = match.group('app_name')
+#app_path = '{0}.app.dSYM/Contents/Resources/DWARF/{0}'.format(app_name)
+
+dev_dir = subprocess.check_output(['/usr/bin/xcode-select', '--print-path']).strip()
+os.environ['DEVELOPER_DIR'] = dev_dir
+subprocess.check_call([SYMBOLICATE_CRASH, '-v', crash, artifact], env=os.environ)

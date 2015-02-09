@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-ws = "/Users/kndlrc/workspace"
+ws = "/Users/#{ENV["USER"]}/workspace/src"
 exit unless File.exists?(ws)
 
 Dir.foreach(ws) do |f|
