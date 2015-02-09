@@ -39,7 +39,7 @@ fi
 # install brewdler
 brew tap Homebrew/brewdler
 # install everything from Brewfile
-brew brewdle $ROOT/Brewfile
+brew brewdle
 # link apps
 brew linkapps
 # install Casks
