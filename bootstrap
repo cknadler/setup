@@ -42,8 +42,6 @@ brew tap Homebrew/brewdler
 brew brewdle
 # link apps
 brew linkapps
-# install Casks
-$ROOT/home/.cask
 
 # ruby
 # temporary env variables to get rbenv to work immediately
