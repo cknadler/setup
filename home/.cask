@@ -10,13 +10,10 @@ function installcask() {
 installcask dropbox
 installcask google-chrome
 installcask iterm2
-installcask keyremap4macbook
+installcask karabiner
 installcask mactex
-installcask mou
 installcask pandoc
-installcask pckeyboardhack
+installcask seil
 installcask skype
 installcask spotify
 installcask the-unarchiver
-installcask transmission
-installcask virtualbox
