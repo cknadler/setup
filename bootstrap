@@ -36,8 +36,10 @@ RUBY_VERSION="2.0.0-p195"
 if ! installed brew; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+# install brewdler
+brew tap Homebrew/brewdler
 # install everything from Brewfile
-brew bundle $ROOT/Brewfile
+brew brewdle $ROOT/Brewfile
 # link apps
 brew linkapps
 # install Casks
