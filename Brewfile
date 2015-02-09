@@ -24,18 +24,10 @@ install brew-cask
 
 # Install other useful binaries
 install ack
-install apple-gcc42
 install appledoc
-install autoconf
-install automake
 install curl
 install git
-install gradle
-install haskell-platform
-install hub
 install macvim
-install maven
-install node
 install objc-run
 install pcre
 install python
