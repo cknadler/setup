@@ -45,12 +45,12 @@ Software I install via the App Store:
   - Delat Until Repeat: `200 ms`
   - Key Repeat: `23 ms`
 
-## XCode
+### XCode
 
 - [Dracula Theme](https://github.com/zenorocha/dracula-theme)
 - [XVim](https://github.com/XVimProject/XVim)
 
-## iTerm
+### iTerm
 
 - [Base 16](https://github.com/chriskempson/base16-iterm2)
 
