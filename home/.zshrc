@@ -80,8 +80,8 @@ DISABLE_AUTO_TITLE=true
 ###
 
 # general
-alias l='ls -A --color'
-alias ll='ls -lA --color'
+alias l='ls -A'
+alias ll='ls -lA'
 alias rst='exec $SHELL -l'
 alias c='clear'
 
