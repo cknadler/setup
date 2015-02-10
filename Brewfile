@@ -35,6 +35,7 @@ brew 'zsh'
 # install casks
 cask 'dropbox'
 cask 'google-chrome'
+cask 'google-drive'
 cask 'iterm2'
 cask 'karabiner'
 cask 'mactex'
