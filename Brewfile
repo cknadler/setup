@@ -17,7 +17,6 @@ brew 'homebrew/dupes/grep'
 
 # Install other useful binaries
 brew 'ack'
-brew 'appledoc'
 brew 'curl'
 brew 'git'
 brew 'macvim'
