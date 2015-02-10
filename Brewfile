@@ -2,12 +2,6 @@
 tap 'caskroom/cask'
 tap 'homebrew/dupes'
 
-# Make sure we’re using the latest Homebrew
-update
-
-# Upgrade any already-installed formulae
-upgrade
-
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew 'coreutils'
@@ -15,7 +9,7 @@ brew 'coreutils'
 brew 'findutils'
 
 # Install wget with IRI support
-brew 'wget', args: ['enable-iri']
+brew 'wget', args: ['with-iri']
 
 # Install more recent versions of some OS X tools
 brew 'vim', args: ['override-system-vi']
