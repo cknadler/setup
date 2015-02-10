@@ -57,6 +57,7 @@ rbenv rehash
 
 # gems
 gem install bundler
+rbenv rehash
 bundle install --gemfile=$ROOT/Gemfile
 rbenv rehash
 
