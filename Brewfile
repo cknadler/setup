@@ -44,6 +44,3 @@ cask 'seil'
 cask 'skype'
 cask 'spotify'
 cask 'the-unarchiver'
-
-# Remove outdated versions from the cellar
-cleanup
