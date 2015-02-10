@@ -45,6 +45,15 @@ Software I install via the App Store:
   - Delat Until Repeat: `200 ms`
   - Key Repeat: `23 ms`
 
+## XCode
+
+- [Dracula Theme](https://github.com/zenorocha/dracula-theme)
+- [XVim](https://github.com/XVimProject/XVim)
+
+## iTerm
+
+- [Base 16](https://github.com/chriskempson/base16-iterm2)
+
 ## Issues
 
 If you see something, say something. Feel free to open issues or pull requests.
