@@ -28,6 +28,9 @@ Software I install via the App Store:
 
 ### Bindings
 
+- General
+  - Move To Left Space: `cmd+shift+h`
+  - Move To Right Space: `cmd+shift+l`
 - [Dash](http://kapeli.com/dash)
   - Open: `cmd+shift+space`
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
