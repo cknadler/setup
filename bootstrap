@@ -79,6 +79,9 @@ if ! [[ -d $HOME/.vim-anywhere ]]; then
   curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
 fi
 
+# alfred workflows
+open $ROOT/workflows/*
+
 # OSX defaults
 # should always be run last as it will shut down Terminal
 $ROOT/home/.osx
