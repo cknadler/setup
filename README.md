@@ -18,12 +18,10 @@ rm -r dotfiles
 
 Software I install via the App Store:
 
-- [Alfred](http://www.alfredapp.com/)
 - [Dash](http://kapeli.com/dash)
 - [Growl](http://growl.info/)
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
 - [Boom](http://www.globaldelight.com/boom/)
-- [Pixelmator](http://www.pixelmator.com/)
 - [XCode](https://developer.apple.com/xcode/)
 
 ### Bindings
