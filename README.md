@@ -18,6 +18,7 @@ rm -r dotfiles
 
 Software I install via the App Store:
 
+- [Alfred](http://www.alfredapp.com/)
 - [Dash](http://kapeli.com/dash)
 - [Growl](http://growl.info/)
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
@@ -39,11 +40,16 @@ Software I install via the App Store:
   - Top Right: `cmd+ctrl+u`
   - Bottom Left: `cmd+ctrl+b`
   - Bottom Right: `cmd+ctrl+n`
-- [PCKeyboardHack](https://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)
-  - Caps Lock: `53` (remap caps lock to escape, and vise versa)
-- [KeyRemap4MacBook](https://pqrs.org/macosx/keyremap4macbook/)
+- [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
+  - Caps Lock: `53` (remap caps lock to escape)
+- [Karabiner](https://pqrs.org/osx/karabiner/)
   - Delat Until Repeat: `200 ms`
   - Key Repeat: `23 ms`
+
+### Alfred
+
+- [Workflows](https://github.com/zenorocha/alfred-workflows)
+- [Spotify](https://github.com/citelao/Spotify-for-Alfred)
 
 ### XCode
 
