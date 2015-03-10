@@ -120,12 +120,14 @@ if [ -f ~/.bin/gen-aliases ]; then
   eval `~/.bin/gen-aliases`
 fi
 
-# post-review
-alias prv=post-review
-alias prvm="post-review --parent mainline"
-
-# enable work settings
+###
+# work stuff
+###
 if [ -d /apollo/env/SDETools/bin ]; then
-#   PATH=/apollo/env/SDETools/bin:$PATH
-#   PATH=/apollo/env/ruby193/bin:$PATH
+  PATH=/apollo/env/SDETools/bin:$PATH
+  PATH=/apollo/env/ruby193/bin:$PATH
+  alias bbsn="brazil ws sync && brazil-build xcode-env"
+  alias bb="brazil-build xcode-env"
+  alias prv=post-review
+  alias prvm="post-review --parent mainline"
 fi
