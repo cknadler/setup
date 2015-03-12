@@ -49,11 +49,6 @@ Software I install via the App Store:
   - Delat Until Repeat: `200 ms`
   - Key Repeat: `23 ms`
 
-### Alfred
-
-- [Workflows](https://github.com/zenorocha/alfred-workflows)
-- [Spotify](https://github.com/citelao/Spotify-for-Alfred)
-
 ### XCode
 
 - [Dracula Theme](https://github.com/zenorocha/dracula-theme)
