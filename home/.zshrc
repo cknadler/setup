@@ -127,7 +127,8 @@ if [ -d /apollo/env/SDETools/bin ]; then
   PATH=/apollo/env/SDETools/bin:$PATH
   PATH=/apollo/env/ruby193/bin:$PATH
   alias bbsn="brazil ws sync && brazil-build xcode-env"
-  alias bb="brazil-build xcode-env"
+  alias bbx="brazil-build xcode-env"
+  alias bb=brazil-build
   alias prv=post-review
   alias prvm="post-review --parent mainline"
 fi
