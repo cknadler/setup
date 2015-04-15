@@ -129,6 +129,7 @@ if [ -d /apollo/env/SDETools/bin ]; then
   alias bbsn="brazil ws sync && brazil-build xcode-env"
   alias bbx="brazil-build xcode-env"
   alias bb=brazil-build
+  alias bbc="brazil-build clean"
   alias prv=post-review
   alias prvm="post-review --parent mainline"
 fi
