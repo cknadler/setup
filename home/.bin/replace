@@ -1,0 +1,5 @@
+#!/bin/bash
+# Replaces all instances of $1 with $2 in the current directory and all
+# subdirectories recursively.
+
+grep -rl "$1" ./ | xargs sed -i '' "s/$1/$2/g"

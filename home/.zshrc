@@ -23,15 +23,18 @@ PATH=/usr/texbin:$PATH
 PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 # homebrew
 PATH=/usr/local/bin:$PATH
-# npm
-PATH=/usr/local/share/npm/bin:$PATH
-# rbenv
-PATH=$HOME/.rbenv/bin:$PATH
 # bin
 PATH=$HOME/.bin:$PATH
-# work specific path
+
+# work specific stuff
 if [ -d $HOME/.work_bin ]; then
   PATH=$PATH:$HOME/.work_bin
+fi
+if [ -d /apollo/env/SDETools/bin ]; then
+  PATH=/apollo/env/SDETools/bin:$PATH
+fi
+if [ -d /apollo/env/ruby193/bin ]; then
+  #PATH=/apollo/env/ruby193/bin:$PATH
 fi
 
 ###
@@ -66,11 +69,8 @@ export LESS_TERMCAP_md=$ORANGE
 export MANPAGER='less -X'
 
 ###
-# source tools
+# config
 ###
-
-# rbenv
-eval "$(rbenv init -)"
 
 # tmuxinator
 DISABLE_AUTO_TITLE=true
@@ -120,16 +120,13 @@ if [ -f ~/.bin/gen-aliases ]; then
   eval `~/.bin/gen-aliases`
 fi
 
-###
 # work stuff
-###
 if [ -d /apollo/env/SDETools/bin ]; then
-  PATH=/apollo/env/SDETools/bin:$PATH
-  PATH=/apollo/env/ruby193/bin:$PATH
   alias bbsn="brazil ws sync && brazil-build xcode-env"
   alias bbx="brazil-build xcode-env"
   alias bb=brazil-build
   alias bbc="brazil-build clean"
   alias prv=post-review
+  alias bbc="brazil ws clean && brazil-build clean"
   alias prvm="post-review --parent mainline"
 fi
