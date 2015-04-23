@@ -68,12 +68,8 @@ export LESS_TERMCAP_md=$ORANGE
 # Don’t clear the screen after quitting a manual page
 export MANPAGER='less -X'
 
-###
-# config
-###
-
 # tmuxinator
-DISABLE_AUTO_TITLE=true
+export DISABLE_AUTO_TITLE=true
 
 ###
 # aliases
