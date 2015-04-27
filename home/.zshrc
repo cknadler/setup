@@ -21,8 +21,6 @@ bindkey -v
 PATH=/usr/texbin:$PATH
 # gnu core utils
 PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
-# homebrew
-PATH=/usr/local/bin:$PATH
 # bin
 PATH=$HOME/.bin:$PATH
 
