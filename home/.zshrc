@@ -123,4 +123,5 @@ if [ -d /apollo/env/SDETools/bin ]; then
   alias prv=post-review
   alias bbc="brazil ws clean && brazil-build clean"
   alias prvm="post-review --parent mainline"
+  alias ft="cd ~/workspace/ui_ft/src/SXUIFunctionalTestFramework"
 fi
