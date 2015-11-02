@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require "fileutils"
+
+if ARGV.length < 2
+  puts "usage: rename <target> <replacement>\n\n"
+  puts "Renames all files in current directory and subdirectories recursively"
+  puts "that contain \"target\" in their name. Renames them replacing \"target\""
+  puts "with \"replacement\".\n\n"
+  exit 0
+end
+
+TARGET = ARGV[0]
+REPLACEMENT = ARGV[1]
+
+
+Dir.glob("**/*").each do |file|
+  next if File.directory?(file)
+  base = File.basename(file)
+  next if !base.include?(TARGET)
+  new_base = base.sub(TARGET, REPLACEMENT)
+  puts "#{base} => #{new_base}"
+  new_path = File.dirname(file) + "/" + new_base
+  FileUtils.mv(file, new_path)
+end
