@@ -19,9 +19,8 @@ rm -r dotfiles
 Software I install via the App Store:
 
 - [Dash](http://kapeli.com/dash)
-- [Growl](http://growl.info/)
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
-- [Boom](http://www.globaldelight.com/boom/)
+- [Boom 2](http://www.globaldelight.com/boom/)
 - [XCode](https://developer.apple.com/xcode/)
 
 ### Bindings
