@@ -27,7 +27,6 @@ brew 'tmux'
 brew 'zsh'
 
 # install casks
-cask 'alfred'
 cask 'dropbox'
 cask 'google-chrome'
 cask 'google-drive'
