@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+HELP = <<DOC
+annualize [-h|--help] <sessions> <diff> <days_running>
+
+sessions     - total number of sessions in the weblab
+diff         - the raw diff of the metric
+days_running - the number of days the weblab was running
+DOC
+
+if ARGV.size < 3
+  puts HELP
+  exit 1
+end
+
+SESSIONS = ARGV[0]
+DIFF = ARGV[1]
+DAYS = ARGV[2]
+
+raw = (SESSIONS.to_f * DIFF.to_f / DAYS.to_f * 365).to_i
+mm = raw.round(-6) / 1000000
+
+puts "RAW: #{raw}"
+puts "MM: #{mm}MM"
