@@ -53,6 +53,11 @@ fi
 homesick clone cknadler/dotfiles
 homesick symlink dotfiles
 
+# submodules
+pushd ~/.homesick/repos/dotfiles
+git submodule sync
+popd
+
 # fonts
 mkdir -p $HOME/Library/Fonts
 cp $ROOT/fonts/* $HOME/Library/Fonts
