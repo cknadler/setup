@@ -28,8 +28,6 @@ Software I install via the App Store:
 - General
   - Move To Left Space: `cmd+shift+h`
   - Move To Right Space: `cmd+shift+l`
-- [Alfred](http://www.alfredapp.com/)
-  - Open: `cmd+space` (goodbye forever spotlight)
 - [Dash](http://kapeli.com/dash)
   - Open: `cmd+shift+space`
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
