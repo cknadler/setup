@@ -26,8 +26,6 @@ done
 SCRIPT_PATH=$(pwd -P)/$TARGET_FILE
 ROOT=$(dirname $SCRIPT_PATH)
 
-RUBY_VERSION="2.0.0-p195"
-
 ###
 # installer
 ###
@@ -36,30 +34,15 @@ RUBY_VERSION="2.0.0-p195"
 if ! installed brew; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
-# install casks
-brew install caskroom/cask/brew-cask
 # install brewdler
 brew tap Homebrew/bundle
 # install everything from Brewfile
 brew bundle
 brew linkapps
 
-# ruby
-# temporary env variables to get rbenv to work immediately
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-# install
-if ! rbenv versions --bare | grep $RUBY_VERSION; then
-  rbenv install $RUBY_VERSION
-fi
-rbenv global $RUBY_VERSION
-rbenv rehash
-
 # gems
 gem install bundler
-rbenv rehash
 bundle install --gemfile=$ROOT/Gemfile
-rbenv rehash
 
 # oh-my-zsh
 if ! [[ -d $HOME/.oh-my-zsh ]]; then
