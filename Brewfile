@@ -18,6 +18,7 @@ brew 'homebrew/dupes/grep'
 # Install other useful binaries
 brew 'curl'
 brew 'git'
+brew 'ruby'
 brew 'git-extras'
 brew 'macvim'
 brew 'pcre'
