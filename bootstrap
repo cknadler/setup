@@ -39,9 +39,9 @@ fi
 # install casks
 brew install caskroom/cask/brew-cask
 # install brewdler
-brew tap Homebrew/brewdler
+brew tap Homebrew/bundle
 # install everything from Brewfile
-brew brewdle
+brew bundle
 brew linkapps
 
 # ruby
