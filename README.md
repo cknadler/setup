@@ -51,10 +51,6 @@ Software I install via the App Store:
 - [Dracula Theme](https://github.com/zenorocha/dracula-theme)
 - [XVim](https://github.com/XVimProject/XVim)
 
-## Issues
-
-If you see something, say something. Feel free to open issues or pull requests.
-
 ## Credits
 
 * [ryanb/dotfiles](https://github.com/ryanb/dotfiles)
