@@ -31,9 +31,6 @@ fi
 if [ -d /apollo/env/SDETools/bin ]; then
   PATH=/apollo/env/SDETools/bin:$PATH
 fi
-if [ -d /apollo/env/ruby193/bin ]; then
-  #PATH=/apollo/env/ruby193/bin:$PATH
-fi
 
 ###
 # exports
