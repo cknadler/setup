@@ -46,12 +46,15 @@ end
 # returns a hash
 #   "ops" => annualized ops
 #   "units" => annualized units
-def parse_locale(name, obj, days)
+#   "currency" => currency ISO symbol
+def parse_locale(name, obj)
   currency = CURRENCY_MAP[name]
   unless currency
     puts "#{name} is not a valid locale"
     exit 1
   end
+
+  days = days_running(obj)
 
   samples = obj["samples"]
   units_diff = obj["units_diff"]
@@ -69,20 +72,20 @@ def parse_locale(name, obj, days)
   return {
     "raw_ops" => raw_ops.to_i,
     "ops" => ops.to_i,
-    "units" => units.to_i
+    "units" => units.to_i,
+    "currency" => currency,
+    "days" => days
   }
 end
 
 def parse_weblab(data)
-  metadata = data["metadata"]
-  days = days_running(metadata)
   total_ops = 0
   total_units = 0
 
   data["locales"].each do |name, obj|
-    res = parse_locale(name, obj, days)
+    res = parse_locale(name, obj)
     puts "  #{name}:"
-    puts "    ops: #{res["ops"]} USD (#{res["raw_ops"]} #{CURRENCY_MAP[name]})"
+    puts "    ops: #{res["ops"]} USD (#{res["raw_ops"]} #{res["currency"]})"
     puts "    units: #{res["units"]}"
 
     total_ops += res["ops"]
@@ -106,9 +109,3 @@ weblabs.each do |weblab, data|
   puts "weblab: #{weblab}"
   parse_weblab(data)
 end
-
-# raw = (SESSIONS.to_f * DIFF.to_f / DAYS.to_f * 365).to_i
-# mm = raw.round(-6) / 1000000
-
-# puts "RAW: #{raw}"
-# puts "MM: #{mm}MM"
