@@ -26,6 +26,7 @@ brew 'reattach-to-user-namespace'
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'zsh'
+brew 'terminal-notifier'
 
 # install casks
 cask 'dropbox'
