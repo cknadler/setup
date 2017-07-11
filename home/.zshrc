@@ -22,7 +22,7 @@ PATH=/usr/texbin:$PATH
 # gnu core utils
 PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 # bin
-PATH=$HOME/.bin:$PATH
+PATH=$PATH:$HOME/.bin
 
 # work specific stuff
 if [ -d $HOME/.work_bin ]; then

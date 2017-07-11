@@ -263,7 +263,6 @@ if has("autocmd")
   aug alternate_spacing
     au!
     au filetype java setl ts=4 sw=4 sts=4
-    au filetype html setl ts=4 sw=4 sts=4
     au filetype xml setl ts=4 sw=4 sts=4
     au filetype python setl ts=4 sw=4 sts=4
   aug end
