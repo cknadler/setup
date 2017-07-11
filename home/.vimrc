@@ -236,6 +236,9 @@ au BufRead,BufNewFile Podfile set filetype=ruby
 " JSON (Javascript for now)
 au BufRead,BufNewFile *.json.schema set filetype=javascript
 
+" Markdown
+au BufRead,BufNewFile *.md set filetype=markdown
+
 """"""""""""""""""""""""
 " filetype specific
 """"""""""""""""""""""""
