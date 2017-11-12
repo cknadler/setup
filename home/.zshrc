@@ -24,14 +24,6 @@ PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 # bin
 PATH=$PATH:$HOME/.bin
 
-# work specific stuff
-if [ -d $HOME/.work_bin ]; then
-  PATH=$PATH:$HOME/.work_bin
-fi
-if [ -d /apollo/env/SDETools/bin ]; then
-  PATH=/apollo/env/SDETools/bin:$PATH
-fi
-
 ###
 # exports
 ###
@@ -96,29 +88,10 @@ alias bex='bundle exec'
 alias bi='bundle install'
 alias bu='bundle uninstall'
 
-# Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
 # core-utils
 alias readlink=greadlink
-
-# iOS dev
-alias deriveddata="cd /Users/$USER/Library/Developer/Xcode/DerivedData"
-alias oxp="open *.xcodeproj"
 
 # navigation aliases
 if [ -f ~/.bin/gen-aliases ]; then
   eval `~/.bin/gen-aliases`
-fi
-
-# work stuff
-if [ -d /apollo/env/SDETools/bin ]; then
-  alias bbsn="brazil ws sync && brazil-build xcode-env"
-  alias bbx="brazil-build xcode-env"
-  alias bb=brazil-build
-  alias bbc="brazil-build clean"
-  alias prv=post-review
-  alias bbc="brazil ws clean && brazil-build clean"
-  alias prvm="post-review --parent mainline"
-  alias ft="cd ~/workspace/ui_ft/src/SXUIFunctionalTestFramework"
 fi
