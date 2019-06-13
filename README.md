@@ -20,6 +20,14 @@ Software I install via the App Store:
 
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
 
+### Manual
+
+Software I install manually:
+
+- Chrome
+- 1Password
+- Dropbox
+
 ### Bindings
 
 - General
