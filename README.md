@@ -18,9 +18,7 @@ rm -r dotfiles
 
 Software I install via the App Store:
 
-- [Dash](http://kapeli.com/dash)
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
-- [Boom 2](http://www.globaldelight.com/boom/)
 - [XCode](https://developer.apple.com/xcode/)
 
 ### Bindings
@@ -28,8 +26,6 @@ Software I install via the App Store:
 - General
   - Move To Left Space: `cmd+shift+h`
   - Move To Right Space: `cmd+shift+l`
-- [Dash](http://kapeli.com/dash)
-  - Open: `cmd+shift+space`
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
   - Maximize: `cmd+ctrl+m`
   - Left Half: `cmd+ctrl+h`
@@ -40,11 +36,6 @@ Software I install via the App Store:
   - Top Right: `cmd+ctrl+u`
   - Bottom Left: `cmd+ctrl+b`
   - Bottom Right: `cmd+ctrl+n`
-- [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
-  - Caps Lock: `53` (remap caps lock to escape)
-- [Karabiner](https://pqrs.org/osx/karabiner/)
-  - Delat Until Repeat: `200 ms`
-  - Key Repeat: `23 ms`
 
 ### XCode
 
