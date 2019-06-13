@@ -38,7 +38,6 @@ fi
 brew tap Homebrew/bundle
 # install everything from Brewfile
 brew bundle
-brew linkapps
 
 # gems
 gem install bundler
