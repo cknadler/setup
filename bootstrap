@@ -40,7 +40,7 @@ brew tap Homebrew/bundle
 brew bundle
 
 # gems
-gem install bundler
+sudo gem install bundler
 bundle install --gemfile=$ROOT/Gemfile
 
 # oh-my-zsh
