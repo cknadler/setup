@@ -18,7 +18,6 @@ brew 'tmux'
 brew 'zsh'
 
 # install casks
-cask 'dropbox'
 cask 'iterm2'
 cask 'macvim'
 cask 'spotify'
