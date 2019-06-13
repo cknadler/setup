@@ -27,6 +27,7 @@ Software I install manually:
 - Chrome
 - 1Password
 - Dropbox
+- Guitar Pro
 
 ### Bindings
 
