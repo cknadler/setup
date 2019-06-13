@@ -37,10 +37,21 @@ Software I install via the App Store:
   - Bottom Left: `cmd+ctrl+b`
   - Bottom Right: `cmd+ctrl+n`
 
-### XCode
+## Music
 
-- [Dracula Theme](https://github.com/zenorocha/dracula-theme)
-- [XVim](https://github.com/XVimProject/XVim)
+### DAW
+
+- Cubase
+
+### Plugins
+
+- Waves
+- Valhalla
+- Slate
+
+### Other Software
+
+- Guitar Pro
 
 ## Credits
 
