@@ -24,10 +24,11 @@ Software I install via the App Store:
 
 Software I install manually:
 
-- Chrome
-- 1Password
-- Dropbox
-- Guitar Pro
+- [Chrome](https://www.google.com/chrome)
+- [1Password](https://1password.com/)
+- [Dropbox](https://www.dropbox.com/install)
+- [Guitar Pro](https://www.guitar-pro.com/en/index.php)
+- [Cubase](https://www.steinberg.net/en/mysteinberg/my_products.html)
 
 ### Bindings
 
