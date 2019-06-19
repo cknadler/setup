@@ -30,6 +30,10 @@ Software I install manually:
 - [Dropbox](https://www.dropbox.com/install)
 - [Guitar Pro](https://www.guitar-pro.com/en/index.php)
 - [Cubase](https://www.steinberg.net/en/mysteinberg/my_products.html)
+- [Waves](https://www.waves.com/login)
+- [Valhalla](https://valhalladsp.com/my-account/)
+- [Slate](https://app.slatedigital.com/authenticate/sign-in?redirect=%2Fmy-products)
+- [Toontrack](https://www.toontrack.com)
 
 ### Bindings
 
@@ -55,9 +59,6 @@ Software I install manually:
 
 ### Plugins
 
-- Waves
-- Valhalla
-- Slate
 
 ### Other Software
 
