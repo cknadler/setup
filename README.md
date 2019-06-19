@@ -51,19 +51,6 @@ Software I install manually:
   - Bottom Left: `cmd+ctrl+b`
   - Bottom Right: `cmd+ctrl+n`
 
-## Music
-
-### DAW
-
-- Cubase
-
-### Plugins
-
-
-### Other Software
-
-- Guitar Pro
-
 ## Credits
 
 * [ryanb/dotfiles](https://github.com/ryanb/dotfiles)
