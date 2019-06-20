@@ -37,9 +37,9 @@ Software I install manually:
 
 ### Bindings
 
-- General
-  - Move To Left Space: `cmd+shift+h`
-  - Move To Right Space: `cmd+shift+l`
+- General (Keyboard -> Shortcuts -> Mission Control)
+  - Move Left A Space: `cmd+shift+h`
+  - Move Right A Space: `cmd+shift+l`
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
   - Maximize: `cmd+ctrl+m`
   - Left Half: `cmd+ctrl+h`
