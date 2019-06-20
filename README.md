@@ -31,7 +31,7 @@ Software I install manually:
 - [Guitar Pro](https://www.guitar-pro.com/en/index.php)
 - [Cubase](https://www.steinberg.net/en/mysteinberg/my_products.html)
 - [Waves](https://www.waves.com/login)
-- [Valhalla](https://valhalladsp.com/my-account/)
+- [Valhalla DSP](https://valhalladsp.com/my-account/)
 - [Slate](https://app.slatedigital.com/authenticate/sign-in?redirect=%2Fmy-products)
 - [Toontrack](https://www.toontrack.com)
 
