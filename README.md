@@ -34,6 +34,9 @@ Software I install manually:
 - [Valhalla DSP](https://valhalladsp.com/my-account/)
 - [Slate](https://app.slatedigital.com/authenticate/sign-in?redirect=%2Fmy-products)
 - [Toontrack](https://www.toontrack.com)
+- [Axe Edit](https://www.fractalaudio.com/axe-edit/)
+- [Axe FX 2 USB Driver](https://www.fractalaudio.com/axe-fx-ii-downloads/)
+- [Fractal Bot](https://www.fractalaudio.com/fractal-bot/)
 
 ### Bindings
 
