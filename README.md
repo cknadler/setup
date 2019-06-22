@@ -37,6 +37,7 @@ Software I install manually:
 - [Axe Edit](https://www.fractalaudio.com/axe-edit/)
 - [Axe FX 2 USB Driver](https://www.fractalaudio.com/axe-fx-ii-downloads/)
 - [Fractal Bot](https://www.fractalaudio.com/fractal-bot/)
+- [iLok](https://www.ilok.com/#!license-manager)
 
 ### Bindings
 
