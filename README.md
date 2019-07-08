@@ -28,6 +28,7 @@ Software I install manually:
 - [Chrome](https://www.google.com/chrome)
 - [1Password](https://1password.com/)
 - [Dropbox](https://www.dropbox.com/install)
+- [Alfred](https://www.alfredapp.com/)
 - [Guitar Pro](https://www.guitar-pro.com/en/index.php)
 - [Cubase](https://www.steinberg.net/en/mysteinberg/my_products.html)
 - [Waves](https://www.waves.com/login)
