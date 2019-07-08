@@ -46,6 +46,8 @@ Software I install manually:
 - General (Keyboard -> Shortcuts -> Mission Control)
   - Move Left A Space: `cmd+shift+h`
   - Move Right A Space: `cmd+shift+l`
+- Spotlight (Keyboard -> Shortcuts -> Spotlight)
+  - Show Spotlight Search: `unbind` (use Alfred instead)
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
   - Maximize: `cmd+ctrl+m`
   - Left Half: `cmd+ctrl+h`
