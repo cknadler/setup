@@ -61,6 +61,16 @@ Software I install manually:
   
 ## Windows
 
+### Settings
+
+- System
+  - Multitasking
+    - "When I snap a window, show..." -> off
+    - "When I resize a snapped window..." -> off
+    - Timeline -> off
+    
+### Software
+      
 - [SharpKeys](https://github.com/randyrants/sharpkeys)
   - Left Cmd -> Left Ctrl
   - Left Ctrl -> Left Cmd
