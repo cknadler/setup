@@ -77,7 +77,7 @@ Software I install manually:
   - Caps Lock -> Escape
 - [Reverse Mouse Scroll](https://answers.microsoft.com/en-us/windows/forum/windows_10-other_settings/reverse-the-scroll-of-mouse/334669c3-8a45-4600-830a-8df628d7415e)
 - [AutoHotKey](https://www.autohotkey.com/)
-- [Wox](https://github.com/Wox-launcher/Wox)
+- [AquaSnap](https://www.nurgo-software.com/products/aquasnap)
 
 ## Credits
 
