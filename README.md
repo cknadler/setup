@@ -78,6 +78,9 @@ Software I install manually:
 - [Reverse Mouse Scroll](https://answers.microsoft.com/en-us/windows/forum/windows_10-other_settings/reverse-the-scroll-of-mouse/334669c3-8a45-4600-830a-8df628d7415e)
 - [AutoHotKey](https://www.autohotkey.com/)
 - [AquaSnap](https://www.nurgo-software.com/products/aquasnap)
+  - Maximize: `ctrl+win+k`
+  - Left: `ctrl+win+h`
+  - Right: `ctrl+win+l`
 
 ## Credits
 
