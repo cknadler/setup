@@ -63,6 +63,7 @@ Software I install manually:
 
 - [SharpKeys](https://github.com/randyrants/sharpkeys)
   - Left Cmd -> Left Ctrl
+  - Left Ctrl -> Left Cmd
   - Caps Lock -> Escape
 
 ## Credits
