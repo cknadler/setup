@@ -58,6 +58,12 @@ Software I install manually:
   - Top Right: `cmd+ctrl+u`
   - Bottom Left: `cmd+ctrl+b`
   - Bottom Right: `cmd+ctrl+n`
+  
+## Windows
+
+- [SharpKeys](https://github.com/randyrants/sharpkeys)
+  - Left Cmd -> Left Ctrl
+  - Caps Lock -> Escape
 
 ## Credits
 
