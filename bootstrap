@@ -66,6 +66,9 @@ if ! [[ -d $HOME/.vim-anywhere ]]; then
   curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
 fi
 
+# command line tools
+xcode-select --install
+
 # OSX defaults
 # should always be run last as it will shut down Terminal
 $ROOT/home/.osx
