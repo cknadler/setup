@@ -30,6 +30,10 @@ ROOT=$(dirname $SCRIPT_PATH)
 # installer
 ###
 
+# command line tools
+# note: must come before brew bundle
+xcode-select --install
+
 # Homebrew
 if ! installed brew; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -65,9 +69,6 @@ cp $ROOT/fonts/* $HOME/Library/Fonts
 if ! [[ -d $HOME/.vim-anywhere ]]; then
   curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
 fi
-
-# command line tools
-xcode-select --install
 
 # OSX defaults
 # should always be run last as it will shut down Terminal
