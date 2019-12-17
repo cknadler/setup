@@ -25,6 +25,12 @@ PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 PATH=$PATH:$HOME/.bin
 
 ###
+# ruby
+###
+
+eval "$(rbenv init -)"
+
+###
 # exports
 ###
 
@@ -80,7 +86,6 @@ alias g=git
 
 # navigation
 alias src='cd ~/src'
-alias ws='cd ~/workspace'
 alias home='cd ~/.homesick/repos/dotfiles'
 
 # ruby dev
