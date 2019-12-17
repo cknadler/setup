@@ -43,6 +43,9 @@ brew tap Homebrew/bundle
 # install everything from Brewfile
 brew bundle
 
+# install lastest ruby version
+rbenv install $(rbenv install -l | grep -v - | tail -1)
+
 # gems
 sudo gem install bundler
 bundle install --gemfile=$ROOT/Gemfile
