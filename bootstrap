@@ -3,6 +3,11 @@
 set -e
 
 ###
+# TODO
+# - Run this assuming no git at first
+###
+
+###
 # functions
 ###
 
@@ -32,7 +37,9 @@ ROOT=$(dirname $SCRIPT_PATH)
 
 # command line tools
 # note: must come before brew bundle
-xcode-select --install
+if ! xcode-select -p 1>/dev/null; then
+  xcode-select --install
+fi
 
 # Homebrew
 if ! installed brew; then
