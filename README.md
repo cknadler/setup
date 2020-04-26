@@ -1,8 +1,8 @@
 # Chris Knadler Dot Files
 
-These are my config files to set up my OSX development environment.
+These are my config files to set up my OSX and Windows environments.
 
-## Setup
+## OSX
 
 Most of this is automated. Run the following:
 
@@ -23,14 +23,20 @@ Software I install via the App Store:
 
 ### Manual
 
-Software I install manually:
+Software I install manually.
+
+**General**:
 
 - [Chrome](https://www.google.com/chrome)
 - [1Password](https://1password.com/)
 - [Dropbox](https://www.dropbox.com/install)
 - [Alfred](https://www.alfredapp.com/)
+
+**Music**:
+
 - [Guitar Pro](https://www.guitar-pro.com/en/index.php)
 - [Cubase](https://www.steinberg.net/en/mysteinberg/my_products.html)
+  - After installing, [symlink the following folders](https://helpcenter.steinberg.de/hc/en-us/articles/360000327730-Location-file-paths-of-presets-in-Cubase-and-Nuendo-) in from `~/Dropbox/config/*` (TODO: script)
 - [Waves](https://www.waves.com/login)
 - [Valhalla DSP](https://valhalladsp.com/my-account/)
 - [Toontrack](https://www.toontrack.com)
@@ -40,6 +46,7 @@ Software I install manually:
 - [iLok](https://www.ilok.com/#!license-manager)
 - [Splyce](https://splice.com/plugins/your-plugins)
 - [FabFilter](https://www.fabfilter.com/download/)
+- [Slate Digital](https://slatedigital.com/installers/)
 
 ### Bindings
 
