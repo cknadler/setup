@@ -21,8 +21,6 @@ rm -r dotfiles
 
 ### Manual
 
-Software I install manually.
-
 **General**
 
 - [Chrome](https://www.google.com/chrome)
