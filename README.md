@@ -16,8 +16,6 @@ rm -r dotfiles
 
 ### App Store
 
-Software I install via the App Store:
-
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
 - Metronomics HD
 
