@@ -31,6 +31,7 @@ Software I install manually.
 - [1Password](https://1password.com/)
 - [Dropbox](https://www.dropbox.com/install)
 - [Alfred](https://www.alfredapp.com/)
+  - Preferences: `~/Dropbox/config/Alfred`
 
 **Music**:
 
