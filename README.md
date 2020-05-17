@@ -102,4 +102,4 @@ If I'm using something I forgot to credit, please let me know.
 
 ## Copyright
 
-Copyright (c) 2014 Chris Knadler. See LICENSE for details.
+Copyright (c) 2020 Chris Knadler. See LICENSE for details.
