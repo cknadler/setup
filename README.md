@@ -25,7 +25,7 @@ Software I install via the App Store:
 
 Software I install manually.
 
-**General**:
+**General**
 
 - [Chrome](https://www.google.com/chrome)
 - [1Password](https://1password.com/)
@@ -33,17 +33,20 @@ Software I install manually.
 - [Alfred](https://www.alfredapp.com/)
   - Preferences: `~/Dropbox/config/Alfred`
 
-**Music**:
+**Music**
 
 - [Guitar Pro](https://www.guitar-pro.com/en/index.php)
 - [Cubase](https://www.steinberg.net/en/mysteinberg/my_products.html)
   - After installing, [symlink the following folders](https://helpcenter.steinberg.de/hc/en-us/articles/360000327730-Location-file-paths-of-presets-in-Cubase-and-Nuendo-) in from `~/Dropbox/config/*` (TODO: script)
-- [Waves](https://www.waves.com/login)
-- [Valhalla DSP](https://valhalladsp.com/my-account/)
-- [Toontrack](https://www.toontrack.com)
 - [Axe Edit](https://www.fractalaudio.com/axe-edit/)
 - [Axe FX 2 USB Driver](https://www.fractalaudio.com/axe-fx-ii-downloads/)
 - [Fractal Bot](https://www.fractalaudio.com/fractal-bot/)
+
+**Music Plugins**
+
+- [Waves](https://www.waves.com/login)
+- [Valhalla DSP](https://valhalladsp.com/my-account/)
+- [Toontrack](https://www.toontrack.com)
 - [iLok](https://www.ilok.com/#!license-manager)
 - [Splyce](https://splice.com/plugins/your-plugins)
 - [FabFilter](https://www.fabfilter.com/download/)
