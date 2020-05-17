@@ -37,7 +37,7 @@ Software I install manually.
 
 - [Guitar Pro](https://www.guitar-pro.com/en/index.php)
 - [Cubase](https://www.steinberg.net/en/mysteinberg/my_products.html)
-  - After installing, [symlink the following folders](https://helpcenter.steinberg.de/hc/en-us/articles/360000327730-Location-file-paths-of-presets-in-Cubase-and-Nuendo-) in from `~/Dropbox/config/*` (TODO: script)
+  - After installing, [symlink the following folders](https://helpcenter.steinberg.de/hc/en-us/articles/360000327730-Location-file-paths-of-presets-in-Cubase-and-Nuendo-) in from `~/Dropbox/config/Cubase` (TODO: script)
 - [Axe Edit](https://www.fractalaudio.com/axe-edit/)
 - [Axe FX 2 USB Driver](https://www.fractalaudio.com/axe-fx-ii-downloads/)
 - [Fractal Bot](https://www.fractalaudio.com/fractal-bot/)
