@@ -27,7 +27,8 @@ rm -r dotfiles
 - [1Password](https://1password.com/)
 - [Dropbox](https://www.dropbox.com/install)
 - [Alfred](https://www.alfredapp.com/)
-  - Preferences: `~/Dropbox/config/Alfred`
+  - Preferences: `~/Dropbox/config/Alfred/preferences`
+  - Workflows: `~/Dropbox/config/Alfred/workflows`
 
 **Music**
 
