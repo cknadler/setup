@@ -51,6 +51,7 @@ rm -r dotfiles
 - [Slate Digital](https://slatedigital.com/installers/)
 - [Native Instruments](https://www.native-instruments.com/en/specials/native-access/)
   - Update downloads, app & content to `/SSD/native_instruments`
+- [Spitfire Audio](https://www.spitfireaudio.com/info/library-manager/)
 
 ### Bindings
 
