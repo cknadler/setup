@@ -48,6 +48,8 @@ rm -r dotfiles
 - [Splyce](https://splice.com/plugins/your-plugins)
 - [FabFilter](https://www.fabfilter.com/download/)
 - [Slate Digital](https://slatedigital.com/installers/)
+- [Native Instruments](https://www.native-instruments.com/en/specials/native-access/)
+  - Update downloads, app & content to `/SSD/native_instruments`
 
 ### Bindings
 
