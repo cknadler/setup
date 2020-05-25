@@ -43,7 +43,8 @@ rm -r dotfiles
 
 - [Waves](https://www.waves.com/login)
 - [Valhalla DSP](https://valhalladsp.com/my-account/)
-- [Toontrack](https://www.toontrack.com)
+- [Toontrack](https://www.toontrack.com/product-manager/)
+  - Component installation path `/SSD/superior_drummer`
 - [iLok](https://www.ilok.com/#!license-manager)
 - [Splyce](https://splice.com/plugins/your-plugins)
 - [FabFilter](https://www.fabfilter.com/download/)
