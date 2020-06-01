@@ -86,6 +86,7 @@ rm -r dotfiles
 - [Valhalla DSP](https://valhalladsp.com/my-account/)
 - [Toontrack](https://www.toontrack.com/product-manager/)
   - Component installation path `/SSD/superior_drummer`
+  - Symlink `~/Dropbox/confic/Superior\ Drummer/User\ MIDI` -> `~/Music/EZdrummer/User\ MIDI` (TODO: script)
 - [iLok](https://www.ilok.com/#!license-manager)
 - [Splyce](https://splice.com/plugins/your-plugins)
 - [FabFilter](https://www.fabfilter.com/download/)
