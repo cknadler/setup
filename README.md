@@ -1,10 +1,10 @@
 # Chris Knadler Dot Files
 
-These are my config files to set up my OSX and Windows environments.
+These are my config files to set up my OSX and Windows environments, as well as my music production environment.
 
 ## OSX
 
-Most of this is automated. Run the following:
+~~Most~~ Some of this is automated. Run the following:
 
 ```bash
 git clone https://github.com/cknadler/dotfiles && \
@@ -30,29 +30,6 @@ rm -r dotfiles
   - Preferences: `~/Dropbox/config/Alfred/preferences`
   - Workflows: `~/Dropbox/config/Alfred/workflows`
 
-**Music**
-
-- [Guitar Pro](https://www.guitar-pro.com/en/index.php)
-- [Cubase](https://www.steinberg.net/en/mysteinberg/my_products.html)
-  - After installing, [symlink the following folders](https://helpcenter.steinberg.de/hc/en-us/articles/360000327730-Location-file-paths-of-presets-in-Cubase-and-Nuendo-) in from `~/Dropbox/config/Cubase` (TODO: script)
-- [Axe Edit](https://www.fractalaudio.com/axe-edit/)
-- [Axe FX 2 USB Driver](https://www.fractalaudio.com/axe-fx-ii-downloads/)
-- [Fractal Bot](https://www.fractalaudio.com/fractal-bot/)
-
-**Music Plugins**
-
-- [Waves](https://www.waves.com/login)
-- [Valhalla DSP](https://valhalladsp.com/my-account/)
-- [Toontrack](https://www.toontrack.com/product-manager/)
-  - Component installation path `/SSD/superior_drummer`
-- [iLok](https://www.ilok.com/#!license-manager)
-- [Splyce](https://splice.com/plugins/your-plugins)
-- [FabFilter](https://www.fabfilter.com/download/)
-- [Slate Digital](https://slatedigital.com/installers/)
-- [Native Instruments](https://www.native-instruments.com/en/specials/native-access/)
-  - Update downloads, app & content to `/SSD/native_instruments`
-- [Spitfire Audio](https://www.spitfireaudio.com/info/library-manager/)
-
 ### Bindings
 
 - General (Keyboard -> Shortcuts -> Mission Control)
@@ -70,7 +47,7 @@ rm -r dotfiles
   - Top Right: `cmd+ctrl+u`
   - Bottom Left: `cmd+ctrl+b`
   - Bottom Right: `cmd+ctrl+n`
-  
+
 ## Windows
 
 ### Settings
@@ -80,13 +57,54 @@ rm -r dotfiles
     - "When I snap a window, show..." -> off
     - "When I resize a snapped window..." -> off
     - Timeline -> off
-    
+
 ### Software
-      
+
 - [SharpKeys](https://github.com/randyrants/sharpkeys)
   - Left Cmd -> Left Ctrl
   - Left Ctrl -> Left Cmd
   - Caps Lock -> Escape
+
+## Music
+
+**General**
+
+- [Guitar Pro](https://www.guitar-pro.com/en/index.php)
+- [Cubase](https://www.steinberg.net/en/mysteinberg/my_products.html)
+  - [Symlink these folders](https://helpcenter.steinberg.de/hc/en-us/articles/360000327730-Location-file-paths-of-presets-in-Cubase-and-Nuendo-) in from `~/Dropbox/config/Cubase` (TODO: script)
+
+**Hardware Drivers**
+
+- [Axe Edit](https://www.fractalaudio.com/axe-edit/)
+- [Axe FX 2 USB Driver](https://www.fractalaudio.com/axe-fx-ii-downloads/)
+- [Fractal Bot](https://www.fractalaudio.com/fractal-bot/)
+- [Scarlett 2i2 (3rd gen) Driver](https://customer.focusrite.com/en/support/downloads?brand=Focusrite&product_by_range=1361&download_type=all)
+
+**Plugins**
+
+- [Waves](https://www.waves.com/login)
+- [Valhalla DSP](https://valhalladsp.com/my-account/)
+- [Toontrack](https://www.toontrack.com/product-manager/)
+  - Component installation path `/SSD/superior_drummer`
+- [iLok](https://www.ilok.com/#!license-manager)
+- [Splyce](https://splice.com/plugins/your-plugins)
+- [FabFilter](https://www.fabfilter.com/download/)
+- [Slate Digital](https://slatedigital.com/installers/)
+- [Native Instruments](https://www.native-instruments.com/en/specials/native-access/)
+  - Update downloads, app & content to `/SSD/native_instruments`
+- [Spitfire Audio](https://www.spitfireaudio.com/info/library-manager/)
+- [TSE BOD](https://www.tseaudio.com/software/tseBOD)
+- [Headcrusher](http://www.vst4free.com/free_vst.php?plugin=HeadCrusher_Free&id=2112)
+- [Bittersweet](https://www.flux.audio/project/bittersweet-v3/)
+- [Pancake](http://www.cableguys.com/pancake.html)
+- [Voxengo SPAN](https://www.voxengo.com/product/span/)
+- [TDR Kotelnikov](https://www.tokyodawn.net/tdr-kotelnikov/)
+- [Ozone Imager](https://www.izotope.com/en/products/ozone-imager.html)
+- [MAutoPitch](https://www.meldaproduction.com/MAutoPitch)
+- [Tyrell N6](https://www.amazona.de/freeware-synthesizer-tyrell-n6-plugin-vst-au-win-mac/)
+  - Download additional presets from the same page (TODO: ~/Library/Audio/Presets/u-he/TyrellN6 -> backup script)
+- [Helm](https://tytel.org/helm/)
+- [Dexed](https://asb2m10.github.io/dexed/)
 
 ## Credits
 
@@ -102,3 +120,4 @@ If I'm using something I forgot to credit, please let me know.
 ## Copyright
 
 Copyright (c) 2020 Chris Knadler. See LICENSE for details.
+
