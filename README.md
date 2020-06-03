@@ -103,7 +103,7 @@ rm -r dotfiles
 - [Ozone Imager](https://www.izotope.com/en/products/ozone-imager.html)
 - [MAutoPitch](https://www.meldaproduction.com/MAutoPitch)
 - [Tyrell N6](https://www.amazona.de/freeware-synthesizer-tyrell-n6-plugin-vst-au-win-mac/)
-  - Download additional presets from the same page (TODO: ~/Library/Audio/Presets/u-he/TyrellN6 -> backup script)
+  - Presets are backed up in Cubase, don't bother re-installing
 - [Helm](https://tytel.org/helm/)
 - [Dexed](https://asb2m10.github.io/dexed/)
 
