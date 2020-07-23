@@ -83,7 +83,10 @@ rm -r dotfiles
 **Plugins**
 
 - [Waves](https://www.waves.com/login)
-- [Valhalla DSP](https://valhalladsp.com/my-account/)
+- [Valhalla DSP](https://valhalladsp.com/my-account/) (some in account, some free below)
+  - [Super Massive](https://valhalladsp.com/shop/reverb/valhalla-supermassive/)
+  - [Freq Echo](https://valhalladsp.com/shop/delay/valhalla-freq-echo/)
+  - [Space Mod](https://valhalladsp.com/shop/modulation/valhalla-space-modulator/)
 - [Toontrack](https://www.toontrack.com/product-manager/)
   - Component installation path `/SSD/superior_drummer`
   - Symlink `~/Dropbox/confic/Superior\ Drummer/User\ MIDI` -> `~/Music/EZdrummer/User\ MIDI` (TODO: script)
