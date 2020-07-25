@@ -79,6 +79,7 @@ rm -r dotfiles
 - [Axe FX 2 USB Driver](https://www.fractalaudio.com/axe-fx-ii-downloads/)
 - [Fractal Bot](https://www.fractalaudio.com/fractal-bot/)
 - [Scarlett 2i2 (3rd gen) Driver](https://customer.focusrite.com/en/support/downloads?brand=Focusrite&product_by_range=1361&download_type=all)
+- [iLok](https://www.ilok.com/#!license-manager)
 
 **Plugins**
 
@@ -90,7 +91,6 @@ rm -r dotfiles
 - [Toontrack](https://www.toontrack.com/product-manager/)
   - Component installation path `/SSD/superior_drummer`
   - Symlink `~/Dropbox/confic/Superior\ Drummer/User\ MIDI` -> `~/Music/EZdrummer/User\ MIDI` (TODO: script)
-- [iLok](https://www.ilok.com/#!license-manager)
 - [Splice](https://splice.com/plugins/your-plugins)
 - [FabFilter](https://www.fabfilter.com/download/)
 - [Slate Digital](https://slatedigital.com/installers/)
@@ -107,6 +107,7 @@ rm -r dotfiles
   - Presets are backed up in Cubase, don't bother re-installing
 - [Helm](https://tytel.org/helm/)
 - [Dexed](https://asb2m10.github.io/dexed/)
+- [TAL Chorus LX](https://tal-software.com/products/tal-chorus-lx)
 
 ## Credits
 
