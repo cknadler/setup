@@ -100,7 +100,6 @@ rm -r dotfiles
 - [TSE BOD](https://www.tseaudio.com/software/tseBOD)
 - [Headcrusher](http://www.vst4free.com/free_vst.php?plugin=HeadCrusher_Free&id=2112)
 - [Bittersweet](https://www.flux.audio/project/bittersweet-v3/)
-- [Pancake](http://www.cableguys.com/pancake.html)
 - [TDR Kotelnikov](https://www.tokyodawn.net/tdr-kotelnikov/)
 - [Ozone Imager](https://www.izotope.com/en/products/ozone-imager.html)
 - [MAutoPitch](https://www.meldaproduction.com/MAutoPitch)
