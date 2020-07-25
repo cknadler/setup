@@ -103,8 +103,7 @@ rm -r dotfiles
 - [TDR Kotelnikov](https://www.tokyodawn.net/tdr-kotelnikov/)
 - [Ozone Imager](https://www.izotope.com/en/products/ozone-imager.html)
 - [MAutoPitch](https://www.meldaproduction.com/MAutoPitch)
-- [Tyrell N6](https://www.amazona.de/freeware-synthesizer-tyrell-n6-plugin-vst-au-win-mac/)
-  - Presets are backed up in Cubase, don't bother re-installing
+- [Tyrell N6](https://www.amazona.de/freeware-synthesizer-tyrell-n6-plugin-vst-au-win-mac/) (presets are backed up in Cubase)
 - [Helm](https://tytel.org/helm/)
 - [Dexed](https://asb2m10.github.io/dexed/)
 - [TAL Chorus LX](https://tal-software.com/products/tal-chorus-lx)
