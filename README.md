@@ -91,7 +91,7 @@ rm -r dotfiles
   - Component installation path `/SSD/superior_drummer`
   - Symlink `~/Dropbox/confic/Superior\ Drummer/User\ MIDI` -> `~/Music/EZdrummer/User\ MIDI` (TODO: script)
 - [iLok](https://www.ilok.com/#!license-manager)
-- [Splyce](https://splice.com/plugins/your-plugins)
+- [Splice](https://splice.com/plugins/your-plugins)
 - [FabFilter](https://www.fabfilter.com/download/)
 - [Slate Digital](https://slatedigital.com/installers/)
 - [Native Instruments](https://www.native-instruments.com/en/specials/native-access/)
@@ -101,7 +101,6 @@ rm -r dotfiles
 - [Headcrusher](http://www.vst4free.com/free_vst.php?plugin=HeadCrusher_Free&id=2112)
 - [Bittersweet](https://www.flux.audio/project/bittersweet-v3/)
 - [Pancake](http://www.cableguys.com/pancake.html)
-- [Voxengo SPAN](https://www.voxengo.com/product/span/)
 - [TDR Kotelnikov](https://www.tokyodawn.net/tdr-kotelnikov/)
 - [Ozone Imager](https://www.izotope.com/en/products/ozone-imager.html)
 - [MAutoPitch](https://www.meldaproduction.com/MAutoPitch)
