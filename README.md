@@ -21,8 +21,6 @@ rm -r dotfiles
 
 ### Manual
 
-**General**
-
 - [Chrome](https://www.google.com/chrome)
 - [1Password](https://1password.com/)
 - [Dropbox](https://www.dropbox.com/install)
