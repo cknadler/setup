@@ -107,6 +107,7 @@ rm -r dotfiles
 - [Helm](https://tytel.org/helm/)
 - [Dexed](https://asb2m10.github.io/dexed/)
 - [TAL Chorus LX](https://tal-software.com/products/tal-chorus-lx)
+- [Soothe](https://oeksound.com/plugins/)
 
 ## Credits
 
