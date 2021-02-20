@@ -70,7 +70,7 @@ rm -r dotfiles
 - [Guitar Pro](https://www.guitar-pro.com/en/index.php)
 - [Cubase](https://www.steinberg.net/en/mysteinberg/my_products.html)
   - [Symlink these folders](https://helpcenter.steinberg.de/hc/en-us/articles/360000327730-Location-file-paths-of-presets-in-Cubase-and-Nuendo-) in from `~/Dropbox/config/Cubase` (TODO: script)
-- [Sibelius](https://www.avid.com/sibelius)
+- [Dorico](https://new.steinberg.net/dorico/)
 
 **Hardware Drivers**
 
