@@ -28,6 +28,9 @@ set formatoptions=qrn1
 set fileformats="unix,dos,mac"
 set clipboard=unnamed " system clipboard
 
+" no error bells
+set noeb vb t_vb=
+
 " colorscheme
 set t_Co=256        " 256 colors
 set background=dark
