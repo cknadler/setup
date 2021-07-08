@@ -17,6 +17,8 @@ bindkey -v
 # path
 ###
 
+# homebrew
+PATH=/usr/local/bin:$PATH
 # tex
 PATH=/usr/texbin:$PATH
 # gnu core utils
@@ -28,7 +30,7 @@ PATH=$PATH:$HOME/.bin
 # ruby
 ###
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 ###
 # exports
