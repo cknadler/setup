@@ -97,6 +97,7 @@ rm -r dotfiles
 - [Waves](https://www.waves.com/login)
 - [Steven Slate Drums - Trigger 2](https://my.stevenslateaudio.com/)
 - [Valhalla DSP](https://valhalladsp.com/my-account/) (some in account, some free below)
+- [Auto Align](https://www.soundradix.com/)
   - [Super Massive](https://valhalladsp.com/shop/reverb/valhalla-supermassive/)
   - [Freq Echo](https://valhalladsp.com/shop/delay/valhalla-freq-echo/)
   - [Space Mod](https://valhalladsp.com/shop/modulation/valhalla-space-modulator/)
