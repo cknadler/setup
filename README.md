@@ -93,6 +93,7 @@ rm -r dotfiles
   - Fortin Nameless
   - Parallax
   - Nolly
+- [Plugin Alliance](https://www.plugin-alliance.com/)
 - [Waves](https://www.waves.com/login)
 - [Valhalla DSP](https://valhalladsp.com/my-account/) (some in account, some free below)
   - [Super Massive](https://valhalladsp.com/shop/reverb/valhalla-supermassive/)
