@@ -97,10 +97,10 @@ rm -r dotfiles
 - [Waves](https://www.waves.com/login)
 - [Steven Slate Drums - Trigger 2](https://my.stevenslateaudio.com/)
 - [Valhalla DSP](https://valhalladsp.com/my-account/) (some in account, some free below)
-- [Auto Align](https://www.soundradix.com/)
   - [Super Massive](https://valhalladsp.com/shop/reverb/valhalla-supermassive/)
   - [Freq Echo](https://valhalladsp.com/shop/delay/valhalla-freq-echo/)
   - [Space Mod](https://valhalladsp.com/shop/modulation/valhalla-space-modulator/)
+- [Auto Align](https://www.soundradix.com/)
 - [Toontrack](https://www.toontrack.com/product-manager/)
   - Component installation path `/SSD/superior_drummer`
   - Symlink `~/Dropbox/confic/Superior\ Drummer/User\ MIDI` -> `~/Music/EZdrummer/User\ MIDI` (TODO: script)
@@ -112,14 +112,12 @@ rm -r dotfiles
 - [Spitfire Audio](https://www.spitfireaudio.com/info/library-manager/)
 - [TSE BOD](https://www.tseaudio.com/software/tseBOD)
 - [Headcrusher](http://www.vst4free.com/free_vst.php?plugin=HeadCrusher_Free&id=2112)
-- [Bittersweet](https://www.flux.audio/project/bittersweet-v3/)
 - [TDR Kotelnikov](https://www.tokyodawn.net/tdr-kotelnikov/)
 - [Ozone Imager](https://www.izotope.com/en/products/ozone-imager.html)
 - [MAutoPitch](https://www.meldaproduction.com/MAutoPitch)
 - [Tyrell N6](https://www.amazona.de/freeware-synthesizer-tyrell-n6-plugin-vst-au-win-mac/) (presets are backed up in Cubase)
 - [Helm](https://tytel.org/helm/)
 - [Dexed](https://asb2m10.github.io/dexed/)
-- [TAL Chorus LX](https://tal-software.com/products/tal-chorus-lx)
 - [Soothe](https://oeksound.com/plugins/)
 
 ## Credits
