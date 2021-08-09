@@ -93,6 +93,8 @@ rm -r dotfiles
   - Fortin Nameless
   - Parallax
   - Nolly
+  - Fortin NTS
+  - Plini
 - [Plugin Alliance](https://www.plugin-alliance.com/)
 - [Waves](https://www.waves.com/login)
 - [Steven Slate Drums - Trigger 2](https://my.stevenslateaudio.com/)
