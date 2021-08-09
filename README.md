@@ -95,6 +95,7 @@ rm -r dotfiles
   - Nolly
 - [Plugin Alliance](https://www.plugin-alliance.com/)
 - [Waves](https://www.waves.com/login)
+- [Steven Slate Drums - Trigger 2](https://stevenslatedrums.com/)
 - [Valhalla DSP](https://valhalladsp.com/my-account/) (some in account, some free below)
   - [Super Massive](https://valhalladsp.com/shop/reverb/valhalla-supermassive/)
   - [Freq Echo](https://valhalladsp.com/shop/delay/valhalla-freq-echo/)
