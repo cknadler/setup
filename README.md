@@ -113,7 +113,6 @@ rm -r dotfiles
   - Update downloads, app & content to `/SSD/native_instruments`
 - [Spitfire Audio](https://www.spitfireaudio.com/info/library-manager/)
 - [TSE BOD](https://www.tseaudio.com/software/tseBOD)
-- [Headcrusher](http://www.vst4free.com/free_vst.php?plugin=HeadCrusher_Free&id=2112)
 - [TDR Kotelnikov](https://www.tokyodawn.net/tdr-kotelnikov/)
 - [Ozone Imager](https://www.izotope.com/en/products/ozone-imager.html)
 - [MAutoPitch](https://www.meldaproduction.com/MAutoPitch)
