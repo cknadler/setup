@@ -89,6 +89,7 @@ rm -r dotfiles
 
 **Plugins**
 
+- [UAD](https://www.uaudio.com/my/account/)
 - [Neural DSP](https://neuraldsp.com/)
   - Fortin Nameless
   - Parallax
