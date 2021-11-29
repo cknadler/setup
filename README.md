@@ -114,13 +114,10 @@ rm -r dotfiles
   - Update downloads, app & content to `/SSD/native_instruments`
 - [Spitfire Audio](https://www.spitfireaudio.com/info/library-manager/)
 - [TSE BOD](https://www.tseaudio.com/software/tseBOD)
-- [TDR Kotelnikov](https://www.tokyodawn.net/tdr-kotelnikov/)
-- [Ozone Imager](https://www.izotope.com/en/products/ozone-imager.html)
-- [MAutoPitch](https://www.meldaproduction.com/MAutoPitch)
-- [Tyrell N6](https://www.amazona.de/freeware-synthesizer-tyrell-n6-plugin-vst-au-win-mac/) (presets are backed up in Cubase)
-- [Helm](https://tytel.org/helm/)
-- [Dexed](https://asb2m10.github.io/dexed/)
 - [Soothe](https://oeksound.com/plugins/)
+- [boz Digital Labs](https://www.bozdigitallabs.com/my-account/downloads/)
+- [Plugin Alliance](https://www.plugin-alliance.com/en/manage-plugins.html)
+- [Soundtoys](https://acct.soundtoys.com/acct/downloads)
 
 ## Credits
 
