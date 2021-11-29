@@ -118,6 +118,7 @@ rm -r dotfiles
 - [boz Digital Labs](https://www.bozdigitallabs.com/my-account/downloads/)
 - [Plugin Alliance](https://www.plugin-alliance.com/en/manage-plugins.html)
 - [Soundtoys](https://acct.soundtoys.com/acct/downloads)
+- [Sonnox](https://www.sonnox.com/mysonnox)
 
 ## Credits
 
