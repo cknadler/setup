@@ -90,6 +90,7 @@ rm -r dotfiles
 **Plugins**
 
 - [UAD](https://www.uaudio.com/my/account/)
+- [iZotope](https://www.izotope.com/en/account/overview)
 - [Neural DSP](https://neuraldsp.com/)
   - Fortin Nameless
   - Parallax
