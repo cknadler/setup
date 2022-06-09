@@ -116,7 +116,6 @@ rm -r dotfiles
 - [TSE BOD](https://www.tseaudio.com/software/tseBOD)
 - [Soothe](https://oeksound.com/plugins/)
 - [boz Digital Labs](https://www.bozdigitallabs.com/my-account/downloads/)
-- [Plugin Alliance](https://www.plugin-alliance.com/en/manage-plugins.html)
 - [Soundtoys](https://acct.soundtoys.com/acct/downloads)
 - [Sonnox](https://www.sonnox.com/mysonnox)
 
