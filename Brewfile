@@ -10,13 +10,16 @@ brew 'findutils'
 # Install other useful binaries
 brew 'curl'
 brew 'git'
-brew 'git-extras'
-brew 'pcre'
-brew 'reattach-to-user-namespace'
-brew 'the_silver_searcher'
-brew 'tmux'
 brew 'zsh'
-brew 'rbenv'
+
+# suppressed dev stuff for now
+
+#brew 'reattach-to-user-namespace'
+#brew 'the_silver_searcher'
+#brew 'tmux'
+#brew 'rbenv'
+#brew 'git-extras'
+#brew 'pcre'
 
 # install casks
 cask 'iterm2'
