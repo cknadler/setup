@@ -119,6 +119,7 @@ rm -r dotfiles
 - [boz Digital Labs](https://www.bozdigitallabs.com/my-account/downloads/)
 - [Soundtoys](https://acct.soundtoys.com/acct/downloads)
 - [Sonnox](https://www.sonnox.com/mysonnox)
+- [OTT](https://splice.com/plugins/3788-ott-vst-au-by-xfer-records)
 
 ## Credits
 
