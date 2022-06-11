@@ -86,7 +86,7 @@ rm -r dotfiles
 - [Axe Edit](https://www.fractalaudio.com/axe-edit/)
 - [Axe FX 2 USB Driver](https://www.fractalaudio.com/axe-fx-ii-downloads/)
 - [Fractal Bot](https://www.fractalaudio.com/fractal-bot/)
-- [Scarlett 2i2 (3rd gen) Driver](https://customer.focusrite.com/en/support/downloads?brand=Focusrite&product_by_range=1361&download_type=all)
+- [Scarlett 18i20 (3rd gen) Driver](https://downloads.focusrite.com/focusrite/scarlett-3rd-gen/scarlett-18i20-3rd-gen)
 - [iLok](https://www.ilok.com/#!license-manager)
 
 **Plugins**
