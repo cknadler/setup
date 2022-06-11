@@ -18,6 +18,7 @@ rm -r dotfiles
 
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
 - Metronomics HD
+- NordVPN
 
 ### Manual
 
