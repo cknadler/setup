@@ -100,7 +100,7 @@ rm -r dotfiles
   - Nolly
   - Fortin NTS
   - Plini
-- [Plugin Alliance](https://www.plugin-alliance.com/)
+- [Plugin Alliance](https://www.plugin-alliance.com/en/installation-manager.html)
 - [Waves](https://www.waves.com/login)
 - [Steven Slate Drums - Trigger 2](https://my.stevenslateaudio.com/)
 - [Valhalla DSP](https://valhalladsp.com/my-account/) (some in account, some free below)
