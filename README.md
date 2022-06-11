@@ -29,6 +29,7 @@ rm -r dotfiles
   - Workflows: `~/Dropbox/config/Alfred/workflows`
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
 - [Plex Server](https://www.plex.tv/media-server-downloads/)
+- [Signal](https://signal.org/download/)
 
 ### Bindings
 
