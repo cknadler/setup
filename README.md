@@ -27,6 +27,8 @@ rm -r dotfiles
 - [Alfred](https://www.alfredapp.com/)
   - Preferences: `~/Dropbox/config/Alfred/preferences`
   - Workflows: `~/Dropbox/config/Alfred/workflows`
+- [MusicBrainz Picard](https://picard.musicbrainz.org/)
+- [Plex Server](https://www.plex.tv/media-server-downloads/)
 
 ### Bindings
 
