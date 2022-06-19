@@ -11,6 +11,7 @@ brew 'findutils'
 brew 'curl'
 brew 'git'
 brew 'zsh'
+brew 'bandcamp-dl'
 
 # suppressed dev stuff for now
 
