@@ -33,6 +33,7 @@ rm -r dotfiles
 - [Signal](https://signal.org/download/)
 - [Loopback](https://rogueamoeba.com/loopback/)
 - [Zoom](https://zoom.us/download)
+- [Synology Drive](https://www.synology.com/en-us/dsm/feature/drive)
 
 ### Bindings
 
