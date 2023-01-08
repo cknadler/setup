@@ -12,9 +12,9 @@ brew 'curl'
 brew 'git'
 brew 'zsh'
 brew 'bandcamp-dl'
+brew 'python'
 
 # suppressed dev stuff for now
-
 #brew 'reattach-to-user-namespace'
 #brew 'the_silver_searcher'
 #brew 'tmux'
