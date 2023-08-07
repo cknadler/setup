@@ -17,12 +17,16 @@ bindkey -v
 # path
 ###
 
+installed() { hash $1 &> /dev/null; }
+
 # homebrew
 PATH=/usr/local/bin:$PATH
 # tex
 PATH=/usr/texbin:$PATH
 # gnu core utils
-PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+if installed brew; then
+  PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+fi
 # bin
 PATH=$PATH:$HOME/.bin
 
