@@ -5,7 +5,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME='minimal'
 source $ZSH/oh-my-zsh.sh
-plugins=(brew node npm osx)
+plugins=(brew node npm)
 
 ###
 # zsh config
