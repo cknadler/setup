@@ -29,53 +29,6 @@ end
 # Autopickup artefacts
 ae += <artefact
 
-# Armour/Weapon autopickup by rwbarton, enhanced by HDA with fixes from Bloaxor
-{
-add_autopickup_func(function(it, name)
-
-  if name:find("throwing net") then return true end
-  if name:find("scroll of immolation") then return true end
-  if name:find("scroll of vulnerability") then return true end
-
-  local class = it.class(true)
-  local armour_slots = {cloak="Cloak", helmet="Helmet", gloves="Gloves", boots="Boots", body="Armour", shield="Shield"}
-
-  if (class == "armour") then
-        if it.is_useless then return false end
-
-    sub_type = it.subtype()
-    equipped_item = items.equipped_at(armour_slots[sub_type])
-
-    if (sub_type == "cloak") or (sub_type == "helmet") or (sub_type == "gloves") or (sub_type == "boots") then
-      if not equipped_item then
-        return true
-      else
-        return it.artefact or it.branded or it.ego
-      end
-    end
-
-    if (sub_type == "body") then
-      if equipped_item then
-        local armourname = equipped_item.name()
-        if equipped_item.artefact or equipped_item.branded or equipped_item.ego or (equipped_item.plus > 2) or armourname:find("dragon") or armourname:find("troll") then
-          return it.artefact
-        else
-          return it.artefact or it.branded or it.ego
-        end
-      end
-      return true
-    end
-
-    if (sub_type == "shield") then
-      if equipped_item then
-          return it.artefact or it.branded or it.ego
-      end
-    end
-  end
-end)
-}
-
-
 #############
 # Interface #
 #############

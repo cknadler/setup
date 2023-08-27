@@ -106,3 +106,6 @@ alias readlink=greadlink
 if [ -f ~/.bin/gen-aliases ]; then
   eval `~/.bin/gen-aliases`
 fi
+
+# bandcamp-dl
+alias bc-dl="bandcamp-dl --base-dir='Dropbox/music/music-mp3'"
