@@ -14,8 +14,57 @@
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "30f6546ba685ecdc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Todo.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1e4ef16e7a0927bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Todo.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "500ba85935e98417",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Todo.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "54c6b9bb93503342",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Todo.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -81,6 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Todo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +169,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Todo.md"
+              }
             }
           },
           {
@@ -148,6 +201,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2d28054bcfa31e86",
-  "lastOpenFiles": []
+  "active": "54c6b9bb93503342",
+  "lastOpenFiles": [
+    "Piano Todo.md",
+    "Todo.md",
+    "Music Todo.md",
+    "Creative Advice.md",
+    "Piano Lesson Notes.md",
+    "Sibyl Planning.md",
+    "Pull List.md",
+    "Music Learning Material.md",
+    "Untitled.canvas",
+    "pulllist.txt",
+    "sibyl/planning.md",
+    "sibyl",
+    "Creative.md"
+  ]
 }
