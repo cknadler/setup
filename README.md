@@ -33,6 +33,7 @@ rm -r dotfiles
 - [Loopback](https://rogueamoeba.com/loopback/)
 - [Zoom](https://zoom.us/download)
 - [Synology Drive](https://www.synology.com/en-us/dsm/feature/drive)
+- [Obsidian](https://obsidian.md/)
 
 ### Bindings
 
