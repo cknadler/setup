@@ -43,8 +43,9 @@ fi
 
 # Homebrew
 if ! installed brew; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+
 # install brewdler
 brew tap Homebrew/bundle
 # install everything from Brewfile
