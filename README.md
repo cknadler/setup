@@ -29,7 +29,6 @@ rm -r dotfiles
   - Preferences: `~/Dropbox/config/Alfred/preferences`
   - Workflows: `~/Dropbox/config/Alfred/workflows`
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
-- [Plex Server](https://www.plex.tv/media-server-downloads/)
 - [Signal](https://signal.org/download/)
 - [Loopback](https://rogueamoeba.com/loopback/)
 - [Zoom](https://zoom.us/download)
