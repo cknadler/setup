@@ -19,6 +19,7 @@ rm -r dotfiles
 - [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
 - Metronomics HD
 - NordVPN
+- [HEIC Converter](https://apps.apple.com/app/id1294126402)
 
 ### Bindings / Settings
 
