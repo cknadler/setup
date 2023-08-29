@@ -20,23 +20,11 @@ rm -r dotfiles
 - Metronomics HD
 - NordVPN
 
-### Manual
+### Bindings / Settings
 
-- [Chrome](https://www.google.com/chrome)
-- [1Password](https://1password.com/)
-- [Dropbox](https://www.dropbox.com/install)
 - [Alfred](https://www.alfredapp.com/)
   - Preferences: `~/Dropbox/config/Alfred/preferences`
   - Workflows: `~/Dropbox/config/Alfred/workflows`
-- [MusicBrainz Picard](https://picard.musicbrainz.org/)
-- [Signal](https://signal.org/download/)
-- [Loopback](https://rogueamoeba.com/loopback/)
-- [Zoom](https://zoom.us/download)
-- [Synology Drive](https://www.synology.com/en-us/dsm/feature/drive)
-- [Obsidian](https://obsidian.md/)
-
-### Bindings
-
 - General (Keyboard -> Shortcuts -> Mission Control -> Mission Control)
   - Move Left A Space: `cmd+shift+h`
   - Move Right A Space: `cmd+shift+l`
