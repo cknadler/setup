@@ -36,7 +36,7 @@ rm -r dotfiles
 
 ### Bindings
 
-- General (Keyboard -> Shortcuts -> Mission Control)
+- General (Keyboard -> Shortcuts -> Mission Control -> Mission Control)
   - Move Left A Space: `cmd+shift+h`
   - Move Right A Space: `cmd+shift+l`
 - Spotlight (Keyboard -> Shortcuts -> Spotlight)
