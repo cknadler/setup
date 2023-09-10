@@ -7,14 +7,13 @@ brew 'coreutils'
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew 'findutils'
 
-# Install other useful binaries
+# basics
 brew 'curl'
 brew 'git'
 brew 'zsh'
-brew 'bandcamp-dl'
 brew 'python'
 
-# suppressed dev stuff for now
+# dev stuff
 brew 'reattach-to-user-namespace'
 brew 'the_silver_searcher'
 brew 'tmux'
@@ -22,7 +21,10 @@ brew 'rbenv'
 brew 'git-extras'
 brew 'pcre'
 
-# install casks
+# scripts
+brew 'bandcamp-dl'
+
+# casks
 cask 'alfred'
 cask '1password'
 cask 'google-chrome'
