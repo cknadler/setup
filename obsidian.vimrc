@@ -76,37 +76,6 @@ set novisualbell " no...
 set noerrorbells " ...bells
 
 """"""""""""""""""""""""
-" plugin config
-""""""""""""""""""""""""
-
-" syntastic
-let g:syntastic_mode_map = {
-  \ 'mode': 'passive',
-  \ 'active_filetypes': ['ruby', 'c', 'python']
-  \ }
-
-" vim-json
-let g:vim_json_syntax_conceal = 0 " don't conceal quotes
-
-" easy-align
-" start interactive easy-align in visual mode
-vmap <Enter> <Plug>(EasyAlign)
-" start interactive easy-align with a Vim movement
-nmap <Leader>a <Plug>(EasyAlign)
-
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
-
-" vim-mustache-handlebars
-let g:mustache_abbreviations = 1
-
-""""""""""""""""""""""""
 " bindings
 """"""""""""""""""""""""
 
@@ -154,25 +123,3 @@ nnoremap Y y$
 
 " disable ZZ, use :wq
 nnoremap ZZ <NOP>
-
-""""""""""""""""""""""""
-" set filetypes
-""""""""""""""""""""""""
-
-" Markdown
-au BufRead,BufNewFile *.md set filetype=markdown
-
-""""""""""""""""""""""""
-" filetype specific
-""""""""""""""""""""""""
-
-" only run this if autocmd is supported
-if has("autocmd")
-  " turn on spell checking for these file types
-  aug spell_checking
-    au!
-    au filetype gitcommit setl spell
-  aug end
-endif
-
-
