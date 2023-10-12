@@ -24,7 +24,7 @@ brew 'pcre'
 # casks
 cask 'alfred'
 cask '1password'
-cask 'google-chrome'
+# cask 'google-chrome'
 cask 'dropbox'
 cask 'musicbrainz-picard'
 # cask 'signal'
