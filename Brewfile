@@ -22,7 +22,7 @@ brew 'git-extras'
 brew 'pcre'
 
 # scripts
-brew 'bandcamp-dl'
+# brew 'bandcamp-dl'
 
 # casks
 cask 'alfred'
@@ -44,8 +44,8 @@ cask 'microsoft-remote-desktop'
 cask 'yacreader'
 cask 'discord'
 cask 'dungeon-crawl-stone-soup-tiles'
-cask 'qbittorrent'
+# cask 'qbittorrent'
 cask 'vlc'
 cask 'mediahuman-audio-converter'
 cask 'obsidian'
-cask 'plex'
+# cask 'plex'
