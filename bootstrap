@@ -55,7 +55,7 @@ if ! [[ -d $HOME/.oh-my-zsh ]]; then
 fi
 
 chezmoi init https://github.com/cknadler/dotfiles.git
-chezmoi apply -v
+chezmoi apply
 
 # submodules
 pushd ~/.local/share/chezmoi
