@@ -2,6 +2,7 @@
 brew 'bandcamp-dl'
 
 # home
+cask 'google-chrome'
 cask 'plex'
 cask 'mediahuman-audio-converter'
 cask 'vlc'
@@ -14,6 +15,7 @@ cask 'synology-drive'
 cask 'zoom'
 cask 'signal'
 cask 'musicbrainz-picard'
+cask 'the-unarchiver'
 
 # music
 cask 'loopback'

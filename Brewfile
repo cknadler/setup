@@ -18,18 +18,14 @@ brew 'git-extras'
 brew 'pcre'
 
 # casks
-cask 'google-chrome'
 cask 'alfred'
 cask '1password'
-cask 'google-chrome'
 cask 'dropbox'
 cask 'obsidian'
 cask 'iterm2'
 cask 'macvim'
 cask 'spotify'
-cask 'the-unarchiver'
 cask 'dungeon-crawl-stone-soup-tiles'
-cask 'the-unarchiver'
 
 # mac app store
 brew 'mas'
