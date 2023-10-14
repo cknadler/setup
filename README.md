@@ -1,4 +1,4 @@
-# Chris Knadler Dot Files
+# Workspace Setup
 
 These are my config files to set up my OSX and Windows environments, as well as my music production environment.
 
