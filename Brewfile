@@ -17,33 +17,17 @@ brew 'tmux'
 brew 'git-extras'
 brew 'pcre'
 
-# scripts
-brew 'bandcamp-dl'
-
 # casks
 cask 'alfred'
 cask '1password'
 cask 'google-chrome'
 cask 'dropbox'
-cask 'musicbrainz-picard'
-cask 'signal'
-cask 'loopback'
-cask 'zoom'
 cask 'obsidian'
 cask 'iterm2'
 cask 'macvim'
 cask 'spotify'
 cask 'the-unarchiver'
-cask 'synology-drive'
-cask 'nordvpn'
-cask 'microsoft-remote-desktop'
-cask 'yacreader'
-cask 'discord'
 cask 'dungeon-crawl-stone-soup-tiles'
-cask 'qbittorrent'
-cask 'vlc'
-cask 'mediahuman-audio-converter'
-cask 'plex'
 
 # mac app store
 brew 'mas'

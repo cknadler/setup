@@ -1,0 +1,19 @@
+# scripts
+brew 'bandcamp-dl'
+
+# home
+cask 'plex'
+cask 'mediahuman-audio-converter'
+cask 'vlc'
+cask 'qbittorrent'
+cask 'discord'
+cask 'yacreader'
+cask 'microsoft-remote-desktop'
+cask 'nordvpn'
+cask 'synology-drive'
+cask 'zoom'
+cask 'signal'
+cask 'musicbrainz-picard'
+
+# music
+cask 'loopback'
