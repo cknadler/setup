@@ -46,31 +46,25 @@ if ! installed brew; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# install brewdler
-brew tap Homebrew/bundle
 # install everything from Brewfile
 brew bundle
-
-# install lastest ruby version
-rbenv install $(rbenv install -l | grep -v - | tail -1)
-
-# gems
-sudo gem install bundler
-bundle install --gemfile=$ROOT/Gemfile
 
 # oh-my-zsh
 if ! [[ -d $HOME/.oh-my-zsh ]]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-# homesick
-homesick clone cknadler/dotfiles
-homesick symlink dotfiles
+chezmoi init https://github.com/cknadler/dotfiles.git
+chezmoi apply -v
 
 # submodules
-pushd ~/.homesick/repos/dotfiles
-git submodule sync
+pushd ~/.local/share/chezmoi
+git remote add origin git@github.com:cknadler/dotfiles.git
+git branch --set-upstream-to=origin/master master
 popd
+
+# install vim submodules
+vim +PluginInstall +qall
 
 # fonts
 mkdir -p $HOME/Library/Fonts

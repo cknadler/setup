@@ -7,19 +7,12 @@ These are my config files to set up my OSX and Windows environments, as well as 
 ~~Most~~ Some of this is automated. Run the following:
 
 ```bash
-git clone https://github.com/cknadler/dotfiles && \
-pushd dotfiles && \
+git clone https://github.com/cknadler/setup && \
+pushd setup && \
   ./bootstrap && \
 popd && \
-rm -r dotfiles
+rm -r setup
 ```
-
-### App Store
-
-- [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
-- Metronomics HD
-- NordVPN
-- [HEIC Converter](https://apps.apple.com/app/id1294126402)
 
 ### Bindings / Settings
 
