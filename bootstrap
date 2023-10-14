@@ -61,6 +61,7 @@ chezmoi apply
 pushd ~/.local/share/chezmoi
 git remote rm origin
 git remote add origin git@github.com:cknadler/dotfiles.git
+git fetch
 git branch -u origin/master
 popd
 
