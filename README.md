@@ -24,16 +24,6 @@ rm -r setup
   - Move Right A Space: `cmd+shift+l`
 - Spotlight (Keyboard -> Shortcuts -> Spotlight)
   - Show Spotlight Search: `unbind` (use Alfred instead)
-- [Better Snap Tool](http://blog.boastr.net/bettersnaptool/)
-  - Maximize: `cmd+ctrl+m`
-  - Left Half: `cmd+ctrl+h`
-  - Right Half: `cmd+ctrl+l`
-  - Top Half: `cmd+ctrl+k`
-  - Bottom Half: `cmd+ctrl+j`
-  - Top Left: `cmd+ctrl+y`
-  - Top Right: `cmd+ctrl+u`
-  - Bottom Left: `cmd+ctrl+b`
-  - Bottom Right: `cmd+ctrl+n`
 
 ## Windows
 
