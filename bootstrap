@@ -54,10 +54,10 @@ if ! [[ -d $HOME/.oh-my-zsh ]]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+# Chezmoi
 chezmoi init https://github.com/cknadler/dotfiles.git
 chezmoi -R apply
 
-# submodules
 pushd ~/.local/share/chezmoi
 git remote rm origin
 git remote add origin git@github.com:cknadler/dotfiles.git
