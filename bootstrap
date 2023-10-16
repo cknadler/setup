@@ -31,8 +31,64 @@ done
 SCRIPT_PATH=$(pwd -P)/$TARGET_FILE
 ROOT=$(dirname $SCRIPT_PATH)
 
+# User input vars
+BREW=false
+BREW_HOME=false
+CHEZMOI=false
+VIM_SUBMODULES=false
+OSX=false
+
 ###
-# installer
+# User input - determine what to install
+###
+
+while true; do
+  read -p "Install your default brew bundle packages? " yn
+  case $yn in
+    [Yy]* ) BREW=true; break;;
+    [Nn]* ) BREW=false; break;;
+    * ) echo "Please answer yes or no.";;
+  esac
+done
+
+while true; do
+  read -p "Install your home only brew bundle packages? " yn
+  case $yn in
+    [Yy]* ) BREW_HOME=true; break;;
+    [Nn]* ) BREW_HOME=false; break;;
+    * ) echo "Please answer yes or no.";;
+  esac
+done
+
+while true; do
+  read -p "Setup dotfiles with Chezmoi? " yn
+  case $yn in
+    [Yy]* ) CHEZMOI=true; break;;
+    [Nn]* ) CHEZMOI=false; break;;
+    * ) echo "Please answer yes or no.";;
+  esac
+done
+
+while true; do
+  read -p "Install vim submodules? " yn
+  case $yn in
+    [Yy]* ) VIM_SUBMODULES=true; break;;
+    [Nn]* ) VIM_SUBMODULES=false; break;;
+    * ) echo "Please answer yes or no.";;
+  esac
+done
+
+while true; do
+  read -p "Setup OSX defaults? " yn
+  case $yn in
+    [Yy]* ) OSX=true; break;;
+    [Nn]* ) OSX=false; break;;
+    * ) echo "Please answer yes or no.";;
+  esac
+done
+
+###
+# Installer
 ###
 
 # command line tools
@@ -47,7 +103,14 @@ if ! installed brew; then
 fi
 
 # install everything from Brewfile
-brew bundle
+if $BREW ; then
+  brew bundle
+fi
+
+# install from home only Brewfile
+if $BREW_HOME ; then
+  brew bundle --file $ROOT/Brewfile.home
+fi
 
 # oh-my-zsh
 if ! [[ -d $HOME/.oh-my-zsh ]]; then
@@ -55,18 +118,23 @@ if ! [[ -d $HOME/.oh-my-zsh ]]; then
 fi
 
 # Chezmoi
-chezmoi init https://github.com/cknadler/dotfiles.git
-chezmoi -R apply
 
-pushd ~/.local/share/chezmoi
-git remote rm origin
-git remote add origin git@github.com:cknadler/dotfiles.git
-git fetch
-git branch -u origin/master
-popd
+if $CHEZMOI ; then
+  chezmoi init https://github.com/cknadler/dotfiles.git
+  chezmoi -R apply
+
+  pushd ~/.local/share/chezmoi
+  git remote rm origin
+  git remote add origin git@github.com:cknadler/dotfiles.git
+  git fetch
+  git branch -u origin/master
+  popd
+fi
 
 # install vim submodules
-vim +PluginInstall +qall
+if $VIM_SUBMODULES ; then
+  vim +PluginInstall +qall
+fi
 
 # fonts
 mkdir -p $HOME/Library/Fonts
@@ -79,4 +147,6 @@ fi
 
 # OSX defaults
 # should always be run last as it will shut down Terminal
-$ROOT/.osx
+if $OSX ; then
+  $ROOT/.osx
+fi

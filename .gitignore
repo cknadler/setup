@@ -4,3 +4,5 @@ home/.vim/bundle/*
 !home/.vim/bundle/vundle
 
 .lesshst
+
+Brewfile.lock*

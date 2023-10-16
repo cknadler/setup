@@ -31,3 +31,7 @@ cask 'dungeon-crawl-stone-soup-tiles'
 brew 'mas'
 mas "BetterSnapTool", id: 417375580
 mas "HEIC Converter", id: 1294126402
+
+# fonts
+tap 'homebrew/cask-fonts'
+cask 'font-source-code-pro'
