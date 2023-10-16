@@ -1,0 +1,91 @@
+[core]
+  whitespace = trailing-space,space-before-tab
+  excludesfile = /Users/kndlrc/.gitignore
+  editor = vim
+  pager = less -FMRiX
+
+[user]
+  name = Chris Knadler
+  email = kndlrc@amazon.com
+
+[push]
+  default = upstream
+
+[alias]
+  # add
+  a = add
+  aa = add -A
+  ae = add -e
+  au = add -u
+  ap = add -p
+  ai = add -i
+
+  # branch
+  b = branch
+  bu = branch -u
+
+  # checkout
+  co = checkout
+  cb = checkout -b
+
+  # cherry-pick
+  cp = cherry-pick
+
+  # commit
+  c = commit
+  ca = commit --amend
+
+  # diff
+  df = diff
+  dc = diff --cached
+
+  # log
+  l = log --decorate --stat # standard log
+  sl = log --pretty=format:'%Cred%h%Creset %s %Cgreen%d%Creset' # short log
+  tl = log --pretty=format:'%h %s %d' # timeline log, no color
+  cl = log -u # change log
+  dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+
+  # ribbon
+  ribbon = tag --force _ribbon origin/master
+  catchup = log --patch --reverse --topo-order _ribbon..origin/master
+
+  # rebase
+  rb = rebase
+  rc = rebase --continue
+  rs = rebase --skip
+  ra = rebase --abort
+
+  # remote
+  r = remote -v
+
+  # status
+  s = status -sb
+  st = status
+
+  # reset
+  us = reset HEAD
+  uc = reset --soft HEAD^
+
+  # push
+  pom = push origin master
+  ps = push
+
+  # pull
+  pl = pull
+
+[color]
+  ui = true
+
+[log]
+  decorate = short
+
+[credential]
+  helper = osxkeychain
+
+[github]
+  user = cknadler
+
+[amazon]
+	append-cr-url = true
+	pull-request-by-default = false

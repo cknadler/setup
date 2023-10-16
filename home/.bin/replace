@@ -1,0 +1,13 @@
+#!/bin/bash
+# Replaces all instances of $1 with $2 in the current directory and all
+# subdirectories recursively.
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+  echo "usage: replace <to_replace> <replacement>"
+  echo ""
+  echo "Replaces text in files in current the directory and all subdirectories recursively."
+  echo ""
+  exit 0
+fi
+
+grep -rl "$1" ./ | xargs sed -i '' "s/$1/$2/g"
