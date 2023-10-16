@@ -79,4 +79,4 @@ fi
 
 # OSX defaults
 # should always be run last as it will shut down Terminal
-$ROOT/home/.osx
+$ROOT/.osx
