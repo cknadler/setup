@@ -26,10 +26,10 @@ cask 'iterm2'
 cask 'macvim'
 cask 'spotify'
 cask 'dungeon-crawl-stone-soup-tiles'
+cask 'rectangle'
 
 # mac app store
 brew 'mas'
-mas "BetterSnapTool", id: 417375580
 mas "HEIC Converter", id: 1294126402
 
 # fonts
