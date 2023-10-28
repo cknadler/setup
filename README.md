@@ -1,6 +1,6 @@
 # Workspace Setup
 
-Documenting how I set up my workspace.
+Documenting how I set up my workspace. See [dotfiles here](https://github.com/cknadler/dotfiles).
 
 ## OSX
 
