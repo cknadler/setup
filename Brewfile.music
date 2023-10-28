@@ -6,3 +6,6 @@ cask 'izotope-product-portal'
 
 # Hardware interfaces
 cask 'fractal-bot'
+
+# DRM
+cask 'ilok-license-manager'
