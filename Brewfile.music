@@ -1,2 +1,3 @@
 cask 'waves-central'
 cask 'spitfire-audio'
+cask 'native-access'

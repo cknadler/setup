@@ -9,6 +9,7 @@ brew 'curl'
 brew 'git'
 brew 'zsh'
 brew 'python'
+brew 'vim'
 
 # dev stuff
 brew 'reattach-to-user-namespace'
