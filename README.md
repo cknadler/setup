@@ -60,16 +60,27 @@ rm -r setup
 
 **Hardware Drivers**
 
+Pre-installed by homebrew: 
+- Fractal Bot
+- iLok
+
 - [Axe Edit](https://www.fractalaudio.com/axe-edit/)
 - [Axe FX 2 USB Driver](https://www.fractalaudio.com/axe-fx-ii-downloads/)
-- [Fractal Bot](https://www.fractalaudio.com/fractal-bot/)
 - [Scarlett 18i20 (3rd gen) Driver](https://downloads.focusrite.com/focusrite/scarlett-3rd-gen/scarlett-18i20-3rd-gen)
-- [iLok](https://www.ilok.com/#!license-manager)
 
 **Plugins**
 
+Install via plugin managers, already installed by homebrew:
+- iZotope
+- Waves
+- Splice
+- Native Instruments
+  - Update downloads, app & content to `/SSD/native_instruments`
+- Spitfire Audio
+ 
+Manual:
+
 - [UAD](https://www.uaudio.com/my/account/)
-- [iZotope](https://www.izotope.com/en/account/overview)
 - [Neural DSP](https://neuraldsp.com/)
   - Fortin Nameless
   - Parallax
@@ -77,7 +88,6 @@ rm -r setup
   - Fortin NTS
   - Plini
 - [Plugin Alliance](https://www.plugin-alliance.com/en/installation-manager.html)
-- [Waves](https://www.waves.com/login)
 - [Steven Slate Drums - Trigger 2](https://my.stevenslateaudio.com/)
 - [Valhalla DSP](https://valhalladsp.com/my-account/) (some in account, some free below)
   - [Super Massive](https://valhalladsp.com/shop/reverb/valhalla-supermassive/)
@@ -87,12 +97,8 @@ rm -r setup
 - [Toontrack](https://www.toontrack.com/product-manager/)
   - Component installation path `/SSD/superior_drummer`
   - Symlink `~/Dropbox/confic/Superior\ Drummer/User\ MIDI` -> `~/Music/EZdrummer/User\ MIDI` (TODO: script)
-- [Splice](https://splice.com/plugins/your-plugins)
 - [FabFilter](https://www.fabfilter.com/download/)
 - [Slate Digital](https://slatedigital.com/installers/)
-- [Native Instruments](https://www.native-instruments.com/en/specials/native-access/)
-  - Update downloads, app & content to `/SSD/native_instruments`
-- [Spitfire Audio](https://www.spitfireaudio.com/info/library-manager/)
 - [TSE BOD](https://www.tseaudio.com/software/tseBOD)
 - [Soothe](https://oeksound.com/plugins/)
 - [boz Digital Labs](https://www.bozdigitallabs.com/my-account/downloads/)
