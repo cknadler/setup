@@ -5,4 +5,4 @@ home/.vim/bundle/*
 
 .lesshst
 
-Brewfile.lock*
+*.lock.json
