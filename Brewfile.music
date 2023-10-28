@@ -12,3 +12,6 @@ cask 'fractal-bot'
 
 # DRM
 cask 'ilok-license-manager'
+
+# Sheet Music
+cask 'musescore'
