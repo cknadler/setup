@@ -4,6 +4,9 @@ cask 'spitfire-audio'
 cask 'native-access'
 cask 'izotope-product-portal'
 
+# Samples
+cask 'splice'
+
 # Hardware interfaces
 cask 'fractal-bot'
 
