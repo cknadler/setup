@@ -34,6 +34,7 @@ ROOT=$(dirname $SCRIPT_PATH)
 # User input vars
 BREW=false
 BREW_HOME=false
+BREW_MUSIC=false
 CHEZMOI=false
 VIM_SUBMODULES=false
 OSX=false
@@ -56,6 +57,15 @@ while true; do
   case $yn in
     [Yy]* ) BREW_HOME=true; break;;
     [Nn]* ) BREW_HOME=false; break;;
+    * ) echo "Please answer yes or no.";;
+  esac
+done
+
+while true; do
+  read -p "Install your music brew bundle packages? " yn
+  case $yn in
+    [Yy]* ) BREW_MUSIC=true; break;;
+    [Nn]* ) BREW_MUSIC=false; break;;
     * ) echo "Please answer yes or no.";;
   esac
 done
@@ -110,6 +120,10 @@ fi
 # install from home only Brewfile
 if $BREW_HOME ; then
   brew bundle --file $ROOT/Brewfile.home
+fi
+
+if $BREW_MUSIC ; then
+  brew bundle --file $ROOT/Brewfile.music
 fi
 
 # oh-my-zsh
