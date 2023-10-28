@@ -1,6 +1,6 @@
 # Workspace Setup
 
-These are my config files to set up my OSX and Windows environments, as well as my music production environment.
+Documenting how I set up my workspace.
 
 ## OSX
 
