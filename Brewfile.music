@@ -1,11 +1,12 @@
-# Plugins
+# Plugins & samples
 cask 'waves-central'
 cask 'spitfire-audio'
 cask 'native-access'
 cask 'izotope-product-portal'
-
-# Samples
 cask 'splice'
+
+# DAW
+cask 'ableton-live-suite'
 
 # Hardware interfaces
 cask 'fractal-bot'
