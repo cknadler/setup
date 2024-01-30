@@ -44,7 +44,7 @@ rm -r setup
 
 ## Music
 
-**General**
+### General
 
 - [Cubase](https://www.steinberg.net/en/mysteinberg/my_products.html)
   - [Symlink these folders](https://helpcenter.steinberg.de/hc/en-us/articles/360000327730-Location-file-paths-of-presets-in-Cubase-and-Nuendo-) in from `~/Dropbox/config/Cubase` (TODO: script)
@@ -60,7 +60,7 @@ rm -r setup
   - Notation Options -> Accidentals
     - Notes at a different octave in the following bar: No cautionary
 
-**Hardware Drivers**
+### Hardware Drivers
 
 Pre-installed by homebrew: 
 - Fractal Bot
@@ -70,7 +70,7 @@ Pre-installed by homebrew:
 - [Axe FX 2 USB Driver](https://www.fractalaudio.com/axe-fx-ii-downloads/)
 - [Scarlett 18i20 (3rd gen) Driver](https://downloads.focusrite.com/focusrite/scarlett-3rd-gen/scarlett-18i20-3rd-gen)
 
-**Plugins**
+### Plugins
 
 Install via plugin managers, already installed by homebrew:
 
@@ -81,7 +81,7 @@ Install via plugin managers, already installed by homebrew:
   - Update downloads, app & content to `/SSD/native_instruments`
 - Spitfire Audio
  
-Manual:
+#### Manual
 
 - [UAD](https://www.uaudio.com/my/account/)
 - [Neural DSP](https://neuraldsp.com/)
