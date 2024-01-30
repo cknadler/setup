@@ -14,6 +14,10 @@ popd && \
 rm -r setup
 ```
 
+### Manual
+
+- [Jomo](https://apps.apple.com/us/app/jomo-screen-time-blocker/id1609960918)
+
 ### Bindings / Settings
 
 - [Alfred](https://www.alfredapp.com/)
