@@ -62,10 +62,9 @@ rm -r setup
 
 ### Hardware Drivers
 
-Pre-installed by homebrew: 
+Pre-installed by homebrew
 - Fractal Bot
 - iLok
-
 - [Axe Edit](https://www.fractalaudio.com/axe-edit/)
 - [Axe FX 2 USB Driver](https://www.fractalaudio.com/axe-fx-ii-downloads/)
 - [Scarlett 18i20 (3rd gen) Driver](https://downloads.focusrite.com/focusrite/scarlett-3rd-gen/scarlett-18i20-3rd-gen)
