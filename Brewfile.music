@@ -16,4 +16,3 @@ cask 'ilok-license-manager'
 
 # Sheet Music
 cask 'musescore'
-cask 'guitar-pro'
