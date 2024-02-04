@@ -72,7 +72,7 @@ Pre-installed by homebrew:
 
 ### Plugins
 
-Install via plugin managers, already installed by homebrew:
+Install via plugin managers, already installed by homebrew
 
 - iZotope
 - Waves
