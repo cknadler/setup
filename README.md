@@ -50,16 +50,16 @@ rm -r setup
   - [Symlink these folders](https://helpcenter.steinberg.de/hc/en-us/articles/360000327730-Location-file-paths-of-presets-in-Cubase-and-Nuendo-) in from `~/Dropbox/config/Cubase` (TODO: script)
 - [Dorico](https://new.steinberg.net/dorico/) (TODO: script key commands)
   - Preferences -> Key Commands
-    - Raise Pitch by Chromatic Step: opt+shft+K
-    - Raise Pitch by Octave: opt+cmd+K
-    - Raise Pitch by Step: opt+K
-    - Lower Pitch by Chromatic Step: opt+shft+J
-    - Lower Pitch by Octave: opt+cmd+J
-    - Lower Pitch by Step: opt+J
+    - Raise Pitch by Chromatic Step: `opt+shft+K`
+    - Raise Pitch by Octave: `opt+cmd+K`
+    - Raise Pitch by Step: `opt+K`
+    - Lower Pitch by Chromatic Step: `opt+shft+J`
+    - Lower Pitch by Octave: `opt+cmd+J`
+    - Lower Pitch by Step: `opt+J`
   - Notation Options -> Accidentals
     - Notes at a different octave in the following bar: No cautionary
   - Setup
-    - Layout Options: opt+shft+cmd+L
+    - Layout Options: `opt+shft+cmd+L`
 
 ### Hardware Drivers
 
