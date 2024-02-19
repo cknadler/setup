@@ -60,6 +60,8 @@ rm -r setup
     - Notes at a different octave in the following bar: No cautionary
   - Setup
     - Layout Options: `opt+shft+cmd+L`
+  - Library -> Edit playback techniques
+    - Palm muting -> articulation type: Attribute
 
 ### Hardware Drivers
 
