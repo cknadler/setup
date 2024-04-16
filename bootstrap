@@ -132,7 +132,6 @@ if ! [[ -d $HOME/.oh-my-zsh ]]; then
 fi
 
 # Chezmoi
-
 if $CHEZMOI ; then
   chezmoi init https://github.com/cknadler/dotfiles.git
   chezmoi -R apply
@@ -144,6 +143,9 @@ if $CHEZMOI ; then
   git branch -u origin/master
   popd
 fi
+
+# Marta
+defaults write -g NSFileViewer -string org.yanex.marta
 
 # install vim submodules
 if $VIM_SUBMODULES ; then
