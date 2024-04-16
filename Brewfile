@@ -28,6 +28,7 @@ cask 'macvim'
 cask 'spotify'
 cask 'dungeon-crawl-stone-soup-tiles'
 cask 'rectangle'
+cask 'marta'
 
 # mac app store
 brew 'mas'
