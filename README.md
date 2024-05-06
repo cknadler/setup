@@ -48,6 +48,10 @@ rm -r setup
 
 - [Cubase](https://www.steinberg.net/en/mysteinberg/my_products.html)
   - [Symlink these folders](https://helpcenter.steinberg.de/hc/en-us/articles/360000327730-Location-file-paths-of-presets-in-Cubase-and-Nuendo-) in from `~/Dropbox/config/Cubase` (TODO: script)
+  - Preferences -> Transport -> "Locate when Clicked in Empty Space": enabled
+  - Key Commands
+    - Key Commands: `cmd+shft+K`
+    - Record: `cmd+shft+R`
 - [Dorico](https://new.steinberg.net/dorico/) (TODO: script key commands)
   - Preferences -> Key Commands
     - Raise Pitch by Chromatic Step: `opt+shft+K`
