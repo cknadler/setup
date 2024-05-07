@@ -52,6 +52,10 @@ rm -r setup
   - Key Commands
     - Key Commands: `cmd+shft+K`
     - Record: `cmd+shft+R`
+    - Set Left Locator to Product Cursor Position: `ctrl+A`
+    - Set Right Locator to Product Cursor Position: `ctrl+D`
+    - Go to Left Locator: `shft+A`
+    - Go to Right Locator: `shft+D`
 - [Dorico](https://new.steinberg.net/dorico/) (TODO: script key commands)
   - Preferences -> Key Commands
     - Raise Pitch by Chromatic Step: `opt+shft+K`
