@@ -34,7 +34,3 @@ cask 'marta'
 brew 'mas'
 mas "HEIC Converter", id: 1294126402
 mas "Jomo - Screen Time Blocker", id: 1609960918
-
-# sketchybar
-tap 'FelixKratz/formulae'
-brew 'FelixKratz/formulae/sketchybar'
