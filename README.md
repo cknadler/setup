@@ -14,6 +14,10 @@ popd && \
 rm -r setup
 ```
 
+### Yabai
+
+- [Disable system integrity protection](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection)
+
 ### Bindings / Settings
 
 - [Alfred](https://www.alfredapp.com/)
