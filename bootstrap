@@ -155,10 +155,6 @@ if $VIM_SUBMODULES ; then
   vim +PluginInstall +qall
 fi
 
-# fonts
-mkdir -p $HOME/Library/Fonts
-cp $ROOT/fonts/* $HOME/Library/Fonts
-
 # vim-anywhere
 if ! [[ -d $HOME/.vim-anywhere ]]; then
   curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
