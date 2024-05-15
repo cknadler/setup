@@ -17,6 +17,7 @@ brew 'the_silver_searcher'
 brew 'tmux'
 brew 'git-extras'
 brew 'pcre'
+brew 'ripgrep'
 
 # casks
 cask 'alfred'
@@ -34,3 +35,7 @@ cask 'marta'
 brew 'mas'
 mas "HEIC Converter", id: 1294126402
 mas "Jomo - Screen Time Blocker", id: 1609960918
+
+# fonts
+tap "homebrew/cask-fonts"
+brew "font-meslo-lg-nerd-font"
