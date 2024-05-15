@@ -10,6 +10,8 @@ brew 'git'
 brew 'zsh'
 brew 'python'
 brew 'vim'
+brew 'neovim'
+brew 'starship'
 
 # dev stuff
 brew 'reattach-to-user-namespace'
@@ -35,7 +37,3 @@ cask 'marta'
 brew 'mas'
 mas "HEIC Converter", id: 1294126402
 mas "Jomo - Screen Time Blocker", id: 1609960918
-
-# fonts
-tap "homebrew/cask-fonts"
-brew "font-meslo-lg-nerd-font"
