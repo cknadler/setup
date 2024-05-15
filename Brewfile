@@ -11,7 +11,6 @@ brew 'zsh'
 brew 'python'
 brew 'vim'
 brew 'neovim'
-brew 'starship'
 
 # dev stuff
 brew 'reattach-to-user-namespace'
