@@ -10,7 +10,6 @@ brew 'git'
 brew 'zsh'
 brew 'python'
 brew 'vim'
-brew 'neovim'
 
 # dev stuff
 brew 'reattach-to-user-namespace'
@@ -18,7 +17,7 @@ brew 'the_silver_searcher'
 brew 'tmux'
 brew 'git-extras'
 brew 'pcre'
-brew 'ripgrep'
+brew 'zsh-autosuggestions'
 
 # casks
 cask 'alfred'
