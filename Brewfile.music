@@ -8,8 +8,5 @@ cask 'splice'
 # DAW
 cask 'ableton-live-suite'
 
-# Hardware interfaces
-cask 'fractal-bot'
-
 # DRM
 cask 'ilok-license-manager'
