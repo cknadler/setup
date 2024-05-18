@@ -10,3 +10,6 @@ cask 'ableton-live-suite'
 
 # DRM
 cask 'ilok-license-manager'
+
+# Other
+cask 'guitar-pro'
