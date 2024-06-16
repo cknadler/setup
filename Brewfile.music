@@ -13,3 +13,4 @@ cask 'ilok-license-manager'
 
 # Other
 cask 'guitar-pro'
+cask 'transcribe'
