@@ -68,6 +68,7 @@ rm -r setup
     - Lower Pitch by Chromatic Step: `opt+shft+J`
     - Lower Pitch by Octave: `opt+cmd+J`
     - Lower Pitch by Step: `opt+J`
+    - Filter -> Chord Symbols: `cmd+opt+shft+\`
   - Notation Options -> Accidentals
     - Notes at a different octave in the following bar: No cautionary
   - Setup
