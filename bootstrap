@@ -53,7 +53,7 @@ while true; do
 done
 
 while true; do
-  read -p "Install your home only brew bundle packages? " yn
+  read -p "Install your home brew bundle packages? " yn
   case $yn in
     [Yy]* ) BREW_HOME=true; break;;
     [Nn]* ) BREW_HOME=false; break;;
