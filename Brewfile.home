@@ -2,20 +2,27 @@
 brew 'bandcamp-dl'
 
 # home
-cask 'google-chrome'
 cask 'plex'
 cask 'mediahuman-audio-converter'
 cask 'vlc'
-cask 'qbittorrent'
 cask 'discord'
 cask 'yacreader'
 cask 'microsoft-remote-desktop'
-cask 'nordvpn'
 cask 'synology-drive'
 cask 'zoom'
 cask 'signal'
 cask 'musicbrainz-picard'
 cask 'the-unarchiver'
+cask 'dungeon-crawl-stone-soup-tiles'
+cask 'spotify'
+cask 'dropbox'
+cask 'obsidian'
+
 
 # music
 cask 'loopback'
+
+# mac app store
+brew 'mas'
+mas "HEIC Converter", id: 1294126402
+mas "Jomo - Screen Time Blocker", id: 1609960918
