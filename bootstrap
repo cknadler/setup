@@ -4,7 +4,9 @@ set -e
 
 ###
 # TODO
-# - Run this assuming no git at first
+# - Resolve conflicts between macvim and vim in brew
+# - Add sshkeygen before Chezmoi
+# - Ensure brew still continues even if there are conflicts with pre-installed packages
 ###
 
 ###
