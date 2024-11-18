@@ -21,17 +21,11 @@ brew 'zsh-autosuggestions'
 
 # casks
 cask 'alfred'
+cask 'google-chrome'
 cask '1password'
-cask 'dropbox'
 cask 'iterm2'
-cask 'obsidian'
 cask 'macvim'
-cask 'spotify'
-cask 'dungeon-crawl-stone-soup-tiles'
 cask 'rectangle'
 cask 'marta'
-
-# mac app store
-brew 'mas'
-mas "HEIC Converter", id: 1294126402
-mas "Jomo - Screen Time Blocker", id: 1609960918
+cask 'nordvpn'
+cask 'qbittorrent'
