@@ -5,12 +5,10 @@ cask 'native-access'
 cask 'izotope-product-portal'
 cask 'splice'
 
-# DAW
-cask 'ableton-live-suite'
-
 # DRM
 cask 'ilok-license-manager'
 
 # Other
 cask 'guitar-pro'
 cask 'transcribe'
+cask 'loopback'
