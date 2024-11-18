@@ -2,17 +2,14 @@
 brew 'bandcamp-dl'
 
 # home
-cask 'plex'
 cask 'mediahuman-audio-converter'
 cask 'vlc'
 cask 'discord'
-cask 'yacreader'
 cask 'synology-drive'
 cask 'zoom'
 cask 'signal'
 cask 'musicbrainz-picard'
 cask 'the-unarchiver'
-cask 'dungeon-crawl-stone-soup-tiles'
 cask 'spotify'
 cask 'dropbox'
 cask 'obsidian'
