@@ -10,6 +10,7 @@ brew 'git'
 brew 'zsh'
 brew 'python'
 brew 'vim'
+brew 'chezmoi'
 
 # dev stuff
 brew 'reattach-to-user-namespace'
