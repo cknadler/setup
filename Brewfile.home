@@ -14,10 +14,6 @@ cask 'spotify'
 cask 'dropbox'
 cask 'obsidian'
 
-
-# music
-cask 'loopback'
-
 # mac app store
 brew 'mas'
 mas "HEIC Converter", id: 1294126402
