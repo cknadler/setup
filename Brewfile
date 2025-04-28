@@ -30,3 +30,6 @@ cask 'rectangle'
 cask 'marta'
 cask 'nordvpn'
 cask 'qbittorrent'
+
+# other stuff
+brew 'youtube-dl'
