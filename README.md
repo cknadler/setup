@@ -79,8 +79,6 @@ Pre-installed by homebrew
 - iLok
 
 Install manually
-- [Axe Edit](https://www.fractalaudio.com/axe-edit/)
-- [Axe FX 2 USB Driver](https://www.fractalaudio.com/axe-fx-ii-downloads/)
 - [Scarlett 18i20 (3rd gen) Driver](https://downloads.focusrite.com/focusrite/scarlett-3rd-gen/scarlett-18i20-3rd-gen)
 
 ### Plugins
