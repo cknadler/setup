@@ -120,17 +120,6 @@ Install via plugin managers, already installed by homebrew
 - [Sonnox](https://www.sonnox.com/mysonnox)
 - [OTT](https://splice.com/plugins/3788-ott-vst-au-by-xfer-records)
 
-## Credits
-
-* [ryanb/dotfiles](https://github.com/ryanb/dotfiles)
-* [rtomayko/dotfiles](https://github.com/rtomayko/dotfiles)
-* [technicalpickles/pickled-vim](https://github.com/technicalpickles/pickled-vim)
-* [tpope/tpope](https://github.com/tpope/tpope)
-* [sectioneight/dotfiles](https://github.com/sectioneight/dotfiles)
-* [skwp/dotfiles](https://github.com/skwp/dotfiles)
-
-If I'm using something I forgot to credit, please let me know.
-
 ## Copyright
 
 Copyright (c) 2020 Chris Knadler. See LICENSE for details.
