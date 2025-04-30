@@ -12,13 +12,19 @@ brew 'python'
 brew 'vim'
 brew 'chezmoi'
 
-# dev stuff
+# dev
 brew 'reattach-to-user-namespace'
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'git-extras'
 brew 'pcre'
+
+# terminal
+brew 'typewritten'
 brew 'zsh-autosuggestions'
+
+# audio ripping
+brew 'yt-dlp'
 
 # casks
 cask 'alfred'
