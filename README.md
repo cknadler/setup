@@ -77,7 +77,6 @@ rm -r setup
 ### Hardware Drivers
 
 Pre-installed by homebrew
-- Fractal Bot
 - iLok
 
 Install manually
