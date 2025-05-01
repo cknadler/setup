@@ -22,8 +22,10 @@ rm -r setup
 - General (Keyboard -> Shortcuts -> Mission Control -> Mission Control)
   - Move Left A Space: `cmd+shift+h`
   - Move Right A Space: `cmd+shift+l`
-- Spotlight (Keyboard -> Shortcuts -> Spotlight)
+- Replace spotlight with Alfred (Keyboard -> Shortcuts -> Spotlight)
   - Show Spotlight Search: `unbind` (use Alfred instead)
+- Don't index Obsidian files in spotlight (Spotlight -> Search Privacy)
+  - Privacy: `~/Obsidian`
 
 ## Windows
 
