@@ -25,7 +25,9 @@ rm -r setup
 - Replace spotlight with Alfred (Keyboard -> Shortcuts -> Spotlight)
   - Show Spotlight Search: `unbind` (use Alfred instead)
 - Don't index Obsidian files in spotlight (Spotlight -> Search Privacy)
-  - Privacy: `~/Obsidian`
+  - Privacy
+    - `~/Obsidian`
+    - `~/Documents/Backup Projects` (don't index Dorico backups)
 
 ## Windows
 
