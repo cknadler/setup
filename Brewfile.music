@@ -5,10 +5,16 @@ cask 'native-access'
 cask 'izotope-product-portal'
 cask 'splice'
 
+# DAW
+cask 'reaper'
+
+# Writing
+cask 'musescore'
+cask 'dorico'
+
 # DRM
 cask 'ilok-license-manager'
 
 # Other
-cask 'guitar-pro'
 cask 'transcribe'
 cask 'loopback'
