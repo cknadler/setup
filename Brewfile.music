@@ -18,3 +18,4 @@ cask 'ilok-license-manager'
 # Other
 cask 'transcribe'
 cask 'loopback'
+cask 'ireal-pro'
