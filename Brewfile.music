@@ -1,9 +1,17 @@
 # Plugins & samples
 cask 'waves-central'
-cask 'spitfire-audio'
 cask 'native-access'
 cask 'izotope-product-portal'
-cask 'splice'
+
+# Fab Filter
+cask 'fabfilter-pro-c`
+cask 'fabfilter-pro-ds'
+cask 'fabfilter-pro-g'
+cask 'fabfilter-pro-l'
+cask 'fabfilter-pro-mb'
+cask 'fabfilter-pro-q'
+cask 'fabfilter-pro-r'
+cask 'fabfilter-timeless'
 
 # DAW
 cask 'reaper'
