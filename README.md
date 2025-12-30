@@ -106,7 +106,7 @@ Install via plugin managers, already installed by homebrew
   - Plini
 - [Plugin Alliance](https://www.plugin-alliance.com/en/installation-manager.html)
 - [Steven Slate Drums - Trigger 2](https://my.stevenslateaudio.com/)
-- [Valhalla DSP](https://valhalladsp.com/my-account/) (some in account, some free below)
+- [Valhalla DSP](https://valhalladsp.com/my-account/)
 - [Auto Align](https://www.soundradix.com/)
 - [Toontrack](https://www.toontrack.com/product-manager/)
   - Component installation path `/SSD/superior_drummer`
