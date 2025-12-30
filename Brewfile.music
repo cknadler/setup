@@ -16,6 +16,11 @@ cask 'fabfilter-timeless'
 # Oeksound
 cask 'soothe2'
 
+# Valhalla DSP
+cask 'valhalla-freq-echo'
+cask 'valhalla-space-modulator'
+cask 'valhalla-supermassive'
+
 # DAW
 cask 'reaper'
 
