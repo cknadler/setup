@@ -13,6 +13,9 @@ cask 'fabfilter-pro-q'
 cask 'fabfilter-pro-r'
 cask 'fabfilter-timeless'
 
+# Oeksound
+cask 'soothe2'
+
 # DAW
 cask 'reaper'
 
