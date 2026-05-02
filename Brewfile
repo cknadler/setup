@@ -32,6 +32,7 @@ brew 'yt-dlp'
 
 # casks
 cask 'ghostty'
+cask 'font-jetbrains-mono'
 cask 'alfred'
 cask 'google-chrome'
 cask '1password'
