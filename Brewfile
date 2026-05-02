@@ -16,6 +16,8 @@ brew 'chezmoi'
 brew 'neovim'
 brew 'ripgrep'
 brew 'mise'
+brew 'fzf'
+brew 'git-delta'
 brew 'tmux'
 brew 'git-extras'
 brew 'pcre'
@@ -23,11 +25,13 @@ brew 'pcre'
 # terminal
 brew 'typewritten'
 brew 'zsh-autosuggestions'
+brew 'zsh-syntax-highlighting'
 
 # audio ripping
 brew 'yt-dlp'
 
 # casks
+cask 'ghostty'
 cask 'alfred'
 cask 'google-chrome'
 cask '1password'
