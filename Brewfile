@@ -13,8 +13,9 @@ brew 'vim'
 brew 'chezmoi'
 
 # dev
-brew 'reattach-to-user-namespace'
-brew 'the_silver_searcher'
+brew 'neovim'
+brew 'ripgrep'
+brew 'mise'
 brew 'tmux'
 brew 'git-extras'
 brew 'pcre'
