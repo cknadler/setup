@@ -1,156 +1,192 @@
 #!/usr/bin/env bash
+#
+# bootstrap — install a mac dev environment.
+#
+# Usage:
+#   bootstrap                  Interactive: prompt for each step.
+#   bootstrap --all            Non-interactive: run every step (in scope).
+#   bootstrap --only S1,S2     Run only the named steps (comma-separated).
+#   bootstrap --doctor         Read-only: report current state. Installs nothing.
+#   bootstrap --force          Re-run steps even if marked completed.
+#   bootstrap --help           Show this help.
+#
+# Steps (run in this order when --all or default interactive):
+#   xcode homebrew brewfile claude chezmoi marta vim_anywhere osx
+#
+# Extra Brewfile steps (interactive only by default; specify with --only):
+#   brewfile_home brewfile_fun brewfile_music
+#
+# Logs every run to ~/.local/state/setup/bootstrap-<date>.log
+# State file at ~/.local/state/setup/completed tracks finished steps.
 
-set -e
+set -uo pipefail
 
-###
-# TODO
-# - Brew conflict / partial-failure handling (deferred to Stage 3 refactor)
-###
-
-###
-# functions
-###
-
-installed() { hash $1 &> /dev/null; }
-
-###
-# globals
-###
-
-# Determine the script path
+# Resolve script root (follow symlinks).
 TARGET_FILE=$0
-cd "$(dirname "$TARGET_FILE")"
+cd "$(dirname "$TARGET_FILE")" || exit 1
 TARGET_FILE=$(basename "$TARGET_FILE")
-# Iterate down a (possible) chain of symlinks
-while [ -L "$TARGET_FILE" ]; do
+while [[ -L "$TARGET_FILE" ]]; do
   TARGET_FILE=$(readlink "$TARGET_FILE")
-  cd "$(dirname "$TARGET_FILE")"
+  cd "$(dirname "$TARGET_FILE")" || exit 1
   TARGET_FILE=$(basename "$TARGET_FILE")
 done
-# Put it all together
-SCRIPT_PATH=$(pwd -P)/$TARGET_FILE
-ROOT=$(dirname $SCRIPT_PATH)
+export ROOT
+ROOT=$(pwd -P)
+cd - >/dev/null || exit 1
 
-# User input vars
-BREW=false
-BREW_HOME=false
-BREW_MUSIC=false
-BREW_FUN=false
-CHEZMOI=false
-OSX=false
+# shellcheck source=lib.sh
+source "$ROOT/lib.sh"
 
 ###
-# User input - determine what to install
+# Defaults / config
 ###
 
-while true; do
-  read -p "Install your default brew bundle packages? " yn
-  case $yn in
-    [Yy]* ) BREW=true; break;;
-    [Nn]* ) BREW=false; break;;
-    * ) echo "Please answer yes or no.";;
-  esac
-done
+# Steps included in --all and default-interactive. Order matters: each step
+# may depend on earlier ones (e.g. brewfile needs homebrew).
+ALL_STEPS=(xcode homebrew brewfile claude chezmoi marta vim_anywhere osx)
 
-while true; do
-  read -p "Install your home brew bundle packages? " yn
-  case $yn in
-    [Yy]* ) BREW_HOME=true; break;;
-    [Nn]* ) BREW_HOME=false; break;;
-    * ) echo "Please answer yes or no.";;
-  esac
-done
+# Extra steps not in --all (opt-in via --only).
+EXTRA_STEPS=(brewfile_home brewfile_fun brewfile_music)
 
-while true; do
-  read -p "Install your music brew bundle packages? " yn
-  case $yn in
-    [Yy]* ) BREW_MUSIC=true; break;;
-    [Nn]* ) BREW_MUSIC=false; break;;
-    * ) echo "Please answer yes or no.";;
-  esac
-done
+MODE=interactive   # interactive | all | only | doctor
+ONLY_STEPS=()
+FORCE=false
 
-while true; do
-  read -p "Install your fun brew bundle packages (games, media, etc)? " yn
-  case $yn in
-    [Yy]* ) BREW_FUN=true; break;;
-    [Nn]* ) BREW_FUN=false; break;;
-    * ) echo "Please answer yes or no.";;
-  esac
-done
+###
+# Arg parsing
+###
 
-while true; do
-  read -p "Setup dotfiles with Chezmoi? " yn
-  case $yn in
-    [Yy]* ) CHEZMOI=true; break;;
-    [Nn]* ) CHEZMOI=false; break;;
-    * ) echo "Please answer yes or no.";;
-  esac
-done
+usage() {
+  sed -n '3,21p' "$0" | sed 's/^# \{0,1\}//'
+}
 
-while true; do
-  read -p "Setup OSX defaults? " yn
-  case $yn in
-    [Yy]* ) OSX=true; break;;
-    [Nn]* ) OSX=false; break;;
-    * ) echo "Please answer yes or no.";;
+while (( $# > 0 )); do
+  case $1 in
+    --all)    MODE=all ;;
+    --only)   MODE=only; shift; IFS=, read -r -a ONLY_STEPS <<< "${1:-}" ;;
+    --doctor) MODE=doctor ;;
+    --force)  FORCE=true ;;
+    --help|-h) usage; exit 0 ;;
+    *) log_error "unknown flag: $1"; usage; exit 2 ;;
   esac
+  shift
 done
 
 ###
-# Installer
+# Logging setup
 ###
 
-# command line tools
-# note: must come before brew bundle
-if ! xcode-select -p 1>/dev/null; then
-  xcode-select --install
+state_init
+BOOTSTRAP_LOG="$(state_dir)/bootstrap-$(date +%Y%m%d-%H%M%S).log"
+export BOOTSTRAP_LOG
+touch "$BOOTSTRAP_LOG"
+log_info "logging to $BOOTSTRAP_LOG"
+
+###
+# Doctor mode (read-only short-circuit)
+###
+
+if [[ "$MODE" == "doctor" ]]; then
+  doctor_report
+  exit 0
 fi
 
-# Homebrew
-if ! installed brew; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+###
+# Pick the steps to run
+###
+
+pick_steps() {
+  case $MODE in
+    all)
+      printf '%s\n' "${ALL_STEPS[@]}"
+      ;;
+    only)
+      if (( ${#ONLY_STEPS[@]} == 0 )); then
+        log_error "--only requires a comma-separated step list"
+        exit 2
+      fi
+      printf '%s\n' "${ONLY_STEPS[@]}"
+      ;;
+    interactive)
+      # Confirm each step with the user; default = yes.
+      local s reply
+      for s in "${ALL_STEPS[@]}" "${EXTRA_STEPS[@]}"; do
+        read -r -p "Run step '$s'? [Y/n] " reply
+        case ${reply:-Y} in
+          [Yy]*) printf '%s\n' "$s" ;;
+          *)     ;;
+        esac
+      done
+      ;;
+  esac
+}
+
+mapfile -t STEPS_TO_RUN < <(pick_steps)
+
+if (( ${#STEPS_TO_RUN[@]} == 0 )); then
+  log_warn "no steps selected; nothing to do"
+  exit 0
 fi
 
-# install everything from Brewfile
-if $BREW ; then
-  brew bundle
+###
+# Validate step names before running anything
+###
+
+valid_step() {
+  local s=$1
+  local known=("${ALL_STEPS[@]}" "${EXTRA_STEPS[@]}")
+  local k
+  for k in "${known[@]}"; do
+    [[ "$k" == "$s" ]] && return 0
+  done
+  return 1
+}
+
+invalid=()
+for s in "${STEPS_TO_RUN[@]}"; do
+  valid_step "$s" || invalid+=("$s")
+done
+if (( ${#invalid[@]} > 0 )); then
+  log_error "unknown step(s): ${invalid[*]}"
+  log_info "valid steps: ${ALL_STEPS[*]} ${EXTRA_STEPS[*]}"
+  exit 2
 fi
 
-# install from home only Brewfile
-if $BREW_HOME ; then
-  brew bundle --file $ROOT/Brewfile.home
-fi
+###
+# Run steps
+###
 
-if $BREW_MUSIC ; then
-  brew bundle --file $ROOT/Brewfile.music
-fi
+run_step() {
+  local name=$1
+  if [[ "$FORCE" != "true" ]] && state_is_done "$name"; then
+    log_skip "$name (already completed; --force to re-run)"
+    return 0
+  fi
+  log_step "$name"
+  if "step_$name"; then
+    state_mark_done "$name"
+    return 0
+  else
+    local rc=$?
+    log_error "step '$name' failed (exit $rc)"
+    return "$rc"
+  fi
+}
 
-if $BREW_FUN ; then
-  brew bundle --file $ROOT/Brewfile.fun
-fi
+failures=()
+for s in "${STEPS_TO_RUN[@]}"; do
+  run_step "$s" || failures+=("$s")
+done
 
-# Chezmoi
-if $CHEZMOI ; then
-  chezmoi init https://github.com/cknadler/dotfiles.git
-  chezmoi -R apply
-fi
+###
+# Summary
+###
 
-# Claude Code CLI (official installer to ~/.local/bin/claude)
-if ! installed claude; then
-  curl -fsSL https://claude.ai/install.sh | bash
-fi
-
-# Marta
-defaults write -g NSFileViewer -string org.yanex.marta
-
-# vim-anywhere (requires macvim)
-if ! [[ -d $HOME/.vim-anywhere ]]; then
-  curl -fsSL https://raw.githubusercontent.com/cknadler/vim-anywhere/master/install | bash
-fi
-
-# OSX defaults
-# should always be run last as it will shut down Terminal
-if $OSX ; then
-  $ROOT/.osx
+echo
+if (( ${#failures[@]} == 0 )); then
+  log_ok "bootstrap complete: ${#STEPS_TO_RUN[@]} step(s) ran successfully"
+else
+  log_warn "bootstrap finished with failures: ${failures[*]}"
+  log_info "see $BOOTSTRAP_LOG for details; re-run with --only ${failures[*]// /,} after fixing"
+  exit 1
 fi

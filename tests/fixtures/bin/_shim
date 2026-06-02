@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+#
+# _shim — generic stub binary for tests. Symlinks per-command name to this.
+#
+# Behavior:
+#   - Logs "<name> <args>" to "$SHIM_CALLS" (if set) so tests can assert
+#     which subprocess was invoked with which arguments.
+#   - Reads exit code from "SHIM_EXIT_<NAME>" (uppercased, dashes → _).
+#     Defaults to 0.
+#   - If "SHIM_STDOUT_<NAME>" is set, prints that to stdout before exiting.
+#
+# Example:
+#   ln -sf _shim brew
+#   SHIM_EXIT_BREW=1 brew bundle      # → exits 1
+#   SHIM_STDOUT_BREW='hi' brew --foo  # → prints "hi" then exits 0
+
+set -u
+
+name=$(basename "$0")
+upper=$(printf '%s' "$name" | tr 'a-z-' 'A-Z_')
+
+if [[ -n "${SHIM_CALLS:-}" ]]; then
+  printf '%s %s\n' "$name" "$*" >> "$SHIM_CALLS"
+fi
+
+stdout_var="SHIM_STDOUT_$upper"
+if [[ -n "${!stdout_var:-}" ]]; then
+  printf '%s\n' "${!stdout_var}"
+fi
+
+exit_var="SHIM_EXIT_$upper"
+exit "${!exit_var:-0}"
