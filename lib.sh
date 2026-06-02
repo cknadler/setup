@@ -227,6 +227,62 @@ step_vim_anywhere() {
   curl -fsSL https://raw.githubusercontent.com/cknadler/vim-anywhere/master/install | bash
 }
 
+# step_crawl — install Dungeon Crawl Stone Soup (Tiles) from the official
+# GitHub release zip. Replaces the deprecated brew cask, which is being
+# disabled 2026-09-01 because the binary isn't Apple-notarized. We strip
+# com.apple.quarantine so Gatekeeper lets it launch.
+#
+# CRAWL_APP_PATH is overridable for tests; default is the standard
+# /Applications location.
+: "${CRAWL_APP_PATH:=/Applications/Dungeon Crawl Stone Soup - Tiles.app}"
+
+step_crawl() {
+  if [[ -d "$CRAWL_APP_PATH" ]]; then
+    log_skip "DCSS already installed at $CRAWL_APP_PATH"
+    return 0
+  fi
+  log_info "querying latest DCSS release..."
+  local tag
+  tag=$(curl -sfL https://api.github.com/repos/crawl/crawl/releases/latest \
+        | grep -oE '"tag_name"[[:space:]]*:[[:space:]]*"[^"]+"' \
+        | head -1 \
+        | sed -E 's/.*"([^"]+)"$/\1/')
+  if [[ -z "$tag" ]]; then
+    log_error "couldn't determine latest DCSS release tag from GitHub API"
+    return 1
+  fi
+  local zip_name="dcss-${tag}-macos-tiles-universal.zip"
+  local url="https://github.com/crawl/crawl/releases/download/${tag}/${zip_name}"
+  local tmp
+  tmp=$(mktemp -d)
+  log_info "downloading $zip_name..."
+  if ! curl -fL "$url" -o "$tmp/$zip_name"; then
+    log_error "download failed: $url"
+    rm -rf "$tmp"
+    return 1
+  fi
+  log_info "extracting..."
+  if ! unzip -q "$tmp/$zip_name" -d "$tmp"; then
+    log_error "unzip failed"
+    rm -rf "$tmp"
+    return 1
+  fi
+  local extracted
+  extracted=$(find "$tmp" -maxdepth 3 -name '*.app' -type d | head -1)
+  if [[ -z "$extracted" ]]; then
+    log_error "no .app found inside $zip_name"
+    rm -rf "$tmp"
+    return 1
+  fi
+  log_info "installing to $CRAWL_APP_PATH..."
+  rm -rf "$CRAWL_APP_PATH"
+  cp -R "$extracted" "$CRAWL_APP_PATH"
+  rm -rf "$tmp"
+  log_info "stripping com.apple.quarantine xattr..."
+  xattr -dr com.apple.quarantine "$CRAWL_APP_PATH" 2>/dev/null || true
+  log_ok "DCSS $tag installed"
+}
+
 step_osx() {
   require_root_var || return 1
   local path="$ROOT/.osx"
@@ -386,6 +442,14 @@ _shk_enabled() {
     | head -1
 }
 
+doctor_crawl() {
+  if [[ -d "$CRAWL_APP_PATH" ]]; then
+    _doctor_line crawl ok "$CRAWL_APP_PATH"
+  else
+    _doctor_line crawl missing "run: bootstrap --only crawl"
+  fi
+}
+
 doctor_bindings() {
   local plist
   plist=$(defaults read com.apple.symbolichotkeys AppleSymbolicHotKeys 2>/dev/null || true)
@@ -418,4 +482,5 @@ doctor_report() {
   doctor_vim_anywhere
   doctor_bindings
   doctor_osx
+  doctor_crawl
 }

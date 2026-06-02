@@ -47,6 +47,21 @@ load test_helper
   [[ "$output" == *"79=MoveLeft"* ]]
 }
 
+@test "doctor_crawl reports ok when app dir exists" {
+  export CRAWL_APP_PATH="$BATS_TEST_TMPDIR/Crawl.app"
+  mkdir -p "$CRAWL_APP_PATH"
+  run doctor_crawl
+  [ "$status" -eq 0 ]
+  [[ "$output" == *"ok"* ]]
+}
+
+@test "doctor_crawl reports missing when app dir absent" {
+  export CRAWL_APP_PATH="$BATS_TEST_TMPDIR/NotInstalled.app"
+  run doctor_crawl
+  [ "$status" -eq 0 ]
+  [[ "$output" == *"miss"* ]]
+}
+
 @test "doctor leaves state file untouched" {
   state_init
   # Pre-mark a step so we can tell if doctor wrote to the file.

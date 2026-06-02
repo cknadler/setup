@@ -13,8 +13,8 @@
 # Steps (run in this order when --all or default interactive):
 #   xcode homebrew brewfile claude chezmoi marta vim_anywhere bindings osx
 #
-# Extra Brewfile steps (interactive only by default; specify with --only):
-#   brewfile_home brewfile_fun brewfile_music
+# Extra steps (interactive only by default; specify with --only):
+#   brewfile_home brewfile_fun brewfile_music crawl
 #
 # Logs every run to ~/.local/state/setup/bootstrap-<date>.log
 # State file at ~/.local/state/setup/completed tracks finished steps.
@@ -46,7 +46,7 @@ source "$ROOT/lib.sh"
 ALL_STEPS=(xcode homebrew brewfile claude chezmoi marta vim_anywhere bindings osx)
 
 # Extra steps not in --all (opt-in via --only).
-EXTRA_STEPS=(brewfile_home brewfile_fun brewfile_music)
+EXTRA_STEPS=(brewfile_home brewfile_fun brewfile_music crawl)
 
 MODE=interactive   # interactive | all | only | doctor
 ONLY_STEPS=()

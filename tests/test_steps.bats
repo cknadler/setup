@@ -137,3 +137,20 @@ load test_helper
   [ "$status" -eq 0 ]
   [ ! -f "$HOME/Obsidian/.metadata_never_index" ]
 }
+
+@test "step_crawl skips when app already at target path" {
+  export CRAWL_APP_PATH="$BATS_TEST_TMPDIR/Crawl.app"
+  mkdir -p "$CRAWL_APP_PATH"
+  run step_crawl
+  [ "$status" -eq 0 ]
+  assert_not_called '^curl '
+}
+
+@test "step_crawl fails clean when GitHub API is unreachable" {
+  export CRAWL_APP_PATH="$BATS_TEST_TMPDIR/Crawl.app"
+  export SHIM_EXIT_CURL=1
+  run step_crawl
+  [ "$status" -ne 0 ]
+  [[ "$output" == *"couldn't determine latest DCSS release tag"* ]] \
+    || [[ "$output" == *"download failed"* ]]
+}
