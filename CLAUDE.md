@@ -75,6 +75,9 @@ dotfiles. `bootstrap` runs `chezmoi init` against that repo as part of the
   CLI flags, logging, state tracking, bats tests, shellcheck
 - Stage 4 ✅ — `step_bindings` automates Mission Control space-switching
   hotkeys, Spotlight unbind, and Spotlight privacy folders
-- Stage 5 (planned) — README rewrites + tag a release
+- Stage 5 ✅ — READMEs rewritten, Makefile shortcuts (`make brew`,
+  `make defaults`), sanity passes green
+- v2 (deferred) — TPM-shaped slash commands + agents under `dot_claude/`
+- Stage 6 (tail) — `dot_crawlrc` refresh
 
 See `PLAN.md` in the parent workspace for the full roadmap.

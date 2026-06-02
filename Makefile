@@ -1,4 +1,4 @@
-.PHONY: all test lint doctor help
+.PHONY: all test lint doctor brew defaults help
 
 SHELL := /bin/bash
 
@@ -12,8 +12,10 @@ all: lint test
 help:
 	@echo "make test     — run bats test suite (tests/*.bats)"
 	@echo "make lint     — run shellcheck over bootstrap, lib.sh, fixtures"
-	@echo "make doctor   — run ./bootstrap --doctor"
 	@echo "make all      — lint then test"
+	@echo "make doctor   — ./bootstrap --doctor"
+	@echo "make brew     — ./bootstrap --only brewfile"
+	@echo "make defaults — ./bootstrap --only osx,bindings"
 
 test:
 	$(BATS) tests/
@@ -23,3 +25,9 @@ lint:
 
 doctor:
 	./bootstrap --doctor
+
+brew:
+	./bootstrap --only brewfile
+
+defaults:
+	./bootstrap --only osx,bindings

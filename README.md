@@ -1,33 +1,59 @@
 # Workspace Setup
 
-Documenting how I set up my workspace. See [dotfiles here](https://github.com/cknadler/dotfiles).
+Bootstrap a fresh Mac dev environment. Pairs with
+[dotfiles](https://github.com/cknadler/dotfiles) (chezmoi-managed).
 
-## OSX
+## macOS
 
-~~Most~~ Some of this is automated. Run the following:
+### Fresh machine
 
 ```bash
-git clone https://github.com/cknadler/setup && \
-pushd setup && \
-  ./bootstrap && \
-popd && \
-rm -r setup
+git clone https://github.com/cknadler/setup ~/src/setup
+cd ~/src/setup && ./bootstrap --all
 ```
+
+`--all` is non-interactive: it runs every step
+(`xcode`, `homebrew`, `brewfile`, `claude`, `chezmoi`, `marta`,
+`vim_anywhere`, `bindings`, `osx`). Steps are idempotent and re-runnable.
+
+### Day-to-day
+
+```bash
+./bootstrap --doctor          # read-only state report
+./bootstrap --only brewfile   # re-run a subset
+./bootstrap --only bindings   # apply Mission Control / Spotlight hotkeys
+./bootstrap --help            # all flags
+```
+
+Logs land in `~/.local/state/setup/bootstrap-<timestamp>.log`; a list of
+completed steps is at `~/.local/state/setup/completed` (delete entries to
+force a re-run, or use `--force`).
 
 ### Bindings / Settings
 
-Most of this is now scripted — `./bootstrap --only bindings` applies:
+Scripted via `./bootstrap --only bindings`:
 
 - Mission Control: Move Left/Right A Space → `cmd+shift+h` / `cmd+shift+l`
 - Spotlight: `cmd+space` unbound (Alfred replaces it)
 - Spotlight privacy: drops `.metadata_never_index` in `~/Obsidian` and
-  `~/Documents/Backup Projects` so neither is indexed
+  `~/Documents/Backup Projects`
 
 Still manual:
 
-- [Alfred](https://www.alfredapp.com/) — open Alfred preferences →
-  Advanced → Set Sync Folder → `~/Dropbox/config/Alfred`. Once-only GUI
-  step; Alfred handles preferences and workflows from there.
+- [Alfred](https://www.alfredapp.com/) — Alfred prefs → Advanced → Set
+  Sync Folder → `~/Dropbox/config/Alfred`. One-time GUI step; Alfred
+  handles preferences and workflows from there.
+
+### Development
+
+```bash
+make test     # bats tests/   (35 tests)
+make lint     # shellcheck over bootstrap, lib.sh, fixtures
+make doctor   # ./bootstrap --doctor
+make all      # lint + test
+```
+
+See [`CLAUDE.md`](./CLAUDE.md) for repo layout and the test infrastructure.
 
 ## Windows
 
