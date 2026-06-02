@@ -4,9 +4,7 @@ set -e
 
 ###
 # TODO
-# - Resolve conflicts between macvim and vim in brew
-# - Add sshkeygen before Chezmoi
-# - Ensure brew still continues even if there are conflicts with pre-installed packages
+# - Brew conflict / partial-failure handling (deferred to Stage 3 refactor)
 ###
 
 ###
@@ -39,7 +37,6 @@ BREW_HOME=false
 BREW_MUSIC=false
 BREW_FUN=false
 CHEZMOI=false
-VIM_SUBMODULES=false
 OSX=false
 
 ###
@@ -92,15 +89,6 @@ while true; do
 done
 
 while true; do
-  read -p "Install vim submodules? " yn
-  case $yn in
-    [Yy]* ) VIM_SUBMODULES=true; break;;
-    [Nn]* ) VIM_SUBMODULES=false; break;;
-    * ) echo "Please answer yes or no.";;
-  esac
-done
-
-while true; do
   read -p "Setup OSX defaults? " yn
   case $yn in
     [Yy]* ) OSX=true; break;;
@@ -142,38 +130,18 @@ if $BREW_FUN ; then
   brew bundle --file $ROOT/Brewfile.fun
 fi
 
-# oh-my-zsh
-if ! [[ -d $HOME/.oh-my-zsh ]]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  git clone https://github.com/reobin/typewritten.git $ZSH_CUSTOM/themes/typewritten
-  ln -s "$ZSH_CUSTOM/themes/typewritten/typewritten.zsh-theme" "$ZSH_CUSTOM/themes/typewritten.zsh-theme"
-  ln -s "$ZSH_CUSTOM/themes/typewritten/async.zsh" "$ZSH_CUSTOM/themes/async"
-fi
-
 # Chezmoi
 if $CHEZMOI ; then
   chezmoi init https://github.com/cknadler/dotfiles.git
   chezmoi -R apply
-
-  pushd ~/.local/share/chezmoi
-  git remote rm origin
-  git remote add origin git@github.com:cknadler/dotfiles.git
-  git fetch
-  git branch -u origin/master
-  popd
 fi
 
 # Marta
 defaults write -g NSFileViewer -string org.yanex.marta
 
-# install vim submodules
-if $VIM_SUBMODULES ; then
-  vim +PluginInstall +qall
-fi
-
-# vim-anywhere
+# vim-anywhere (requires macvim)
 if ! [[ -d $HOME/.vim-anywhere ]]; then
-  curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
+  curl -fsSL https://raw.githubusercontent.com/cknadler/vim-anywhere/master/install | bash
 fi
 
 # OSX defaults
