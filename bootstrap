@@ -136,6 +136,11 @@ if $CHEZMOI ; then
   chezmoi -R apply
 fi
 
+# Claude Code CLI (official installer to ~/.local/bin/claude)
+if ! installed claude; then
+  curl -fsSL https://claude.ai/install.sh | bash
+fi
+
 # Marta
 defaults write -g NSFileViewer -string org.yanex.marta
 

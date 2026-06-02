@@ -21,6 +21,21 @@ brew 'git-delta'
 brew 'tmux'
 brew 'git-extras'
 brew 'pcre'
+brew 'gh'             # GitHub CLI; Claude Code uses for PR workflow
+brew 'jq'             # JSON processor
+brew 'yq'             # YAML processor
+brew 'bat'            # better cat with syntax highlighting
+brew 'eza'            # modern ls
+brew 'zoxide'         # smart cd
+brew 'gum'            # bash interactive prompts (used by scripts)
+
+# writing
+brew 'pandoc'         # document conversion
+brew 'glow'           # terminal markdown renderer
+
+# shell scripting
+brew 'shellcheck'     # bash linter
+brew 'bats-core'      # bash test framework
 
 # terminal
 brew 'starship'
