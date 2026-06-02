@@ -154,3 +154,34 @@ load test_helper
   [[ "$output" == *"couldn't determine latest DCSS release tag"* ]] \
     || [[ "$output" == *"download failed"* ]]
 }
+
+@test "_crawl_install_app copies src to dest and verifies" {
+  local src="$BATS_TEST_TMPDIR/src.app"
+  mkdir -p "$src/Contents"
+  touch "$src/Contents/Info.plist"
+  local dest="$BATS_TEST_TMPDIR/Apps/dest.app"   # parent doesn't exist yet
+  run _crawl_install_app "$src" "$dest"
+  [ "$status" -eq 0 ]
+  [ -d "$dest" ]
+  [ -f "$dest/Contents/Info.plist" ]
+}
+
+@test "_crawl_install_app fails when src doesn't exist" {
+  local dest="$BATS_TEST_TMPDIR/dest.app"
+  run _crawl_install_app "$BATS_TEST_TMPDIR/missing.app" "$dest"
+  [ "$status" -ne 0 ]
+  [ ! -d "$dest" ]
+}
+
+@test "_crawl_install_app replaces existing dest in place" {
+  local src="$BATS_TEST_TMPDIR/src.app"
+  mkdir -p "$src"
+  touch "$src/new-file"
+  local dest="$BATS_TEST_TMPDIR/dest.app"
+  mkdir -p "$dest"
+  touch "$dest/stale-file"
+  run _crawl_install_app "$src" "$dest"
+  [ "$status" -eq 0 ]
+  [ -f "$dest/new-file" ]
+  [ ! -f "$dest/stale-file" ]
+}

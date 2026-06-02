@@ -47,6 +47,33 @@ load test_helper
   [[ "$output" != *"already completed"* ]]
 }
 
+@test "bootstrap --only with no arg exits non-zero" {
+  run /bin/bash "$REPO/bootstrap" --only
+  [ "$status" -eq 2 ]
+  [[ "$output" == *"--only requires"* ]]
+}
+
+@test "bootstrap --only with empty arg exits non-zero" {
+  run /bin/bash "$REPO/bootstrap" --only ""
+  [ "$status" -eq 2 ]
+  [[ "$output" == *"--only requires"* ]]
+}
+
+@test "bootstrap --only followed by another flag exits non-zero" {
+  run /bin/bash "$REPO/bootstrap" --only --doctor
+  [ "$status" -eq 2 ]
+  [[ "$output" == *"--only requires"* ]]
+}
+
+@test "bootstrap --only strips empty fragments from comma list" {
+  # ",marta,," resolves to a single valid step ("marta") after stripping
+  # leading/trailing/doubled-comma empties. State-skip is bypassed by --only.
+  export SHIM_STDOUT_DEFAULTS=""
+  run /bin/bash "$REPO/bootstrap" --only ",marta,,"
+  [ "$status" -eq 0 ]
+  [[ "$output" == *"marta"* ]]
+}
+
 @test "bootstrap --all skips already-completed steps without --force" {
   mkdir -p "$HOME/.local/state/setup"
   echo "marta" > "$HOME/.local/state/setup/completed"

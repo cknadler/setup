@@ -275,12 +275,36 @@ step_crawl() {
     return 1
   fi
   log_info "installing to $CRAWL_APP_PATH..."
-  rm -rf "$CRAWL_APP_PATH"
-  cp -R "$extracted" "$CRAWL_APP_PATH"
+  if ! _crawl_install_app "$extracted" "$CRAWL_APP_PATH"; then
+    rm -rf "$tmp"
+    return 1
+  fi
   rm -rf "$tmp"
   log_info "stripping com.apple.quarantine xattr..."
   xattr -dr com.apple.quarantine "$CRAWL_APP_PATH" 2>/dev/null || true
   log_ok "DCSS $tag installed"
+}
+
+# _crawl_install_app <src-app-dir> <dest-app-path>
+# Atomic-ish replace: ensure parent exists, blow away any existing dest,
+# cp -R the new app in, and verify it landed. Returns non-zero if cp
+# failed OR cp lied and the destination isn't a directory afterwards.
+_crawl_install_app() {
+  local src=$1 dest=$2
+  if ! mkdir -p "$(dirname "$dest")"; then
+    log_error "couldn't create parent dir for $dest"
+    return 1
+  fi
+  rm -rf "$dest"
+  if ! cp -R "$src" "$dest"; then
+    log_error "cp -R failed: $src → $dest"
+    return 1
+  fi
+  if [[ ! -d "$dest" ]]; then
+    log_error "cp returned 0 but $dest is not a directory"
+    return 1
+  fi
+  return 0
 }
 
 step_osx() {

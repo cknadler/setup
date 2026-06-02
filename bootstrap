@@ -63,7 +63,29 @@ usage() {
 while (( $# > 0 )); do
   case $1 in
     --all)    MODE=all ;;
-    --only)   MODE=only; shift; IFS=, read -r -a ONLY_STEPS <<< "${1:-}" ;;
+    --only)
+      MODE=only
+      # Reject "--only" with nothing after, an empty arg, or another flag.
+      # pick_steps runs in a process-substitution subshell so `exit 2` from
+      # there doesn't reach the parent — validate here at parse time.
+      if [[ -z "${2:-}" ]] || [[ "${2:0:2}" == "--" ]]; then
+        log_error "--only requires a comma-separated step list"
+        exit 2
+      fi
+      shift
+      IFS=, read -r -a ONLY_STEPS <<< "$1"
+      # Strip empty fragments from leading / trailing / doubled commas.
+      _filtered=()
+      for _s in "${ONLY_STEPS[@]}"; do
+        [[ -n "$_s" ]] && _filtered+=("$_s")
+      done
+      ONLY_STEPS=("${_filtered[@]+"${_filtered[@]}"}")
+      unset _filtered _s
+      if (( ${#ONLY_STEPS[@]} == 0 )); then
+        log_error "--only requires a non-empty step list"
+        exit 2
+      fi
+      ;;
     --doctor) MODE=doctor ;;
     --force)  FORCE=true ;;
     --help|-h) usage; exit 0 ;;
@@ -102,10 +124,7 @@ pick_steps() {
       printf '%s\n' "${ALL_STEPS[@]}"
       ;;
     only)
-      if (( ${#ONLY_STEPS[@]} == 0 )); then
-        log_error "--only requires a comma-separated step list"
-        exit 2
-      fi
+      # ONLY_STEPS is validated at parse time (see --only case above).
       printf '%s\n' "${ONLY_STEPS[@]}"
       ;;
     interactive)
