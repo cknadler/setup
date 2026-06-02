@@ -146,6 +146,21 @@ step_homebrew() {
   fi
   log_info "installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  # Put brew on PATH for the rest of this run. The Homebrew installer adds
+  # a shellenv line to ~/.zprofile for future shells but the current process
+  # won't see /opt/homebrew/bin (M-series) or /usr/local/bin (Intel) yet.
+  local brew_bin
+  for brew_bin in /opt/homebrew/bin/brew /usr/local/bin/brew; do
+    if [[ -x "$brew_bin" ]]; then
+      eval "$($brew_bin shellenv)"
+      hash -r
+      break
+    fi
+  done
+  if ! installed brew; then
+    log_error "Homebrew install succeeded but brew is still not on PATH"
+    return 1
+  fi
 }
 
 # _brew_bundle <file-name> — common helper.
@@ -222,7 +237,8 @@ step_osx() {
 
 # Symbolic hotkey IDs in com.apple.symbolichotkeys.AppleSymbolicHotKeys.
 # See: https://web.archive.org/web/2019*/apple AppleSymbolicHotKeys reference
-readonly SHK_SPOTLIGHT=64
+readonly SHK_SPOTLIGHT=64                # Show Spotlight Search
+readonly SHK_FINDER_SEARCH=65            # Show Finder search window
 readonly SHK_MOVE_LEFT_SPACE=79
 readonly SHK_MOVE_RIGHT_SPACE=81
 
@@ -245,6 +261,8 @@ step_bindings() {
   _shk_write $SHK_MOVE_RIGHT_SPACE 1 108 37 $MOD_CMD_SHIFT
   # Show Spotlight Search → disabled (Alfred replaces it)
   _shk_write $SHK_SPOTLIGHT        0 32  49 $MOD_CMD
+  # Show Finder search window → disabled (Alfred replaces it)
+  _shk_write $SHK_FINDER_SEARCH    0 32  49 $MOD_CMD
 
   # Reload preferences so changes take effect without a logout
   killall cfprefsd 2>/dev/null || true
@@ -356,6 +374,18 @@ doctor_osx() {
   fi
 }
 
+# _shk_enabled <plist-text> <id> — print "0" / "1" / "" (when key absent).
+# Extracts the dict for a single symbolic hotkey id (outer "    NN = {"
+# to the matching "    };" at the same 4-space indent), then reads the
+# `enabled = <0|1>` line within it.
+_shk_enabled() {
+  local plist=$1 id=$2
+  printf '%s\n' "$plist" \
+    | sed -n "/^    $id =/,/^    };\$/p" \
+    | sed -nE 's/^[[:space:]]*enabled = ([01]);$/\1/p' \
+    | head -1
+}
+
 doctor_bindings() {
   local plist
   plist=$(defaults read com.apple.symbolichotkeys AppleSymbolicHotKeys 2>/dev/null || true)
@@ -363,15 +393,17 @@ doctor_bindings() {
     _doctor_line bindings unknown "no symbolic hotkeys configured"
     return
   fi
-  # Extract just the dict for key 64 (Spotlight). The outer key opens with
-  # "    64 = {" and closes with "    };" at the same 4-space indent — the
-  # inner value dict's closing is at 8-space indent so it won't match.
-  local sp_block
-  sp_block=$(printf '%s\n' "$plist" | sed -n '/^    64 =/,/^    };$/p')
-  if printf '%s\n' "$sp_block" | grep -q 'enabled = 0'; then
-    _doctor_line bindings ok "Spotlight cmd+space unbound"
+  # Expected: Spotlight (64) + Finder search (65) disabled, Mission
+  # Control space-switching (79, 81) enabled.
+  local bad=()
+  [[ "$(_shk_enabled "$plist" 64)" == "0" ]] || bad+=("64=Spotlight")
+  [[ "$(_shk_enabled "$plist" 65)" == "0" ]] || bad+=("65=Finder")
+  [[ "$(_shk_enabled "$plist" 79)" == "1" ]] || bad+=("79=MoveLeft")
+  [[ "$(_shk_enabled "$plist" 81)" == "1" ]] || bad+=("81=MoveRight")
+  if (( ${#bad[@]} == 0 )); then
+    _doctor_line bindings ok "all 4 symbolic hotkeys match"
   else
-    _doctor_line bindings missing "run: bootstrap --only bindings"
+    _doctor_line bindings missing "mismatched: ${bad[*]} (run: bootstrap --only bindings)"
   fi
 }
 

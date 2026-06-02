@@ -103,7 +103,7 @@ load test_helper
   assert_called '^chezmoi -R apply'
 }
 
-@test "step_bindings writes the three symbolic hotkeys" {
+@test "step_bindings writes the four symbolic hotkeys" {
   run step_bindings
   [ "$status" -eq 0 ]
   # Move Left A Space → cmd+shift+h (id 79, ascii 104, keycode 4, mod 1179648)
@@ -114,6 +114,8 @@ load test_helper
   assert_called 'parameters = \(108, 37, 1179648\)'
   # Spotlight disabled (id 64, enabled = 0)
   assert_called 'defaults write com.apple.symbolichotkeys .* 64 '
+  # Finder search window disabled (id 65, enabled = 0)
+  assert_called 'defaults write com.apple.symbolichotkeys .* 65 '
   assert_called 'enabled = 0'
 }
 

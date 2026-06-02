@@ -22,6 +22,10 @@ test:
 
 lint:
 	$(SHELLCHECK) -s bash $(SCRIPTS)
+	# Also parse-check under the fresh-macOS baseline bash (3.2.57). Catches
+	# bash 4+ features that shellcheck doesn't flag by default.
+	/bin/bash -n bootstrap
+	/bin/bash -n lib.sh
 
 doctor:
 	./bootstrap --doctor

@@ -73,7 +73,17 @@ while (( $# > 0 )); do
 done
 
 ###
-# Logging setup
+# Doctor mode (read-only short-circuit — must come BEFORE any state
+# creation or logging side effects).
+###
+
+if [[ "$MODE" == "doctor" ]]; then
+  doctor_report
+  exit 0
+fi
+
+###
+# Logging + state setup (modes that actually install things)
 ###
 
 state_init
@@ -81,15 +91,6 @@ BOOTSTRAP_LOG="$(state_dir)/bootstrap-$(date +%Y%m%d-%H%M%S).log"
 export BOOTSTRAP_LOG
 touch "$BOOTSTRAP_LOG"
 log_info "logging to $BOOTSTRAP_LOG"
-
-###
-# Doctor mode (read-only short-circuit)
-###
-
-if [[ "$MODE" == "doctor" ]]; then
-  doctor_report
-  exit 0
-fi
 
 ###
 # Pick the steps to run
@@ -121,7 +122,12 @@ pick_steps() {
   esac
 }
 
-mapfile -t STEPS_TO_RUN < <(pick_steps)
+# bash 3.2 compatible (no mapfile/readarray, which are bash 4+)
+STEPS_TO_RUN=()
+while IFS= read -r _line; do
+  STEPS_TO_RUN+=("$_line")
+done < <(pick_steps)
+unset _line
 
 if (( ${#STEPS_TO_RUN[@]} == 0 )); then
   log_warn "no steps selected; nothing to do"
@@ -158,8 +164,11 @@ fi
 
 run_step() {
   local name=$1
-  if [[ "$FORCE" != "true" ]] && state_is_done "$name"; then
-    log_skip "$name (already completed; --force to re-run)"
+  # State-skip applies only to the default-interactive and --all flows,
+  # where the user is doing a fresh setup. --only and --force are
+  # explicit re-run requests; respect them.
+  if [[ "$FORCE" != "true" ]] && [[ "$MODE" != "only" ]] && state_is_done "$name"; then
+    log_skip "$name (already completed; --only or --force to re-run)"
     return 0
   fi
   log_step "$name"
