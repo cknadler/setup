@@ -16,18 +16,18 @@ rm -r setup
 
 ### Bindings / Settings
 
-- [Alfred](https://www.alfredapp.com/)
-  - Preferences: `~/Dropbox/config/Alfred/preferences`
-  - Workflows: `~/Dropbox/config/Alfred/workflows`
-- General (Keyboard -> Shortcuts -> Mission Control -> Mission Control)
-  - Move Left A Space: `cmd+shift+h`
-  - Move Right A Space: `cmd+shift+l`
-- Replace spotlight with Alfred (Keyboard -> Shortcuts -> Spotlight)
-  - Show Spotlight Search: `unbind` (use Alfred instead)
-- Don't index Obsidian files in spotlight (Spotlight -> Search Privacy)
-  - Privacy
-    - `~/Obsidian`
-    - `~/Documents/Backup Projects` (don't index Dorico backups)
+Most of this is now scripted — `./bootstrap --only bindings` applies:
+
+- Mission Control: Move Left/Right A Space → `cmd+shift+h` / `cmd+shift+l`
+- Spotlight: `cmd+space` unbound (Alfred replaces it)
+- Spotlight privacy: drops `.metadata_never_index` in `~/Obsidian` and
+  `~/Documents/Backup Projects` so neither is indexed
+
+Still manual:
+
+- [Alfred](https://www.alfredapp.com/) — open Alfred preferences →
+  Advanced → Set Sync Folder → `~/Dropbox/config/Alfred`. Once-only GUI
+  step; Alfred handles preferences and workflows from there.
 
 ## Windows
 

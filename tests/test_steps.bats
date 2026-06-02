@@ -102,3 +102,36 @@ load test_helper
   assert_called '^chezmoi init'
   assert_called '^chezmoi -R apply'
 }
+
+@test "step_bindings writes the three symbolic hotkeys" {
+  run step_bindings
+  [ "$status" -eq 0 ]
+  # Move Left A Space → cmd+shift+h (id 79, ascii 104, keycode 4, mod 1179648)
+  assert_called 'defaults write com.apple.symbolichotkeys .* 79 '
+  assert_called 'parameters = \(104, 4, 1179648\)'
+  # Move Right A Space → cmd+shift+l (id 81, ascii 108, keycode 37)
+  assert_called 'defaults write com.apple.symbolichotkeys .* 81 '
+  assert_called 'parameters = \(108, 37, 1179648\)'
+  # Spotlight disabled (id 64, enabled = 0)
+  assert_called 'defaults write com.apple.symbolichotkeys .* 64 '
+  assert_called 'enabled = 0'
+}
+
+@test "step_bindings reloads cfprefsd" {
+  run step_bindings
+  [ "$status" -eq 0 ]
+  assert_called '^killall cfprefsd'
+}
+
+@test "step_bindings drops .metadata_never_index when target dir exists" {
+  mkdir -p "$HOME/Obsidian"
+  run step_bindings
+  [ "$status" -eq 0 ]
+  [ -f "$HOME/Obsidian/.metadata_never_index" ]
+}
+
+@test "step_bindings skips .metadata_never_index when target dir missing" {
+  run step_bindings
+  [ "$status" -eq 0 ]
+  [ ! -f "$HOME/Obsidian/.metadata_never_index" ]
+}

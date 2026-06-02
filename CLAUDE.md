@@ -38,7 +38,7 @@ State and logs live in `~/.local/state/setup/`:
 ## Steps
 
 In `--all` order: `xcode`, `homebrew`, `brewfile`, `claude`, `chezmoi`,
-`marta`, `vim_anywhere`, `osx`.
+`marta`, `vim_anywhere`, `bindings`, `osx`.
 
 Extra steps (interactive or `--only`): `brewfile_home`, `brewfile_fun`,
 `brewfile_music`.
@@ -73,8 +73,8 @@ dotfiles. `bootstrap` runs `chezmoi init` against that repo as part of the
 - Stage 2 ✅ — Claude Code CLI install + AI tooling Brewfile entries
 - Stage 3 ✅ — bootstrap restructured into idempotent step functions,
   CLI flags, logging, state tracking, bats tests, shellcheck
-- Stage 4 (planned) — automate manual "Bindings / Settings" via a
-  separate `bindings` script
+- Stage 4 ✅ — `step_bindings` automates Mission Control space-switching
+  hotkeys, Spotlight unbind, and Spotlight privacy folders
 - Stage 5 (planned) — README rewrites + tag a release
 
 See `PLAN.md` in the parent workspace for the full roadmap.

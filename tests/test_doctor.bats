@@ -22,6 +22,21 @@ load test_helper
   assert_not_called '^defaults write'
 }
 
+@test "doctor_bindings reports ok when Spotlight key 64 is disabled" {
+  export SHIM_STDOUT_DEFAULTS=$'{\n    64 =     {\n        enabled = 0;\n    };\n    65 =     {\n        enabled = 1;\n    };\n}'
+  run doctor_bindings
+  [ "$status" -eq 0 ]
+  [[ "$output" == *"ok"* ]]
+  [[ "$output" == *"Spotlight"* ]]
+}
+
+@test "doctor_bindings reports missing when Spotlight key 64 is enabled" {
+  export SHIM_STDOUT_DEFAULTS=$'{\n    64 =     {\n        enabled = 1;\n    };\n    65 =     {\n        enabled = 1;\n    };\n}'
+  run doctor_bindings
+  [ "$status" -eq 0 ]
+  [[ "$output" == *"miss"* ]]
+}
+
 @test "doctor leaves state file untouched" {
   state_init
   # Pre-mark a step so we can tell if doctor wrote to the file.

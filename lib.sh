@@ -220,6 +220,49 @@ step_osx() {
   "$path"
 }
 
+# Symbolic hotkey IDs in com.apple.symbolichotkeys.AppleSymbolicHotKeys.
+# See: https://web.archive.org/web/2019*/apple AppleSymbolicHotKeys reference
+readonly SHK_SPOTLIGHT=64
+readonly SHK_MOVE_LEFT_SPACE=79
+readonly SHK_MOVE_RIGHT_SPACE=81
+
+# NSEvent modifier flags
+readonly MOD_CMD=1048576              # 0x100000
+readonly MOD_CMD_SHIFT=1179648        # 0x120000
+
+# _shk_write <id> <enabled 0|1> <ascii> <keycode> <modifiers>
+_shk_write() {
+  local id=$1 enabled=$2 ascii=$3 keycode=$4 modifiers=$5
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add "$id" \
+    "{enabled = $enabled; value = {parameters = ($ascii, $keycode, $modifiers); type = standard;};}"
+}
+
+step_bindings() {
+  log_info "applying Mission Control + Spotlight hotkeys..."
+  # Move Left A Space → cmd+shift+h
+  _shk_write $SHK_MOVE_LEFT_SPACE  1 104 4  $MOD_CMD_SHIFT
+  # Move Right A Space → cmd+shift+l
+  _shk_write $SHK_MOVE_RIGHT_SPACE 1 108 37 $MOD_CMD_SHIFT
+  # Show Spotlight Search → disabled (Alfred replaces it)
+  _shk_write $SHK_SPOTLIGHT        0 32  49 $MOD_CMD
+
+  # Reload preferences so changes take effect without a logout
+  killall cfprefsd 2>/dev/null || true
+
+  log_info "marking Spotlight privacy folders..."
+  local p
+  for p in "$HOME/Obsidian" "$HOME/Documents/Backup Projects"; do
+    if [[ -d "$p" ]]; then
+      touch "$p/.metadata_never_index"
+      log_ok "  $p/.metadata_never_index"
+    else
+      log_skip "  $p doesn't exist yet; rerun after creating it"
+    fi
+  done
+
+  log_info "alfred: set Alfred's Sync Folder to ~/Dropbox/config/Alfred via Alfred prefs (one-time GUI step)"
+}
+
 ###
 # 5. Doctor checks
 #
@@ -313,6 +356,25 @@ doctor_osx() {
   fi
 }
 
+doctor_bindings() {
+  local plist
+  plist=$(defaults read com.apple.symbolichotkeys AppleSymbolicHotKeys 2>/dev/null || true)
+  if [[ -z "$plist" ]]; then
+    _doctor_line bindings unknown "no symbolic hotkeys configured"
+    return
+  fi
+  # Extract just the dict for key 64 (Spotlight). The outer key opens with
+  # "    64 = {" and closes with "    };" at the same 4-space indent — the
+  # inner value dict's closing is at 8-space indent so it won't match.
+  local sp_block
+  sp_block=$(printf '%s\n' "$plist" | sed -n '/^    64 =/,/^    };$/p')
+  if printf '%s\n' "$sp_block" | grep -q 'enabled = 0'; then
+    _doctor_line bindings ok "Spotlight cmd+space unbound"
+  else
+    _doctor_line bindings missing "run: bootstrap --only bindings"
+  fi
+}
+
 doctor_report() {
   log_step "doctor — reporting current state (read-only)"
   doctor_xcode
@@ -322,5 +384,6 @@ doctor_report() {
   doctor_chezmoi
   doctor_marta
   doctor_vim_anywhere
+  doctor_bindings
   doctor_osx
 }

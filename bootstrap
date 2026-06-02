@@ -11,7 +11,7 @@
 #   bootstrap --help           Show this help.
 #
 # Steps (run in this order when --all or default interactive):
-#   xcode homebrew brewfile claude chezmoi marta vim_anywhere osx
+#   xcode homebrew brewfile claude chezmoi marta vim_anywhere bindings osx
 #
 # Extra Brewfile steps (interactive only by default; specify with --only):
 #   brewfile_home brewfile_fun brewfile_music
@@ -43,7 +43,7 @@ source "$ROOT/lib.sh"
 
 # Steps included in --all and default-interactive. Order matters: each step
 # may depend on earlier ones (e.g. brewfile needs homebrew).
-ALL_STEPS=(xcode homebrew brewfile claude chezmoi marta vim_anywhere osx)
+ALL_STEPS=(xcode homebrew brewfile claude chezmoi marta vim_anywhere bindings osx)
 
 # Extra steps not in --all (opt-in via --only).
 EXTRA_STEPS=(brewfile_home brewfile_fun brewfile_music)
