@@ -67,6 +67,13 @@ symlinks). Each stub records its invocation to `$SHIM_CALLS` so tests can
 assert on subprocess args; exit codes and stdout are controllable per-test
 via `SHIM_EXIT_<NAME>` / `SHIM_STDOUT_<NAME>` env vars.
 
+## Commit messages
+
+- Describe what changed and why, in plain terms. Sentence-case subject.
+- No `Stage N:` prefixes and no references to PLAN.md or its staging.
+- Don't narrate how the work was done (process, review steps, test counts as
+  the point of the commit) — describe the change itself.
+
 ## Companion repo
 
 [`cknadler/dotfiles`](https://github.com/cknadler/dotfiles) — chezmoi-managed
