@@ -3,18 +3,23 @@
 # bootstrap — install a mac dev environment.
 #
 # Usage:
-#   bootstrap                  Interactive: prompt for each step.
-#   bootstrap --all            Non-interactive: run every step (in scope).
+#   bootstrap                  Interactive: ask machine type, then optional extras.
+#   bootstrap --all            Non-interactive: run every core step (in scope).
 #   bootstrap --only S1,S2     Run only the named steps (comma-separated).
 #   bootstrap --doctor         Read-only: report current state. Installs nothing.
 #   bootstrap --force          Re-run steps even if marked completed.
 #   bootstrap --help           Show this help.
 #
-# Steps (run in this order when --all or default interactive):
+# Interactive flow:
+#   Asks "work or personal?" — both run every core step (no per-step prompts).
+#   A personal machine also gets Brewfile.home plus y/n prompts for music
+#   production, games (Dungeon Crawl), and media apps.
+#
+# Core steps (run on every machine; also the --all set):
 #   xcode homebrew brewfile claude chezmoi marta vim_anywhere bindings osx
 #
-# Extra steps (interactive only by default; specify with --only):
-#   brewfile_home brewfile_fun brewfile_music crawl
+# Extra steps (personal interactive flow, or via --only):
+#   brewfile_home brewfile_music brewfile_media crawl
 #
 # Logs every run to ~/.local/state/setup/bootstrap-<date>.log
 # State file at ~/.local/state/setup/completed tracks finished steps.
@@ -45,8 +50,8 @@ source "$ROOT/lib.sh"
 # may depend on earlier ones (e.g. brewfile needs homebrew).
 ALL_STEPS=(xcode homebrew brewfile claude chezmoi marta vim_anywhere bindings osx)
 
-# Extra steps not in --all (opt-in via --only).
-EXTRA_STEPS=(brewfile_home brewfile_fun brewfile_music crawl)
+# Extra steps not in --all (personal interactive flow, or opt-in via --only).
+EXTRA_STEPS=(brewfile_home brewfile_music brewfile_media crawl)
 
 MODE=interactive   # interactive | all | only | doctor
 ONLY_STEPS=()
@@ -57,7 +62,7 @@ FORCE=false
 ###
 
 usage() {
-  sed -n '3,21p' "$0" | sed 's/^# \{0,1\}//'
+  sed -n '3,25p' "$0" | sed 's/^# \{0,1\}//'
 }
 
 while (( $# > 0 )); do
@@ -118,6 +123,17 @@ log_info "logging to $BOOTSTRAP_LOG"
 # Pick the steps to run
 ###
 
+# Yes/no prompt, default No. The prompt goes to stderr (via read -p) so it
+# doesn't pollute the step list pick_steps prints to stdout. Returns 0 for yes.
+_ask_yn() {
+  local reply
+  read -r -p "$1 [y/N] " reply
+  case ${reply:-N} in
+    [Yy]*) return 0 ;;
+    *)     return 1 ;;
+  esac
+}
+
 pick_steps() {
   case $MODE in
     all)
@@ -128,15 +144,26 @@ pick_steps() {
       printf '%s\n' "${ONLY_STEPS[@]}"
       ;;
     interactive)
-      # Confirm each step with the user; default = yes.
-      local s reply
-      for s in "${ALL_STEPS[@]}" "${EXTRA_STEPS[@]}"; do
-        read -r -p "Run step '$s'? [Y/n] " reply
-        case ${reply:-Y} in
-          [Yy]*) printf '%s\n' "$s" ;;
-          *)     ;;
+      local reply machine=""
+      while [[ "$machine" == "" ]]; do
+        read -r -p "What kind of machine are you setting up? [work/personal] " reply
+        case ${reply:-} in
+          [Ww]*) machine=work ;;
+          [Pp]*) machine=personal ;;
+          *)     echo "  please answer 'work' or 'personal'" >&2 ;;
         esac
       done
+
+      # Core steps run on every machine, no per-step prompting.
+      printf '%s\n' "${ALL_STEPS[@]}"
+
+      # Personal machines also get the home baseline plus optional extras.
+      if [[ "$machine" == "personal" ]]; then
+        printf '%s\n' brewfile_home
+        _ask_yn "Install music production apps?"        && printf '%s\n' brewfile_music
+        _ask_yn "Install games (Dungeon Crawl)?"        && printf '%s\n' crawl
+        _ask_yn "Install media apps (Plex, YACReader)?" && printf '%s\n' brewfile_media
+      fi
       ;;
   esac
 }

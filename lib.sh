@@ -182,7 +182,7 @@ _brew_bundle() {
 
 step_brewfile()       { _brew_bundle Brewfile; }
 step_brewfile_home()  { _brew_bundle Brewfile.home; }
-step_brewfile_fun()   { _brew_bundle Brewfile.fun; }
+step_brewfile_media() { _brew_bundle Brewfile.media; }
 step_brewfile_music() { _brew_bundle Brewfile.music; }
 
 step_claude() {

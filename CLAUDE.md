@@ -8,14 +8,16 @@ Bootstrap a fresh macOS dev environment.
 - `lib.sh` — step functions (`step_xcode`, `step_homebrew`, …),
   logging (`log_info`, `log_warn`, …), state tracking (`state_*`),
   and read-only doctor probes (`doctor_*`). Sourced by `bootstrap`.
-- `Brewfile` — default Homebrew packages.
-- `Brewfile.home` — extra apps for personal machines (Dropbox, Signal, etc.).
-- `Brewfile.fun` — games / media.
+- `Brewfile` — default packages installed on every machine, including the
+  everyday apps (Signal, Spotify, Dropbox, Obsidian, …) and `mas` HEIC.
+- `Brewfile.home` — home-machine extras (Discord, VLC, Synology Drive, …);
+  auto-installed when "personal" is chosen.
+- `Brewfile.media` — media apps (Plex, YACReader).
 - `Brewfile.music` — audio production. **Out of scope** for current work.
 - `.osx` — `defaults write` customizations; run last (some changes
   require a restart).
 - `Makefile` — `make test`, `make lint`, `make doctor`, `make all`.
-- `tests/` — bats-core test suite (29 tests) using PATH-shim mocks under
+- `tests/` — bats-core test suite (59 tests) using PATH-shim mocks under
   `tests/fixtures/bin/`. Tests source `lib.sh` directly and exercise step
   functions with isolated `$HOME` and stubbed subprocess calls.
 - `colors/` — terminal color theme assets.
@@ -23,8 +25,8 @@ Bootstrap a fresh macOS dev environment.
 ## Usage
 
 ```
-./bootstrap                Interactive: prompt for each step.
-./bootstrap --all          Non-interactive: run every step (in scope).
+./bootstrap                Interactive: ask machine type, then optional extras.
+./bootstrap --all          Non-interactive: run every core step (in scope).
 ./bootstrap --only S1,S2   Run only named steps.
 ./bootstrap --doctor       Read-only state report. Installs nothing.
 ./bootstrap --force        Re-run completed steps.
@@ -37,11 +39,15 @@ State and logs live in `~/.local/state/setup/`:
 
 ## Steps
 
-In `--all` order: `xcode`, `homebrew`, `brewfile`, `claude`, `chezmoi`,
-`marta`, `vim_anywhere`, `bindings`, `osx`.
+Core steps (`--all` order, and run on every machine in the interactive flow):
+`xcode`, `homebrew`, `brewfile`, `claude`, `chezmoi`, `marta`, `vim_anywhere`,
+`bindings`, `osx`.
 
-Extra steps (interactive or `--only`): `brewfile_home`, `brewfile_fun`,
-`brewfile_music`.
+Extra steps: `brewfile_home`, `brewfile_music`, `brewfile_media`, `crawl`.
+The interactive flow asks "work or personal?" — both run the core steps; a
+personal machine additionally runs `brewfile_home` and is prompted (y/n) for
+`brewfile_music`, `crawl` (games), and `brewfile_media`. Extras are also
+reachable directly via `--only`.
 
 Every step is idempotent — re-runnable any number of times. Failures in
 one step don't abort the rest of the run; check the log + state file for

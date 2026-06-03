@@ -62,3 +62,15 @@ cask 'rectangle'
 cask 'marta'
 cask 'nordvpn'
 cask 'qbittorrent'
+
+# everyday apps (always installed, work and personal)
+cask 'zoom'
+cask 'signal'
+cask 'spotify'
+cask 'dropbox'
+cask 'obsidian'
+cask 'the-unarchiver'
+
+# mac app store
+brew 'mas'
+mas "HEIC Converter", id: 1294126402

@@ -9,12 +9,17 @@ Bootstrap a fresh Mac dev environment. Pairs with
 
 ```bash
 git clone https://github.com/cknadler/setup ~/src/setup
-cd ~/src/setup && ./bootstrap --all
+cd ~/src/setup && ./bootstrap
 ```
 
-`--all` is non-interactive: it runs every step
-(`xcode`, `homebrew`, `brewfile`, `claude`, `chezmoi`, `marta`,
-`vim_anywhere`, `bindings`, `osx`). Steps are idempotent and re-runnable.
+Plain `./bootstrap` is interactive: it asks whether the machine is **work**
+or **personal**. Both run every core step (`xcode`, `homebrew`, `brewfile`,
+`claude`, `chezmoi`, `marta`, `vim_anywhere`, `bindings`, `osx`) — no per-step
+prompting. A **personal** machine additionally installs `Brewfile.home` and
+asks (y/n) about music production apps, games (Dungeon Crawl), and media apps.
+
+`./bootstrap --all` is the non-interactive equivalent for the core steps only.
+Steps are idempotent and re-runnable.
 
 ### Day-to-day
 
@@ -47,7 +52,7 @@ Still manual:
 ### Development
 
 ```bash
-make test     # bats tests/   (35 tests)
+make test     # bats tests/   (59 tests)
 make lint     # shellcheck over bootstrap, lib.sh, fixtures
 make doctor   # ./bootstrap --doctor
 make all      # lint + test

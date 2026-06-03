@@ -36,6 +36,12 @@ load test_helper
   assert_called 'brew bundle --file=.*Brewfile.home'
 }
 
+@test "step_brewfile_media invokes brew bundle with Brewfile.media" {
+  run step_brewfile_media
+  [ "$status" -eq 0 ]
+  assert_called 'brew bundle --file=.*Brewfile.media'
+}
+
 @test "step_brewfile fails when ROOT is unset" {
   unset ROOT
   run step_brewfile

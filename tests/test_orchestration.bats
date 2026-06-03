@@ -85,3 +85,58 @@ load test_helper
   [ "$status" -eq 0 ]
   [[ "$output" == *"already completed"* ]]
 }
+
+# Pre-mark the core steps (and brewfile_home for personal) so the interactive
+# flow exercises selection without actually installing anything.
+_mark_core_done() {
+  mkdir -p "$HOME/.local/state/setup"
+  for step in "$@"; do
+    echo "$step" >> "$HOME/.local/state/setup/completed"
+  done
+}
+
+# read -p suppresses its prompt under non-tty stdin (the heredoc), so these
+# assert on selection *outcomes* — the step count in the summary and which
+# Brewfiles get bundled — rather than on prompt text.
+
+@test "interactive 'work' selects the 9 core steps, no personal extras" {
+  _mark_core_done xcode homebrew brewfile claude chezmoi marta vim_anywhere bindings osx
+  run /bin/bash "$REPO/bootstrap" <<< $'work'
+  [ "$status" -eq 0 ]
+  [[ "$output" == *"9 step(s)"* ]]
+  assert_not_called 'brew bundle --file=.*Brewfile.home'
+  assert_not_called 'brew bundle --file=.*Brewfile.media'
+}
+
+@test "interactive 'personal' all-no adds brewfile_home only (10 steps)" {
+  _mark_core_done xcode homebrew brewfile claude chezmoi marta vim_anywhere bindings osx brewfile_home
+  run /bin/bash "$REPO/bootstrap" <<< $'personal\nn\nn\nn'
+  [ "$status" -eq 0 ]
+  [[ "$output" == *"10 step(s)"* ]]
+  assert_not_called 'brew bundle --file=.*Brewfile.music'
+  assert_not_called 'brew bundle --file=.*Brewfile.media'
+}
+
+@test "interactive 'personal' with music=yes runs Brewfile.music (11 steps)" {
+  _mark_core_done xcode homebrew brewfile claude chezmoi marta vim_anywhere bindings osx brewfile_home
+  run /bin/bash "$REPO/bootstrap" <<< $'personal\ny\nn\nn'
+  [ "$status" -eq 0 ]
+  [[ "$output" == *"11 step(s)"* ]]
+  assert_called 'brew bundle --file=.*Brewfile.music'
+}
+
+@test "interactive 'personal' with media=yes runs Brewfile.media" {
+  _mark_core_done xcode homebrew brewfile claude chezmoi marta vim_anywhere bindings osx brewfile_home
+  run /bin/bash "$REPO/bootstrap" <<< $'personal\nn\nn\ny'
+  [ "$status" -eq 0 ]
+  assert_called 'brew bundle --file=.*Brewfile.media'
+}
+
+@test "interactive re-prompts on an invalid machine type" {
+  # The re-prompt warning is an explicit echo (not read -p), so it is visible
+  # even under piped stdin.
+  _mark_core_done xcode homebrew brewfile claude chezmoi marta vim_anywhere bindings osx
+  run /bin/bash "$REPO/bootstrap" <<< $'maybe\nwork'
+  [ "$status" -eq 0 ]
+  [[ "$output" == *"please answer 'work' or 'personal'"* ]]
+}

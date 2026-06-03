@@ -1,0 +1,7 @@
+# Media apps (home machine, opt-in via the interactive prompt or
+# `./bootstrap --only brewfile_media`).
+#
+# Games (Dungeon Crawl) are installed via bootstrap's `crawl` step, not here:
+# the DCSS cask is deprecated (disabled 2026-09-01, binary isn't notarized).
+cask 'plex'
+cask 'yacreader'

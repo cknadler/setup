@@ -1,3 +1,8 @@
+# Home-machine extras. Installed automatically when "personal" is chosen in
+# the interactive flow, or via `./bootstrap --only brewfile_home`.
+# (Everyday apps like Signal/Spotify/Dropbox/Obsidian live in the default
+# Brewfile now — they're installed on every machine.)
+
 # scripts
 brew 'bandcamp-dl'
 
@@ -6,15 +11,8 @@ cask 'mediahuman-audio-converter'
 cask 'vlc'
 cask 'discord'
 cask 'synology-drive'
-cask 'zoom'
-cask 'signal'
 cask 'musicbrainz-picard'
-cask 'the-unarchiver'
-cask 'spotify'
-cask 'dropbox'
-cask 'obsidian'
 
 # mac app store
 brew 'mas'
-mas "HEIC Converter", id: 1294126402
 mas "Jomo - Screen Time Blocker", id: 1609960918
