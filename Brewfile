@@ -46,6 +46,12 @@ brew 'zsh-syntax-highlighting'
 brew 'yt-dlp'
 
 # casks
+
+# AI (the Claude Code CLI is installed separately via step_claude, not brew)
+cask 'claude'         # Claude desktop app
+cask 'chatgpt'        # ChatGPT desktop app
+cask 'codex'          # OpenAI Codex — terminal coding agent
+
 cask 'ghostty'
 cask 'font-jetbrains-mono'
 cask 'alfred'
