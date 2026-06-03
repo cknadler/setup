@@ -5,13 +5,14 @@ SHELL := /bin/bash
 BATS    ?= bats
 SHELLCHECK ?= shellcheck
 
-SCRIPTS := bootstrap lib.sh tests/fixtures/bin/_shim
+SCRIPTS   := bootstrap lib.sh .osx tests/fixtures/bin/_shim
+BREWFILES := Brewfile Brewfile.home Brewfile.media Brewfile.music
 
 all: lint test
 
 help:
 	@echo "make test     — run bats test suite (tests/*.bats)"
-	@echo "make lint     — run shellcheck over bootstrap, lib.sh, fixtures"
+	@echo "make lint     — shellcheck bootstrap/lib.sh/.osx/fixtures + Brewfile syntax"
 	@echo "make all      — lint then test"
 	@echo "make doctor   — ./bootstrap --doctor"
 	@echo "make brew     — ./bootstrap --only brewfile"
@@ -26,6 +27,9 @@ lint:
 	# bash 4+ features that shellcheck doesn't flag by default.
 	/bin/bash -n bootstrap
 	/bin/bash -n lib.sh
+	/bin/bash -n .osx
+	# Brewfiles are Ruby — syntax-check them (catches malformed cask/brew/mas lines).
+	@for bf in $(BREWFILES); do echo "ruby -c $$bf"; ruby -c "$$bf" >/dev/null; done
 
 doctor:
 	./bootstrap --doctor

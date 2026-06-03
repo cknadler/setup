@@ -17,7 +17,7 @@ Bootstrap a fresh macOS dev environment.
 - `.osx` — `defaults write` customizations; run last (some changes
   require a restart).
 - `Makefile` — `make test`, `make lint`, `make doctor`, `make all`.
-- `tests/` — bats-core test suite (59 tests) using PATH-shim mocks under
+- `tests/` — bats-core test suite (63 tests) using PATH-shim mocks under
   `tests/fixtures/bin/`. Tests source `lib.sh` directly and exercise step
   functions with isolated `$HOME` and stubbed subprocess calls.
 - `colors/` — terminal color theme assets.
@@ -57,7 +57,7 @@ what didn't complete and re-run with `--only <step>` after fixing.
 
 ```
 make test     # bats tests/
-make lint     # shellcheck over bootstrap, lib.sh, fixtures
+make lint     # shellcheck (bootstrap, lib.sh, .osx, fixtures) + Brewfile syntax
 make doctor   # ./bootstrap --doctor
 make all      # lint + test
 ```

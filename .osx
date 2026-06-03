@@ -6,10 +6,15 @@
 # Launchpad reset, tmutil disablelocal), and Yosemite-era cosmetic tweaks
 # have been removed.
 
+# Fail fast: a failed `defaults write` or `sudo -v` should abort rather than
+# fall through to a success exit (bootstrap marks the osx step complete on
+# exit 0). Genuinely best-effort commands below are suffixed with `|| true`.
+set -euo pipefail
+
 # Close any open System Preferences panes to prevent them from overriding
-# settings we're about to change.
-osascript -e 'tell application "System Settings" to quit' 2>/dev/null
-osascript -e 'tell application "System Preferences" to quit' 2>/dev/null
+# settings we're about to change. Best-effort: the apps may not be running.
+osascript -e 'tell application "System Settings" to quit' 2>/dev/null || true
+osascript -e 'tell application "System Preferences" to quit' 2>/dev/null || true
 
 # Ask for the administrator password upfront, keep-alive until done.
 sudo -v
@@ -115,9 +120,9 @@ defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 # No warning when emptying Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
-# Show ~/Library
-chflags nohidden ~/Library 2>/dev/null
-xattr -d com.apple.FinderInfo ~/Library 2>/dev/null
+# Show ~/Library (best-effort: xattr -d fails when the attribute isn't set)
+chflags nohidden ~/Library 2>/dev/null || true
+xattr -d com.apple.FinderInfo ~/Library 2>/dev/null || true
 
 ###############################################################################
 # Dock                                                                        #

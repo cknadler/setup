@@ -81,6 +81,16 @@ load test_helper
   assert_called '^curl .*claude.ai/install.sh'
 }
 
+@test "step_claude skips when claude exists at ~/.local/bin but not on PATH" {
+  rm -f "$FIXTURES/claude"   # not on PATH
+  hash -r
+  mkdir -p "$HOME/.local/bin"
+  ln -s "$FIXTURES/_shim" "$HOME/.local/bin/claude"   # exists + executable
+  run step_claude
+  [ "$status" -eq 0 ]
+  assert_not_called '^curl .*claude.ai/install.sh'
+}
+
 @test "step_vim_anywhere skips when ~/.vim-anywhere exists" {
   mkdir -p "$HOME/.vim-anywhere"
   run step_vim_anywhere
@@ -142,6 +152,21 @@ load test_helper
   run step_bindings
   [ "$status" -eq 0 ]
   [ ! -f "$HOME/Obsidian/.metadata_never_index" ]
+}
+
+@test "step_bindings fails when a hotkey write fails" {
+  export SHIM_EXIT_DEFAULTS=1   # every `defaults write` returns non-zero
+  run step_bindings
+  [ "$status" -ne 0 ]
+}
+
+@test "step_bindings fails when a privacy-folder write fails" {
+  mkdir -p "$HOME/Obsidian"
+  chmod 500 "$HOME/Obsidian"    # r-x, no write → touch can't create the file
+  run step_bindings
+  chmod 700 "$HOME/Obsidian"    # restore so bats can clean up the tmp dir
+  [ "$status" -ne 0 ]
+  [[ "$output" == *"failed to write"* ]]
 }
 
 @test "step_crawl skips when app already at target path" {

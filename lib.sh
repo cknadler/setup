@@ -164,7 +164,9 @@ step_homebrew() {
 }
 
 # _brew_bundle <file-name> — common helper.
-# Doesn't abort on per-package failures; brew bundle by default keeps going.
+# brew bundle keeps going past per-package failures, but exits non-zero if any
+# package failed; we surface that as a step failure so it isn't marked complete
+# (re-running brew bundle is idempotent, so a later run retries the stragglers).
 _brew_bundle() {
   local file=$1
   require_root_var || return 1
@@ -186,7 +188,9 @@ step_brewfile_media() { _brew_bundle Brewfile.media; }
 step_brewfile_music() { _brew_bundle Brewfile.music; }
 
 step_claude() {
-  if installed claude; then
+  # The installer drops the binary at ~/.local/bin/claude, which isn't on a
+  # fresh PATH — check the path directly so the skip fires even mid-session.
+  if [[ -x "$HOME/.local/bin/claude" ]] || installed claude; then
     log_skip "Claude Code CLI already installed"
     return 0
   fi
@@ -201,8 +205,10 @@ step_chezmoi() {
     chezmoi -R apply
   else
     log_info "initializing chezmoi from cknadler/dotfiles..."
-    chezmoi init https://github.com/cknadler/dotfiles.git
-    chezmoi -R apply
+    # Chain so a failed init doesn't fall through to apply (and get the step
+    # marked complete on apply's exit code, leaving a half-initialized .git
+    # that the re-run treats as "already initialized").
+    chezmoi init https://github.com/cknadler/dotfiles.git && chezmoi -R apply
   fi
 }
 
@@ -334,15 +340,18 @@ _shk_write() {
 }
 
 step_bindings() {
+  # Track write failures so the step isn't marked complete on a partial apply.
+  # We keep going (apply what we can) but return non-zero if anything failed.
+  local rc=0
   log_info "applying Mission Control + Spotlight hotkeys..."
   # Move Left A Space → cmd+shift+h
-  _shk_write $SHK_MOVE_LEFT_SPACE  1 104 4  $MOD_CMD_SHIFT
+  _shk_write $SHK_MOVE_LEFT_SPACE  1 104 4  $MOD_CMD_SHIFT || rc=1
   # Move Right A Space → cmd+shift+l
-  _shk_write $SHK_MOVE_RIGHT_SPACE 1 108 37 $MOD_CMD_SHIFT
+  _shk_write $SHK_MOVE_RIGHT_SPACE 1 108 37 $MOD_CMD_SHIFT || rc=1
   # Show Spotlight Search → disabled (Alfred replaces it)
-  _shk_write $SHK_SPOTLIGHT        0 32  49 $MOD_CMD
+  _shk_write $SHK_SPOTLIGHT        0 32  49 $MOD_CMD || rc=1
   # Show Finder search window → disabled (Alfred replaces it)
-  _shk_write $SHK_FINDER_SEARCH    0 32  49 $MOD_CMD
+  _shk_write $SHK_FINDER_SEARCH    0 32  49 $MOD_CMD || rc=1
 
   # Reload preferences so changes take effect without a logout
   killall cfprefsd 2>/dev/null || true
@@ -351,14 +360,19 @@ step_bindings() {
   local p
   for p in "$HOME/Obsidian" "$HOME/Documents/Backup Projects"; do
     if [[ -d "$p" ]]; then
-      touch "$p/.metadata_never_index"
-      log_ok "  $p/.metadata_never_index"
+      if touch "$p/.metadata_never_index"; then
+        log_ok "  $p/.metadata_never_index"
+      else
+        log_warn "  failed to write $p/.metadata_never_index"
+        rc=1
+      fi
     else
       log_skip "  $p doesn't exist yet; rerun after creating it"
     fi
   done
 
   log_info "alfred: set Alfred's Sync Folder to ~/Dropbox/config/Alfred via Alfred prefs (one-time GUI step)"
+  return $rc
 }
 
 ###

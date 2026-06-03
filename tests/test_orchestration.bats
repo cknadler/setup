@@ -19,6 +19,11 @@ load test_helper
   [ "$status" -eq 0 ]
 }
 
+@test ".osx parses under /bin/bash (3.2 syntax check)" {
+  run /bin/bash -n "$REPO/.osx"
+  [ "$status" -eq 0 ]
+}
+
 @test "bootstrap --help works under /bin/bash" {
   run /bin/bash "$REPO/bootstrap" --help
   [ "$status" -eq 0 ]

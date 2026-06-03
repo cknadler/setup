@@ -4,7 +4,7 @@ cask 'native-access'
 cask 'izotope-product-portal'
 
 # Fab Filter
-cask 'fabfilter-pro-c`
+cask 'fabfilter-pro-c'
 cask 'fabfilter-pro-ds'
 cask 'fabfilter-pro-g'
 cask 'fabfilter-pro-l'

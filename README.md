@@ -52,8 +52,8 @@ Still manual:
 ### Development
 
 ```bash
-make test     # bats tests/   (59 tests)
-make lint     # shellcheck over bootstrap, lib.sh, fixtures
+make test     # bats tests/   (63 tests)
+make lint     # shellcheck (bootstrap, lib.sh, .osx, fixtures) + Brewfile syntax
 make doctor   # ./bootstrap --doctor
 make all      # lint + test
 ```
