@@ -12,6 +12,8 @@ cask 'vlc'
 cask 'discord'
 cask 'synology-drive'
 cask 'musicbrainz-picard'
+cask 'qbittorrent'
+cask 'nordvpn'
 
 # mac app store
 brew 'mas'
