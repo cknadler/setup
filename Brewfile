@@ -42,9 +42,6 @@ brew 'starship'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 
-# audio ripping
-brew 'yt-dlp'
-
 # casks
 
 # AI (the Claude Code CLI is installed separately via step_claude, not brew)
