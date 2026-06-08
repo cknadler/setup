@@ -64,7 +64,6 @@ cask 'signal'
 cask 'spotify'
 cask 'dropbox'
 cask 'obsidian'
-cask 'the-unarchiver'
 
 # mac app store
 brew 'mas'
