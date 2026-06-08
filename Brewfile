@@ -60,7 +60,6 @@ cask '1password'
 cask 'macvim'
 cask 'rectangle'
 cask 'marta'
-cask 'qbittorrent'
 
 # everyday apps (always installed, work and personal)
 cask 'zoom'
