@@ -15,6 +15,9 @@ cask 'musicbrainz-picard'
 cask 'qbittorrent'
 cask 'nordvpn'
 
+# audio ripping
+brew 'yt-dlp'
+
 # mac app store
 brew 'mas'
 mas "Jomo - Screen Time Blocker", id: 1609960918
